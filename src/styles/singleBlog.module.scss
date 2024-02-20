@@ -1,0 +1,108 @@
+@import './variables.scss';
+@import './all.scss';
+@import './common.module.scss';
+
+
+
+
+
+.wrapper {
+    @extend %container;
+    max-width: 620px;
+    .container {
+        padding-top: 8rem;
+    }
+    .contentInner {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    h1 {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        font-size: 3rem;
+        color: #2e7338;
+        text-align: left;
+    }
+    h2 {
+        box-shadow: 0px 0px 0px 5px $base-color-light;
+        border: dashed 2px white;
+        padding: 1em;
+        background:$base-color-light;
+        border-radius: 0.1rem;
+        margin: 4rem 0;
+        font-size: 2rem;
+    }
+    
+    h3 { 
+        font-size: 2rem;
+        background: linear-gradient(transparent 60%, $base-color-light 60%);
+        text-indent: 0.6rem;
+        margin: 4rem 0;
+    }
+
+    h4 { 
+        font-weight: bold;
+        color: $base-color;
+    }
+    
+
+    .blogImgWrapper {
+        margin: 3rem 0;
+        img {
+            width: 100%;
+        }
+    }
+    .blogDate {
+        color: rgba($color: #000000, $alpha: 0.6);
+        font-size: 1rem;
+    }
+    
+    .blogTags {
+        display: inline-block;
+        background-color: transparent;
+        border: 1px solid rgba($color: #000000, $alpha: 0.23);
+        color: #999;
+        font-size: 12px;
+        padding: 0.4rem 0.8rem;
+        border-radius: 10rem;
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+    .moreButton {
+        margin-top: 4rem;
+    }
+
+    blockquote {
+        margin: 0;
+        padding: 0.5em 1em;
+        color: #888888;
+        border-left: 1px solid #888888;
+        font-size: 1.4rem;
+    }
+
+    .moreButton {
+        text-align: center;
+        margin: 8rem 0;
+        a {
+            display: inline-block;
+            letter-spacing: 2px;
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+            color: #333;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    
+}
+
+
+
+
+

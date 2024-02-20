@@ -1,0 +1,135 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap');
+
+
+//---------------------------------------------
+//swiperのサムネイルはindex.module.sassだと効かない
+:root {
+    .thumbSwiper{
+        span {
+            font-size: 1rem;
+            font-family: $enFont;
+            display: block;
+            line-height: 100%;
+            @media(max-width: $break-s) { 
+                display: none;
+            }
+        }
+        .swiper-slide {
+            img {
+                border: 2px solid #ccc;
+                border-radius: 100%;
+            }
+        }
+        .swiper-slide-thumb-active {
+            img {
+                border: 2px solid $base-color;
+                border-radius: 100%;
+            }   
+        }
+    }
+}
+//---------------------------------------------
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    overflow-y: scroll; -webkit-overflow-scrolling: touch;
+    
+}
+
+body {
+    font-family: $baseFont;
+    letter-spacing: 0.1rem;
+    background-color: $bg-color;
+    font-display: swap;
+    color: $txt-color;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow:clip;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 180%;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+
+
+ol {
+    padding-inline-start: 10px;
+}
+
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+
+//pagetop
+#scrollBtn {
+    // display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    width: 40px;
+    cursor: pointer;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    animation: fadeIn 1.5s ease 0s 1 normal;
+    p {
+        font-size: 11px;
+        writing-mode:vertical-rl;
+    }
+    :before {
+        content:"";/*疑似要素の中身を指定*/
+        position:absolute;/*絶対位置指定*/
+        left:62%;/*横位置の指定*/
+        top:-120%;/*縦位置の指定*/
+        background:#333333;/*線の色指定*/
+        width:1px;/*線の幅指定*/
+        height:100%;/*線の高さ指定*/
+    }
+}
+  
+#scrollBtn:hover {
+    opacity: 0.5;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
