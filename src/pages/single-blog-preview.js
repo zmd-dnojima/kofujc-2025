@@ -11,8 +11,6 @@ import * as style from "../styles/singleBlog.module.scss"
 import { useLocation } from "@reach/router"
 import Share from "../components/share"
 
-import fujiIcon2 from "../images/fuji_white.svg"
-
  
 const SingleBlogPreview = (props) => {   
 

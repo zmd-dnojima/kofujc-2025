@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import * as style from "../styles/list.module.scss"
+import * as style from "../styles/common.module.scss"
 
 
 const RelatedPost = ({ actTag }) => {
@@ -19,12 +19,6 @@ const RelatedPost = ({ actTag }) => {
               body
               eventDate
               title
-              category {
-                  name
-              }
-              mainImage {
-                  url
-              }
             }
         }
       }

@@ -19,12 +19,6 @@ exports.createPages = async ({ graphql, actions }) => {
                         body
                         id
                         eventDate
-                        category {
-                            name
-                        }
-                        mainImage {
-                            url
-                        }
                     }
                 }
             }

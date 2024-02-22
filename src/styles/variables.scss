@@ -7,11 +7,9 @@ $break-xs: 400px;
 /*==========================================================================
 Font
 ============================================================================*/
-$subFont: 'dnp-shuei-gothic-gin-std', sans-serif;
-$baseFont: 'Zen Maru Gothic', "Noto Sans JP", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ Ｐゴシック", sans-serif;
-$numberFont: 'Roboto', sans-serif;
-$enFont: 'Sofia Sans Condensed', sans-serif;
-$charactorFont: 'Kiwi Maru', serif;
+$baseFont: "Shippori Mincho", serif;
+$enFont: "Marcellus", serif;
+$enFont2: "Sofia Sans", serif;
 
 $baseFontSize: 16;
 @function rem($pixels) {
@@ -21,12 +19,12 @@ $baseFontSize: 16;
 /*==========================================================================
 Color
 ============================================================================*/
-$base-color: #42a651;
-$base-color-light: #ecf4e9;
-$base-color-darken: #2e7338;
+$base-color: #3486bf;
+$active-color: #5dba7b;
 $bg-color: #fff;
-$txt-color: #333;
-$cta-color:#ed6a47;
+
+$txt-color: #000;
+
 
 /*==========================================================================
 mixin
@@ -87,5 +85,8 @@ mixin
     position: relative;
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 1.6rem;
+    text-align: center;
+    @media(max-width: $break-s){ 
+        padding: 0 1rem;
+    }
 }

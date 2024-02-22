@@ -1,35 +1,29 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import instagram from "../images/instagram.svg"
 import * as style from "../styles/common.module.scss"
-import logo from '../images/logo2.svg'
-import ftrImg from '../images/ftr.svg'
-import contactImg from "../images/contactImg.jpg"
+import logo from '../images/logo_white.svg'
 
 const Footer = () => {
     return (
         <footer className={style.footerWrapper}>
 
-            <div className={style.contactWrap}>    
-                <div className={style.contactInner}>    
-                    <div className={style.txt}>とりあえず、きいてみる</div>
-                    <div className={style.ctaBtn}><Link to="/contact">無料相談はこちら<span></span></Link></div>
-                </div>
-            </div>
-            <div className={style.insideContainer}>
+            <div className={style.footerInner}>
                 <div>
-                    <div className={style.logoSub}>山梨県のローカルビジネスに特化した<br/>WEBコンサルティングパートナー</div>
-                    <div className={style.logo}><Link to="/"><img src={logo} alt="javascript"/></Link></div>
+                    <div className={style.logo}><Link to="/"><img src={logo} alt="javascript" /></Link></div>
+                    <div>山梨県中巨摩郡昭和町築地新居1683<br/>
+                        TEL：055-275-5141<br/>
+                        FAX：055-275-5143
+                    </div>
                 </div>
-                
                 <ul>
-                    <li><Link to="/feature"> - サービスと料金</Link></li>
-                    <li><Link to="/works"> - 制作事例</Link></li>
-                    <li><Link to="/blog/?tag=all"> - ブログ記事</Link></li>
-                    <li><Link to="/about"> - ZMDとは？</Link></li>
+                    <li><Link to="/">ホーム</Link></li>
+                    <li><Link to="/articles">お知らせ</Link></li>
+                    <li><Link to="/aboutus">会社案内</Link></li>
+                    <li><Link to="/feature">柳川芳鉄工所の強み</Link></li>
+                    <li><Link to="/contact">お問い合わせ</Link></li>
                 </ul>
             </div> 
-            <div className={style.copyright}>©{new Date().getFullYear()} Zero Mountain Design. All Rights Reserved.</div>
+            <div className={style.copyright}>©{new Date().getFullYear()} Yanagawa Yoshi Iron Works. All Rights Reserved.</div>
         </footer>
     )
 }

@@ -5,8 +5,7 @@ import * as Scroll from 'react-scroll'
 import { StaticImage } from "gatsby-plugin-image"
 import { useLocation } from "@reach/router"
 import * as style from "../styles/common.module.scss"
-import logo from '../images/logo2.svg'
-import mailIcon from "../images/mail.svg"
+import logo from '../images/logo.svg'
 
 const Header = () => {
 
@@ -53,16 +52,13 @@ const Header = () => {
         
         <div className={style.contentInner}>
           <div className={style.logo}><Link to="/"><img src={logo} alt="javascript" /></Link></div>
-          <ul>
-          
-            
+          {/* <ul>
             <li><Link to="/feature" className={`${(location.pathname == "/feature/" ? style.selected : '')}`}>サービスと料金</Link></li>
             <li><Link to="/works" className={`${(location.pathname == "/works/" ? style.selected : '')}`}>制作事例</Link></li>
             <li><Link to="/blog/?tag=all" className={`${(location.pathname == "/blog/" ? style.selected : '')}`}>ブログ記事</Link></li>
             <li><Link to="/about" className={`${(location.pathname == "/about/" ? style.selected : '')}`}>ZMDとは？</Link></li>
             <li className={style.ctaBtn}><Link to="/contact" className={`${(location.pathname == "/contact/" ? style.selected : '')}`}>お問い合わせ<span></span></Link></li>
-            {/* <li className={style.ctaButton02}><Link to="/contact"><img src={mailIcon} alt="javascript" width={14}/>無料相談はこちら</Link></li> */}
-          </ul>
+          </ul> */}
         </div>
       </div>
     </header>

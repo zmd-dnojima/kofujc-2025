@@ -1,233 +1,172 @@
 import * as React from "react"
-import { useEffect, useRef, useState } from "react"
 import { Link, graphql } from "gatsby" 
+import { useEffect, useRef, useState } from "react"
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 
 import { motion, useAnimate, useMotionValueEvent, useScroll, useInView } from "framer-motion"
-//import { useInView } from "react-intersection-observer"
-import * as Scroll from 'react-scroll'
+//import * as Scroll from 'react-scroll'
 
-import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination } from 'swiper'
+import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination, Keyboard, FreeMode, EffectCards, Thumbs } from 'swiper'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import 'swiper/css/bundle'
 import "swiper/swiper.min.css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
+import "swiper/css/free-mode"
+
+//fontswesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import fujiIcon from "../images/fuji.svg"
-import fujiIcon2 from "../images/fuji_white.svg"  
-import image01 from "../images/mock2.png"  
-
-import checkIcon from "../images/check.svg"  
-
-
-
-import * as style from "../styles/feature.module.scss"  
+import * as style from "../styles/sub.module.scss"  
+import ContactArea from "../components/contactArea"
 
 const Feature = (props) => {
-    const singleBlog = [];
+
     return (
         <Layout>
-            <Seo title="ZMD｜サービスの特徴" description="サービスの特徴" />
-            
-            <div className={style.subHdr}>
-                <div className={style.subHdrInner}>    
-                    <h1 className={style.subTitle}><img src={fujiIcon2} alt="javascript"/><span>SERVICES</span>サービスと料金</h1>
+            <Seo title="柳川芳鉄工所の強み" description="柳川芳鉄工所の強み" />
+            <div className={style.main}>
+
+                <div className={style.subtitle}>
+                    <h1>FEATURE</h1>
+                    <div className={style.txtArea}>柳川芳鉄工所の強み</div>
                 </div>
-            </div>
-            
-            <div className={style.contentWrap}>
-              <div className={style.subContentWrap}>
-                  <div className={style.subContentGrid}>
-                      <div className={style.subContentTxt}>
-                          <div className={style.subContentTitle}>WEBサイトやSNSに悩まれている企業様・ご担当者様に</div>
-                          <h2>WEBマーケティング担当として<br/>まるっとご支援します。</h2>
-                          <p>
-                          WEBに関わる全てを対応。<br/>
-                          1社1社に合わせた最適な施策実行で、<br/>
-                          ビジネス・売上拡大をサポートいたします。
-                          </p>  
-                      </div>
-                      <div className={style.subContentImg}><img src={image01} alt="javascript"/></div>
-                  </div> 
-              </div>  
 
-              <div className={style.centerContent}>
-                  <div className={style.title}><div className={style.fukidasi}>このようなお悩みをお持ちの方へ</div></div>
-                  <div className={style.txt}>
-                      <div className={style.subContentList}><p className={style.listImage}><img src={checkIcon} alt="javascript" width={30}/></p><p>ホームページはあるが<span>効果がいまいちわからない</span></p></div>
-                      <div className={style.subContentList}><p className={style.listImage}><img src={checkIcon} alt="javascript" width={30}/></p><p>社内でWEB担当者を抱えているが<span>少しでも人件費を抑えたい</span></p></div>
-                      <div className={style.subContentList}><p className={style.listImage}><img src={checkIcon} alt="javascript" width={30}/></p><p><span>日々の業務に追われて</span>WEBが疎かになっている</p></div>
-                      <div className={style.subContentList}><p className={style.listImage}><img src={checkIcon} alt="javascript" width={30}/></p><p>WEB広告の<span>費用対効果を見直したい</span></p></div>
-                      <div className={style.subContentList}><p className={style.listImage}><img src={checkIcon} alt="javascript" width={30}/></p><p>SNSで毎日投稿してるけど<span>フォロワーが増えない</span></p></div>
-                  </div>
-              </div>
+                <div className={style.subContent}>
 
-              <div className={style.priceWrap} id="priceWrap">
-                <div className={style.subTitle}><img src={fujiIcon} alt="javascript" width={100}/><span>PRICE</span></div>
-                <div className={style.priceInner}>
-                    <div className={style.box} style={{background: '#ecf4e9'}}>
-                        <div className={style.title}>
-                            <p>月額費をなるべく抑えたい</p>
-                            <span>Free</span><br/>プラン
-                            
+                    <div className={style.mission}>
+                        <h2>基本理念</h2>
+                        <p>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。時代の変化とともに様々なニーズに答え続け培ってきた技術力を、未来に向けて更に進化していくことを目標としております。</p>
+                    </div>
+
+                    <h2>事業内容</h2>
+                    <div className={style.grid_1clm_altimg}>
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/feature01.jpg" alt="feature01" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>容器 製作</div>
+                                <p>厚生労働省認可のボイラー・圧力容器製造工場として長年にわたり営業してきた経験がございますので、様々な設計・条件の容器の製作を行うことができます。もちろん普通ボイラー溶接士の有資格者もおりますので確かな品質をお約束いたします。ご要望の容量や圧力を元に設計をすることもいたします。また、オイルタンクなど消防申請が必要になるものも多数製造経験がございますので、まずはご相談くださいませ。</p>
+                            </div>
+                        </div> 
+                        <div className={style.gridbox}>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>配管・炉体製作</div>
+                                <p>TN-P等ステンレス溶接の専門級の資格を持つ確かな知識と技術を持つ職人が多数在籍しておりますので、給排水・蒸気用の配管はもちろんサニタリー配管など細やかな溶接も可能です。※サニタリー配管は溶接部の電解研磨まで行います。また、ボイラー・タンク製造の技術から1000A以上の大型配管や炉体の製作も可能です。</p>
+                            </div>
+                            <div className={style.imgbox}><StaticImage src="../images/feature02.jpg" alt="feature02" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                        </div> 
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/feature03.jpg" alt="feature01" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>架台・ステージ・その他 製作</div>
+                                <p>単純な門型・三角ブラケットの量産や、機器や容器用の架台はもちろんプラント仕様のステージ・歩廊・階段や耐荷重計算された蓋類など各種製作据付を行います。またご要望に応じて強度計算も行いますのでまずはご相談くださいませ。※建築レベルの相談は設計事務所など専門機関へ相談します。</p>
+                            </div>
+                        </div> 
+                        <div className={style.gridbox}>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>ボイラー等 設置工事</div>
+                                <p>ボイラー製造の経験に基づき、現在では大手ボイラーメーカーの代理店としての営業もしておりますので、ご要望に応じてボイラーの選定のお手伝いから行います。もちろん現地確認をして必要な架台・配管・煙道・タンク等のプランニングから設計・製作・各種据付接続工事まで一貫して行います。</p>
+                            </div>
+                            <div className={style.imgbox}><StaticImage src="../images/feature04.jpg" alt="feature02" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                        </div> 
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/feature05.jpg" alt="feature01" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>各種検査・書類作成</div>
+                                <p>ご要望に応じて各種検査を行います。
+                                <br/>・耐圧 / 気密検査（水圧・ガスなどにて）
+                                <br/>・浸透探傷試験　※自社に有資格者あり
+                                <br/>・超音波・レントゲン検査　※社外機関に依頼
+                                <br/>・寸法検査（ｷｰｴﾝｽ ﾜｲﾄﾞｴﾘｱ三次元測定機 WM-3500 所有）
+                                <br/>※上記にないものもご相談ください。
+                                </p>
+                            </div>
+                        </div> 
+                        <div className={style.gridbox}>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>塗装・仕上げ等</div>
+                                <p>ご要望に応じて各種仕上げ作業をいたします。
+                                <br/>・炭素鋼製品の塗装仕上げ
+                                <br/>錆止め塗装仕上げ / 耐熱塗装仕上げ 等
+                                <br/>・ステンレス製品の焼け取り仕上げ
+                                <br/>塗りつけ/吹付けによる酸洗い仕上げ
+                                <br/>電解研磨
+                                <br/>※焼付け塗装については社外に依頼して行います。
+                                <br/>また、小規模な研磨は社内にて行いますが大型容器の研磨は社外依頼になりますが対応いたしますのでご相談ください。
+                                </p>
+                            </div>
+                            <div className={style.imgbox}><StaticImage src="../images/feature06.jpg" alt="feature02" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                        </div> 
+                    </div>
+
+                    <h2>設備紹介</h2>
+                    <div className={style.grid_2clm} id={"facility"}>
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/facility01.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth"/></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>設備名01</div>
+                                <p>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
+                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</p>    
+                            </div>
                         </div>
-                        <div className={`${style.price} ${style.underline}`}><span>¥</span>0<span>/月</span></div>
-                        <div className={style.disc}>個別制作費</div> 
-                        <ul>
-                            <li><span className={style.priceListTxt}>WEBサイト作成</span><span className={style.priceListNumber}>¥200,000~</span></li>
-                        </ul> 
-                        <div className={style.balloon}><span>こんな人におすすめ</span></div>
-                        <div className={style.txt}>コーポレートサイトなど、ホームページを制作する目的が信頼度向上や窓口としての役割の場合、更新頻度は比較的少ないです。本番公開後に画像差し替えや文言修正をしたい場合、別途費用（¥5,000/1時間）が発生しますが<span className={style.underline}>月額運用更新費用は無料</span>なので予算を抑えることができます。</div>
-                    </div>
-                    <div className={style.box} style={{background: '#b9ddb0'}}>
-                        <div className={style.title}>
-                            <p>社内WEB担当者の代わりに</p>
-                            <span>Standard</span><br/>プラン
-                            
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/facility02.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>設備名02</div>
+                                <p>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
+                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</p>    
+                            </div>
                         </div>
-                        <div className={`${style.price} ${style.underline}`}><span>¥</span>30,000-<span>/月</span></div>
-                        <div className={style.disc}>個別制作費</div> 
-                        <ul>
-                            <li><span className={style.priceListTxt}>WEBサイト作成</span><span className={style.priceListNumber}>¥100,000~</span></li>
-                        </ul> 
-                        <div className={style.balloon}><span>こんな人におすすめ</span></div>
-                        <div className={style.txt}>毎月更新が発生するようなホームページの場合、Standardプランが最適です。<span className={style.underline}>社内でWEB担当者を抱えずに人件費を削減することが可能です。</span>
-                        毎月1度はブログを更新したいけど時間がない方、代行で執筆・投稿いたします（1記事/月）。その他更新作業が2人日分含まれますので、お気軽にホームページを最新に保つことができます。</div>
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/facility03.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>設備名03</div>
+                                <p>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
+                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</p>    
+                            </div>
+                        </div>
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/facility04.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>設備名04</div>
+                                <p>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
+                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</p>    
+                            </div>
+                        </div> 
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/facility05.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>設備名05</div>
+                                <p>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
+                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</p>    
+                            </div>
+                        </div>
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/facility06.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>設備名06</div>
+                                <p>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
+                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</p>    
+                            </div>
+                        </div>      
                     </div>
-                    
-                </div>
-                <div className={style.ctaBtnSub}>他にも動画編集・写真撮影のお見積や<br/>自分に合うプランのご相談など承ります。</div>
-                <div className={style.ctaBtn}><Link to="/contact">お問い合わせはこちら<span></span></Link></div>
-                <div className={style.workflowWrap}>
-                    <div className={style.subTitle}><img src={fujiIcon} alt="javascript" width={100}/><span>work flow</span></div>
-                    <h3>ホームページを作成するときの手順</h3>
 
-                    <motion.div variants={{ offscreen: { y: 50, opacity: 0, }, onscreen: { y: 0, opacity: 1, transition: { duration: 1, delay:.2, type:"spring" },},}} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0 }}>
-                    <div className={style.workflow}>
-                        <div className={style.workflowNumber}>01</div>
-                        <div className={style.workflowTitle}>要件定義</div>
-                        <div className={style.workflowContent}>ヒアリングシートにご記入いただき基本情報や背景、目的、参考にしたいWEBサイトなどを洗い出します。</div> 
-                    </div>
-                    </motion.div>
-                    <motion.div variants={{ offscreen: { y: 50, opacity: 0, }, onscreen: { y: 0, opacity: 1, transition: { duration: 1, delay:.2, type:"spring" },},}} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0 }}>
-                    <div className={style.workflow}>
-                        <div className={style.workflowNumber}>02</div>
-                        <div className={style.workflowTitle}>打ち合わせ</div>
-                        <div className={style.workflowContent}>ホームページに関係のない、好き嫌いや人生において重きを置くものなど様々な観点から依頼者を知ることで、より愛着のあるデザインを生みだすことができます。気取らず何でも話してください。</div> 
-                    </div>
-                    </motion.div>
-                    <motion.div variants={{ offscreen: { y: 50, opacity: 0, }, onscreen: { y: 0, opacity: 1, transition: { duration: 1, delay:.2, type:"spring" },},}} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0 }}>
-                    <div className={style.workflow}>
-                        <div className={style.workflowNumber}>03</div>
-                        <div className={style.workflowTitle}>契約</div>
-                        <div className={style.workflowContent}>打ち合わせ後数日以内にお見積書を作成いたします。ご確認していただき発注するかご検討ください。ご契約後制作スケジュールを作成・共有いたします。</div> 
-                    </div>
-                    </motion.div>
-                    <motion.div variants={{ offscreen: { y: 50, opacity: 0, }, onscreen: { y: 0, opacity: 1, transition: { duration: 1, delay:.2, type:"spring" },},}} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0 }}>
-                    <div className={style.workflow}>
-                        <div className={style.workflowNumber}>04</div>
-                        <div className={style.workflowTitle}>構成案作成</div>
-                        <div className={style.workflowContent}>デザインの前に構成案にてWEBサイトの内容を詰めていきます。どのページにどんな画像や文章を入れるか、要素の順番などを組み立てていきます。</div> 
-                    </div>
-                    </motion.div>
-                    <motion.div variants={{ offscreen: { y: 50, opacity: 0, }, onscreen: { y: 0, opacity: 1, transition: { duration: 1, delay:.2, type:"spring" },},}} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0 }}>
-                    <div className={style.workflow}>
-                        <div className={style.workflowNumber}>05</div>
-                        <div className={style.workflowTitle}>素材のご提供</div>
-                        <div className={style.workflowContent}>基本お客様に素材をご用意していただきます。画像素材に関して別料金にて撮影が可能です。また画像素材を代理で購入することも可能です。</div> 
-                    </div>
-                    </motion.div>
-                    <motion.div variants={{ offscreen: { y: 50, opacity: 0, }, onscreen: { y: 0, opacity: 1, transition: { duration: 1, delay:.2, type:"spring" },},}} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0 }}>
-                    <div className={style.workflow}>
-                        <div className={style.workflowNumber}>06</div>
-                        <div className={style.workflowTitle}>デザイン</div>
-                        <div className={style.workflowContent}>まずトップページのデザイン案を作成し、全体の方向性をご確認いただいた上で、その他詳細ページのデザインに入っていきます。</div> 
-                    </div>
-                    </motion.div>
-                    <motion.div variants={{ offscreen: { y: 50, opacity: 0, }, onscreen: { y: 0, opacity: 1, transition: { duration: 1, delay:.2, type:"spring" },},}} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0 }}>
-                    <div className={style.workflow}>
-                        <div className={style.workflowNumber}>07</div>
-                        <div className={style.workflowTitle}>ご確認と修正</div>
-                        <div className={style.workflowContent}>修正回数は３回までとさせていただきます。コーディング後は軽微な修正に限りますのでここでほぼ内容を確定します。</div> 
-                    </div>
-                    </motion.div>
-                    <motion.div variants={{ offscreen: { y: 50, opacity: 0, }, onscreen: { y: 0, opacity: 1, transition: { duration: 1, delay:.2, type:"spring" },},}} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0 }}>
-                    <div className={style.workflow}>
-                        <div className={style.workflowNumber}>08</div>
-                        <div className={style.workflowTitle}>コーディング</div>
-                        <div className={style.workflowContent}>デザインが確定次第、実装（コーディング）に着手します。</div> 
-                    </div>
-                    </motion.div>
-                    <motion.div variants={{ offscreen: { y: 50, opacity: 0, }, onscreen: { y: 0, opacity: 1, transition: { duration: 1, delay:.2, type:"spring" },},}} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0 }}>
-                    <div className={style.workflow}>
-                        <div className={style.workflowNumber}>09</div>
-                        <div className={style.workflowTitle}>独自ドメインの取得</div>
-                        <div className={style.workflowContent}>お客様にて取得された独自ドメインをお送りください。また独自ドメインをお持ちでない方は代理での取得が可能です。お気軽にご相談ください。</div> 
-                    </div>
-                    </motion.div>
-                    <motion.div variants={{ offscreen: { y: 50, opacity: 0, }, onscreen: { y: 0, opacity: 1, transition: { duration: 1, delay:.2, type:"spring" },},}} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0 }}>
-                    <div className={style.workflow}>
-                        <div className={style.workflowNumber}>10</div>
-                        <div className={style.workflowTitle}>仮公開</div>
-                        <div className={style.workflowContent}>テスト環境にて、様々な閲覧環境の方に問題なく表示されるか検証します。</div> 
-                    </div>
-                    </motion.div>
-                    <motion.div variants={{ offscreen: { y: 50, opacity: 0, }, onscreen: { y: 0, opacity: 1, transition: { duration: 1, delay:.2, type:"spring" },},}} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0 }}>
-                    <div className={style.workflow}>
-                        <div className={style.workflowNumber}>11</div>
-                        <div className={style.workflowTitle}>ご確認と修正</div>
-                        <div className={style.workflowContent}>ここでは軽微な修正（文字の修正や画像差し替え等）に限ります。</div> 
-                    </div>
-                    </motion.div>
-                    <div className={style.flowLast}>WEBサイト公開&#127881;</div>
-                </div>
-
-                <div className={style.termWrap}>
-                  <div className={style.termInner}>
-                    <h3>制作上の条件・制限事項</h3>
-                    <ol>
-                      <li>ロゴ／写真素材は原則ご用意お願いいたします。別料金にて写真・動画撮影が可能です。ロゴ・イラストについてはご要望や雰囲気にマッチしそうなグラフィックデザイナーやイラストレーターの方のご紹介もさせていただきます。</li>
-                      <li>制作期間について、大まかな目安としては1ヶ月程度ですが、Webサイトに必要な機能や新規コンテンツ作成の有無などによって、制作期間は大きく変動します。詳細なスケジュールについては、初回ヒアリング時にご要望をお聞きした上で、どのくらい制作期間がかかるかを算出してお知らせいたします。<span>お急ぎの場合は特急料金込みでお見積りさせていただきます。</span></li>
-                      <li>打ち合わせに関して、無料でお伺いいたしますが、山梨県外の場合や富士吉田市、韮崎市より北側の場合は交通費が別途かかります。費用についてはお問い合わせ時にご相談させていただきます。</li>
-                    </ol>
-                  </div>
                 </div>
                 
-              </div>
+
+               
+                <ContactArea/>
+
             </div>
-            
+
+
         </Layout>
     )
 }
 
 export default Feature
 
-// export const query = graphql`
-//   query ContentfulBlogQuery {
-//     allContentfulBlog(sort: {fields: date, order: DESC}) {
-//       edges {
-//         node {
-//           title
-//           slug
-//           id
-//           excerpt
-//           date(formatString: "YYYY-MM-DD")
-//           image {
-//             gatsbyImageData(placeholder: BLURRED, quality: 90, formats: AUTO)
-//           }
-//           metadata {
-//             tags {
-//               id
-//               contentful_id
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-  
-// `

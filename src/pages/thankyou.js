@@ -3,15 +3,13 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as style from "../styles/common.module.scss"
-import fujiIcon from "../images/fuji.svg"
 
 const Thankyou = () => {
     return(
         <Layout>
-            <Seo title="ZMD｜ありがとうございます" description="これはthankyouページです" /> 
+            <Seo title="お問い合わせ完了" description="柳川芳鉄工所｜お問い合わせありがとうございます。" />
             <div className={style.wrapper}>
             <div className={style.subPageTitle}>
-                <img src={fujiIcon} alt="javascript" width={100}/>
                 <h1>CONTACT</h1>
             </div>
             <div className={style.wrapper}>

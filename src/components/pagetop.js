@@ -1,6 +1,6 @@
 // components/pagetop.js
 import React, { useState, useEffect } from 'react'
-import "../styles/all.scss"
+import * as style from "../styles/common.module.scss"
 
 
 const PageTop = ({ showBelow }) => {
@@ -28,8 +28,8 @@ const PageTop = ({ showBelow }) => {
   return (
     <div>
       {show && (
-        <div onClick={handleClick} id="scrollBtn" aria-label="to top">
-          <p>PAGE TOP</p>
+        <div onClick={handleClick} className={style.scrollBtn} aria-label="to top">
+          <p></p>
         </div>
       )}
     </div>
