@@ -77,7 +77,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-          `G-3CMR3GJDD9`, //変更
+          `G-3CMR3GJDD9`,
         ],
         gtagConfig: {
           anonymize_ip: true,

@@ -26,7 +26,7 @@ const SEO = ({ title, description }) => {
             <meta charSet="utf-8" />
 
             <title>{title}</title>
-            <meta name="robots"></meta>
+            <meta name="robots" content="noindex"></meta>
             <meta name="description" content={description} />
             <meta name="image" content={defaultImage} />   
             <link rel="canonical" href={seo.canonical} />

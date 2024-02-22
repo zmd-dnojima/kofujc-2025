@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import RelatedPost from "../components/relatedPost"
 import * as style from "../styles/sub.module.scss"
 
 import { useLocation } from "@reach/router"

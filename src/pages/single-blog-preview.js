@@ -5,7 +5,6 @@ import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import RelatedPost from "../components/relatedPost"
 import * as style from "../styles/singleBlog.module.scss"
 
 import { useLocation } from "@reach/router"
@@ -63,7 +62,7 @@ const SingleBlogPreview = (props) => {
                     <div className={style.contentInner} dangerouslySetInnerHTML={{ __html: postData?.body }} />  
 
                     <h3>関連する記事</h3>
-                    <RelatedPost actTag={postData?.category[0].name} />
+                    {/* <RelatedPost actTag={postData?.category[0].name} /> */}
                     <div className={style.moreButton}><Link to={"../blog?tag=all"}>一覧ページへ戻る</Link></div>
                 </div>
                 
