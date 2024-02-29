@@ -22,7 +22,7 @@ const SingleBlogPreview = (props) => {
     useEffect(() => {
         if (!postData) {
             fetch(
-                `https://yanagawa-yoshi.microcms.io/api/v1/articles/${contentId}?draftKey=${draftKey}`,
+                `https://yanagawa-yoshi.microcms.io/api/v1/${contentId}?draftKey=${draftKey}`,
             {
                 headers: {
                 "X-API-KEY": "0KHCwJD4GocMq9VX4EIhCWXQxw6OlhJVgosP",
