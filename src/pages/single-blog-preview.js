@@ -47,7 +47,6 @@ const SingleBlogPreview = (props) => {
             };
         }
     });
-    const tagsString = postData?.category[0].name;
     
     return(
         <Layout>
