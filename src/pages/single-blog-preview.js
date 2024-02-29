@@ -5,7 +5,7 @@ import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as style from "../styles/singleBlog.module.scss"
+import * as style from "../styles/sub.module.scss"
 
 import { useLocation } from "@reach/router"
 import Share from "../components/share"
@@ -22,10 +22,10 @@ const SingleBlogPreview = (props) => {
     useEffect(() => {
         if (!postData) {
             fetch(
-                `https://zmd.microcms.io/api/v1/articles/${contentId}?draftKey=${draftKey}`,
+                `https://yanagawa-yoshi.microcms.io/api/v1/articles/${contentId}?draftKey=${draftKey}`,
             {
                 headers: {
-                "X-API-KEY": "st30CRbI7cULadmlmvetJT0N6ihLK5xkzXW4",
+                "X-API-KEY": "0KHCwJD4GocMq9VX4EIhCWXQxw6OlhJVgosP",
                 },
             }
             )
@@ -51,22 +51,16 @@ const SingleBlogPreview = (props) => {
     
     return(
         <Layout>
-            <div className={style.wrapper}>  
-                <div className={style.container}>      
-                    {/* <Share title={postData?..title} url={siteUrl}/> */}
-                    <div className={style.blogImgWrapper}><img src={postData?.mainImage.url} alt="card-image" className={style.cardImg} /></div>
-                    <div className={style.blogTags}><Link to={"../blog?tag=" + tagsString}>#{postData?.category[0].name}</Link></div>
-                    <h1 className={style.subTitle}>{postData?.title}</h1>         
+            <div className={style.subtitle}>
+                <h1>NEWS</h1>
+                <div className={style.txtArea}>お知らせ</div>
+            </div>
+            <div className={style.singlePage}>
+                <div className={style.subContent}>
+                    <h1 className={style.subTitle}>{postData?.title}</h1>        
                     <div className={style.blogDate}>{`${postData?.eventDate.substring(0, postData?.eventDate.indexOf("T"))}`}</div>
-                    
                     <div className={style.contentInner} dangerouslySetInnerHTML={{ __html: postData?.body }} />  
-
-                    <h3>関連する記事</h3>
-                    {/* <RelatedPost actTag={postData?.category[0].name} /> */}
-                    <div className={style.moreButton}><Link to={"../blog?tag=all"}>一覧ページへ戻る</Link></div>
                 </div>
-                
-                
             </div>
             
         </Layout>                    
