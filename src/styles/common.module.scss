@@ -479,6 +479,18 @@ form {
     text-align: center;
     max-width: 520px;
     margin-top: 4rem;
+    .tenpu{
+        span {
+            font-size: rem(12);
+            padding-left: 1rem;
+        }
+        input {
+            background: none;
+            border-radius: none;
+            border: none;
+            padding-left: 0em;
+        }
+    }
 }
 form div{
     padding-top: 14px;
@@ -505,12 +517,12 @@ form div{
         flex: 1;
         width: 100%;
         background: #eaedf2;
-        font-size: 18px;
         margin-top: 8px;
         height: 40px;
         flex: inherit;
         font-size: 15px;
     }
+    
     .required {
         border-radius: 4px;
         margin-right: 8px;
@@ -547,4 +559,6 @@ form div{
         color: #fff;
         font-weight: bold;
     }
+
+    
 }

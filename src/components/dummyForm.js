@@ -20,8 +20,39 @@ export default () => (
         <p>こちらのフォームからのお問い合わせに関しては、原則数日以内にメールでご返答させていただきます。なお、お問い合わせの内容次第ではご返答に時間がかかる場合もございます。予めご了承ください。</p>
         <div><a href="../privacypolicy" target="_blank" style={{textDecoration:"underline"}}>プライバシーポリシー</a></div>
 
+        <form action="https://ssgform.com/s/393qJ3JNXKoU" method="post" enctype="multipart/form-data">
+            
+            
+            <div>
+                <label htmlFor="name"><span className={style.required}>必須</span>お名前</label>  
+                <input type="text" name="お名前" required="required" />
+            </div>
+            <div>
+                <label htmlFor="email"><span className={style.required}>必須</span>メールアドレス</label>
+                <input type="email" name="メールアドレス" required="required" />
+            </div>
+            <div>
+                <label htmlFor="tel"><span className={style.required}>必須</span>電話番号</label>
+                <input type="tel" id="電話番号" name="phone" required="required" />
+            </div>
+            <div>
+                <label htmlFor="campanyname">会社名</label>  
+                <input type="text" name="campanyname" id="campanyname"/>
+            </div>
+            <div className={style.tenpu}>
+                <label htmlFor="campanyname">参考資料<span>※5MBまで</span></label>  
+                <input type="file" name="参考資料" />
+            </div>
 
-        <form
+            <div>
+                <label htmlFor="message"><span className={style.required}>必須</span>ご用件</label>
+                <textarea name="message" rows="10" id="message" required="required"></textarea>
+            </div>
+            <div>
+                <button className={style.contactButton} type="submit">お問い合わせをする</button>
+            </div>
+        </form>
+        {/* <form
             name="contact"
             method="post"
             action="/thankyou/"
@@ -52,6 +83,6 @@ export default () => (
         <div>
             <button className={style.contactButton} type="submit">お問い合わせをする</button>
         </div>   
-        </form> 
+        </form>  */}
     </div>
 )
