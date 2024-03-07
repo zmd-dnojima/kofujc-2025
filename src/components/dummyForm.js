@@ -39,7 +39,7 @@ export default () => (
         </div>
         <div>
             <label htmlFor="tel"><span className={style.required}>必須</span>電話番号</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+            <input type="tel" id="phone" name="phone" required />
         </div>
         <div>
             <label htmlFor="campanyname">会社名</label>  
