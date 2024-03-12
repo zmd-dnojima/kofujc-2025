@@ -106,53 +106,194 @@ const Feature = (props) => {
                     <h2>設備紹介</h2>
                     <div className={style.grid_2clm} id={"facility"}>
                         <div className={style.gridbox}>
-                            <div className={style.imgbox}><StaticImage src="../images/facility01.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth"/></div>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-001.jpg" alt="ok-001" placeholder="blurred" quality ={90} layout="fullWidth"/></div>
                             <div className={style.txtbox}>
-                                <div className={style.title}>設備名01</div>
-                                <p>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
-                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</p>    
+                                <div className={style.title}>シャーリング</div>
+                                <div className={style.cap}>相澤鉄工所 / A3-620</div>    
                             </div>
                         </div>
                         <div className={style.gridbox}>
-                            <div className={style.imgbox}><StaticImage src="../images/facility02.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-002.jpg" alt="ok-002" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                             <div className={style.txtbox}>
-                                <div className={style.title}>設備名02</div>
-                                <p>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
-                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</p>    
+                                <div className={style.title}>シャーリング</div>
+                                <div className={style.cap}>萩原機械製作所</div>    
                             </div>
                         </div>
                         <div className={style.gridbox}>
-                            <div className={style.imgbox}><StaticImage src="../images/facility03.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-003.jpg" alt="ok-003" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                             <div className={style.txtbox}>
-                                <div className={style.title}>設備名03</div>
-                                <p>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
-                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</p>    
+                                <div className={style.title}>バンドソー</div>
+                                <div className={style.cap}>大東精機 / ST4060H</div>    
                             </div>
                         </div>
                         <div className={style.gridbox}>
-                            <div className={style.imgbox}><StaticImage src="../images/facility04.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-004.jpg" alt="ok-004" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                             <div className={style.txtbox}>
-                                <div className={style.title}>設備名04</div>
-                                <p>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
-                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</p>    
+                                <div className={style.title}>バンドソー</div>
+                                <div className={style.cap}>大東精機 / ST4565</div>    
                             </div>
                         </div> 
                         <div className={style.gridbox}>
-                            <div className={style.imgbox}><StaticImage src="../images/facility05.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-005.jpg" alt="ok-005" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                             <div className={style.txtbox}>
-                                <div className={style.title}>設備名05</div>
-                                <p>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
-                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</p>    
+                                <div className={style.title}>油圧プレス</div>
+                                <div className={style.cap}>佐々木油機工業/SBC-410</div>      
                             </div>
                         </div>
                         <div className={style.gridbox}>
-                            <div className={style.imgbox}><StaticImage src="../images/facility06.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-006.jpg" alt="ok-006" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                             <div className={style.txtbox}>
-                                <div className={style.title}>設備名06</div>
-                                <p>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
-                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</p>    
+                                <div className={style.title}>油圧プレス</div>
+                                <div className={style.cap}>松田製作所 / C-47</div>     
                             </div>
-                        </div>      
+                        </div>  
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-007.jpg" alt="ok-007" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>油圧プレス</div>
+                                <div className={style.cap}>松田製作所 / CⅡ-110</div>     
+                            </div>
+                        </div> 
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-008.jpg" alt="ok-008" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>中型５種切断複合機</div>
+                                <div className={style.cap}>昭和精工 / CL65</div>     
+                            </div>
+                        </div>   
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-009.jpg" alt="ok-009" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>ホール盤</div>
+                                <div className={style.cap}>日立工機 / DD-4300</div>     
+                            </div>
+                        </div>   
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-010.jpg" alt="ok-010" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>ホール盤</div>
+                                <div className={style.cap}>北川 / KDS-360</div>     
+                            </div>
+                        </div>   
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-011.jpg" alt="ok-011" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>ホール盤</div>
+                                <div className={style.cap}>鈴太製作所/SB-2300</div>     
+                            </div>
+                        </div>   
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-012.jpg" alt="ok-012" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>ベンディングロール</div>
+                                <div className={style.cap}>神崎工業/TAH-03AT</div>     
+                            </div>
+                        </div>   
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-013.jpg" alt="ok-013" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>ベンディングロール</div>
+                                <div className={style.cap}>自社製機械</div>     
+                            </div>
+                        </div>   
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-014.jpg" alt="ok-014" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>ベンディングロール</div>
+                                <div className={style.cap}>神崎工業/TAH-03AT</div>     
+                            </div>
+                        </div>   
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-015.jpg" alt="ok-015" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>高速切断機</div>
+                                <div className={style.cap}>日立工機/CC16SB</div>     
+                            </div>
+                        </div>   
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-016.jpg" alt="ok-016" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>旋盤</div>
+                                <div className={style.cap}>和研機工/KSL-5M</div>     
+                            </div>
+                        </div>   
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-017.jpg" alt="ok-017" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>卓上電気グラインダ</div>
+                                <div className={style.cap}>日立工機/GT26SK</div>     
+                            </div>
+                        </div>   
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-018.jpg" alt="ok-018" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>油圧プレス</div>
+                                <div className={style.cap}>佐々木油機工業/SMB-100</div>     
+                            </div>
+                        </div>   
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-019.jpg" alt="ok-019" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>プラズマ切断機</div>
+                                <div className={style.cap}>Panasonic/YP-060PF3</div>     
+                            </div>
+                        </div>   
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-020.jpg" alt="ok-020" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>溶接機各種</div>
+                                <div className={style.cap}>アーク・半自動・TIG溶接機等</div>     
+                            </div>
+                        </div>   
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/kk-001.jpg" alt="kk-001" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>ﾜｲﾄﾞｴﾘｱ三次元測定機</div>
+                                <div className={style.cap}>KEYENCE/WM-3000</div>     
+                            </div>
+                        </div>  
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/kk-002.jpg" alt="kk-002" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>電解研磨機</div>
+                                <div className={style.cap}>ケミカル山本/ｴﾚｸﾄﾛｼｬｲﾅｰW</div>     
+                            </div>
+                        </div>  
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/kk-003.jpg" alt="kk-003" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>パンチャー</div>
+                                <div className={style.cap}>Ogura等</div>     
+                            </div>
+                        </div>  
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/kk-004.jpg" alt="kk-004" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>ポジショナー</div>
+                                <div className={style.cap}>マツモト機械</div>     
+                            </div>
+                        </div>    
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/gk-001.jpg" alt="gk-001" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>現場用TIG溶接機</div>
+                                <div className={style.cap}>DAIHEN/TIG MINI200PⅡ</div>     
+                            </div>
+                        </div>  
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/gk-002.jpg" alt="gk-002" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>ｴﾝｼﾞﾝ溶接機</div>
+                                <div className={style.cap}>ﾃﾞﾝﾖｰ/ﾆｭｰｴｰﾌﾞﾙ200</div>     
+                            </div>
+                        </div>  
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/gk-003.jpg" alt="gk-003" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>パイプマシン</div>
+                                <div className={style.cap}>REX/N80AⅢ</div>     
+                            </div>
+                        </div>    
                     </div>
 
                 </div>

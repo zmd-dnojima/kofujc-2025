@@ -69,35 +69,31 @@ const Index = (props) => {
 
                     <div className={style.gridArea}>
                         <div className={style.gridbox}>
-                            <div className={style.imgbox}><StaticImage src="../images/facility01.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth"/></div>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-001.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth"/></div>
                             <div className={style.txtbox}>
-                                <div className={style.facTitle}>設備名01</div>
-                                <div>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
-                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</div>    
+                                <div className={style.facTitle}>シャーリング</div>
+                                <div className={style.cap}>相澤鉄工所 / A3-620</div>    
                             </div>
                         </div>
                         <div className={style.gridbox}>
-                            <div className={style.imgbox}><StaticImage src="../images/facility02.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-003.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                             <div className={style.txtbox}>
-                                <div className={style.facTitle}>設備名02</div>
-                                <div>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
-                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</div>    
+                                <div className={style.facTitle}>バンドソー</div>
+                                <div className={style.cap}>大東精機 / ST4060H</div>    
                             </div>
                         </div>
                         <div className={style.gridbox}>
-                            <div className={style.imgbox}><StaticImage src="../images/facility03.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-005.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                             <div className={style.txtbox}>
-                                <div className={style.facTitle}>設備名03</div>
-                                <div>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
-                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</div>    
+                                <div className={style.facTitle}>油圧プレス</div>
+                                <div className={style.cap}>佐々木油機工業 / SBC-410</div>    
                             </div>
                         </div>
                         <div className={style.gridbox}>
-                            <div className={style.imgbox}><StaticImage src="../images/facility04.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-008.jpg" alt="p1" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                             <div className={style.txtbox}>
-                                <div className={style.facTitle}>設備名04</div>
-                                <div>弊社は昭和21年 設立して以来、ボイラー・圧力容器の製造を中心に75年以上にわたり山梨県の産業を支え続けてきました。<br/>
-                                時代の変化とともに様々なニーズに答え続け培ってきた技術力を未来に向けて更に磨き、進化していくことを目標としております。</div>    
+                                <div className={style.facTitle}>中型５種切断複合機</div>
+                                <div className={style.cap}>昭和精工 / CL65</div>    
                             </div>
                         </div>    
                     </div>

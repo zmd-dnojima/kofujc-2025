@@ -72,7 +72,7 @@ const Feature = (props) => {
 
                     <h2>アクセス</h2>
                     <div className={style.gmap} id={"access"}>
-                        <EmbedMap><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.613493083222!2d138.55638371209926!3d35.63725377248729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601bf903f1d0bb85%3A0x457228e9dbf44954!2stotemo%20store!5e0!3m2!1sja!2sjp!4v1696071718735!5m2!1sja!2sjp" className={style.gmapInner} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></EmbedMap>
+                        <EmbedMap><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12971.970567987655!2d138.5186057!3d35.6279079!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601bf6df5f096f9d%3A0xdf6342c1b8234fb!2z77yI5qCq77yJ5p-z5bed6Iqz6YmE5bel5omA!5e0!3m2!1sja!2sjp!4v1710222709157!5m2!1sja!2sjp" className={style.gmapInner} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></EmbedMap>
                     </div>
 
                 </div>
