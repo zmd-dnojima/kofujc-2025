@@ -11,94 +11,88 @@
     height: 100vh;
     //overflow: hidden;
     background: #fff;
+
+    
     .txtArea {
-        width: 100%;
         z-index: 1;
         position: absolute;
-        text-align: left;
+        text-align: center;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        right: 10%;
+        //transform: translate(-50%,-50%);
         color: #fff;
-        margin-left: 1.6rem;
+        text-shadow: 0 0 30px rgb(0, 0, 0, 0.8);
+        @media(max-width: $break-s){ 
+            width: 100%;
+            right: auto;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-shadow: 0 0 20px rgb(0, 0, 0, 1);
+        }
+        
         h1 {
-            font-size: rem(90);
-            margin-bottom: 3rem;
-            letter-spacing: .4rem;
+            font-size: rem(60);
+            margin-bottom: 2rem;
+            letter-spacing: .1rem;
             span {
-                font-size: rem(70);
+                font-size: rem(50);
             }
         }
         h5 {
-            font-size: rem(20);
-            letter-spacing: .6rem;
-            padding-left: 4px;
+            font-size: rem(17);
+            letter-spacing: .1rem;
         }
-        @media(max-width: $break-s){ 
-            zoom: 0.7;
-            top: auto;
-            bottom: 0;
+    }
+    .mainImg {
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, #000), color-stop(70%, #000), to(transparent));
+        -webkit-mask-image: -webkit-linear-gradient(top, transparent 0%, #000 0%, #000 70%, transparent 100%);
+        mask-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, #000), color-stop(70%, #000), to(transparent));
+        mask-image: linear-gradient(to bottom, transparent 0%, #000 0%, #000 70%, transparent 100%);
+        line-height:0;
+            width: 100vw;
+            height: 100vh;
+        img {
+            display:block;
+            width: 100vw;
+            height: 100vh;
         }
-        
     }
-    img {
-        display:block;
-        
-        width: 100vw;
-        height: 100vh;
-    }
+    
 }
 
 .feature {
     position: relative;
-    //background-color: $bg-color;
+    background-color: $bg-color;
+    background-image:
+    
+    radial-gradient(at 100% 100%, #d7e8f0, transparent 70%);
     width: 100%;
-    padding-bottom: 4rem;
-    .skewbg {
-        position: absolute;
-        top: 0;
-        right: calc(14vw - 10%);
-        width: 30%;
-        min-width: 200px;
-        height: 100%;
-        background-color: #f3f2f3;
-        transform: skewX(15deg);
-        z-index: -1;
-        
-    }
+    //background-attachment: fixed;
     
     .feature_img {
+        z-index: 1;
         position: relative;
-        .feature_img01 {
-            width: 88%;
-            min-height: 260px;
-            height: 260px;
-            transform: skewX(15deg);
-            overflow: hidden;
-            margin-left: -40px;
-            img {
-                width:100%;
-                min-height: 160px;
-                transform:skewX(-15deg) scale(1.25);
-            }
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        @media(max-width: $break-s){ 
+            flex-flow: column;
         }
-        .feature_img02 {
-            position: absolute;
-            top: -140px;
-            left: 40%;
-            width: 26vw;
-            min-width: 200px;
-            height: auto;
+        
+        div {
+            width: 100%;
             img {
+                display: block;
                 width: 100%;
                 height: auto;
             }
         }
         
+        
     }
 
     .gridArea {
-        @extend %container;
+        padding: 0 4vw;
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
@@ -124,22 +118,12 @@
         .imgbox {
             display: grid;
             width: 100%;
-            transform: skewX(15deg);
-            
             overflow: hidden;
             img {
                 width:100%;
-                transform:skewX(-15deg) scale(1.25);
             }
             @media(max-width: $break-s){ 
-                width: 74%;
                 grid-row: 1;
-                justify-self: end;
-                transform: skewX(15deg);
-                img {
-                    width:100%;
-                    transform:skewX(-15deg) scale(1.25);
-                }
             }
         }
     }
@@ -206,14 +190,13 @@
     .skewbg {
         position: absolute;
         top: 0;
-        left: calc(14vw - 10%);
-        width: 30%;
+        left: 50%;
+        width: 200px;
         min-width: 200px;
         height: 100%;
         background-color: #f3f2f3;
-        transform: skewX(15deg);
+        transform: skewX(15deg) translateX(-100%);
         z-index: -1;
-        
     }
 
     .gridArea {
@@ -246,34 +229,34 @@
 
 .news {
     @extend %container;
-    padding: 0 1rem 4rem 1rem;
-    
+    border: 1px solid $base-color;
+    width: 80%;
+    border-radius: 6px;
     .gridArea {
+        padding: 0rem 2rem;
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
         @media(max-width: $break-s){ 
-            grid-template-columns: 1fr;
-            row-gap: 2rem;
+            row-gap: 0rem;
+            padding: 0rem 0rem;
         }
-        justify-items: start;
+        justify-items: center;
         align-items: center;
         text-align: left;
         .subtitle {
-            text-align: left;
             padding: 0rem;
             grid-row: 1;
             grid-column: 1;
-            justify-self: start;
+            justify-self: center;
             width: 100%;
-            @media(max-width: $break-s){ 
-                grid-row: 1;
-                grid-column: auto;
-            }
+            
         }
         .morebutton {
             margin-left: 1rem;
-            grid-row: 2;
+            grid-row: 3;
             grid-column: 1;
+            justify-self: end;
+            margin-right: 4rem;
             @media(max-width: $break-s){ 
                 grid-row: 3;
                 grid-column: auto;
@@ -286,8 +269,8 @@
         font-family: "Noto Sans JP", sans-serif;
         width: 100%;
         font-size: rem(12);
-        grid-row: 1/3;
-        grid-column: 2;
+        grid-row: 2;
+        grid-column: 1;
         @media(max-width: $break-s){ 
             grid-row: 2;
             grid-column: auto;

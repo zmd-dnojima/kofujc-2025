@@ -32,17 +32,23 @@ const Index = (props) => {
         <Layout>
             <Seo title="柳川芳鉄工所" description="柳川芳鉄工所の公式ホームページです" />
             <div className={style.main}>
+
+
                 <div className={style.mainVisual}>
+                <div className={style.mainVisualInner}>
                     <div className={style.txtArea}>
                         <h1>継承<span>と</span>飛翔</h1>
                         <h5>重ねた歴史を土台に、更に遠くへ</h5> 
                     </div>
-                    <StaticImage className={style.pc} src="../images/top.jpg" alt="main" placeholder="blurred" quality ={90} layout="fullWidth" />
-                    <StaticImage className={style.sp} src="../images/top_sp.jpg" alt="main" placeholder="blurred" quality ={90} layout="fullWidth" />
+                    <div className={style.mainImg}>
+                        <StaticImage className={style.pc} src="../images/top.jpg" alt="main" placeholder="blurred" quality ={90} layout="fullWidth" />
+                        <StaticImage className={style.sp} src="../images/top_sp.jpg" alt="main" placeholder="blurred" quality ={90} layout="fullWidth" />
+                    </div>
+                </div>
                 </div>
 
                 <div className={style.feature}>
-                    <div className={style.subtitle}><span>FEATURE</span>柳川芳鉄工所の強み</div>
+                    <div className={style.subtitle}><span>FEATURE</span><br/>柳川芳鉄工所の強み</div>
 
                     <div className={style.gridArea}>
                         <div className={style.txtbox}>
@@ -52,20 +58,20 @@ const Index = (props) => {
                             <div className={style.morebutton}><Link to="/feature">VIEW MORE<span><FontAwesomeIcon icon={faChevronRight}/></span></Link></div>
                         </div>
                         <div className={style.imgbox}>
-                            <StaticImage src="../images/p1.jpg" alt="p1" placeholder="blurred" quality ={90} />
+                            <StaticImage src="../images/p1.png" alt="p1" placeholder="blurred" quality ={90} />
                         </div>
                     </div>
                     <div className={style.feature_img}>
-                        <div className={style.feature_img01}><StaticImage src="../images/p2.jpg" alt="p1" placeholder="blurred" quality ={90} /></div>
-                        <div className={style.feature_img02}><StaticImage src="../images/p3.png" alt="p1" placeholder="blurred" quality ={90} /></div>
-                        </div>
+                        <div><StaticImage src="../images/p2.jpg" alt="p2" placeholder="blurred" quality ={90} /></div>
+                        <div><StaticImage src="../images/p3.jpg" alt="p3" placeholder="blurred" quality ={90} /></div>
+                    </div>
                     
-                    <div className={style.skewbg}></div>
+                    {/* <div className={style.skewbg}></div> */}
                     
                 </div>
 
                 <div className={style.facility}>
-                    <div className={style.subtitle}><span>FACILITY</span>設備紹介</div>
+                    <div className={style.subtitle}><span>FACILITY</span><br/>設備紹介</div>
 
                     <div className={style.gridArea}>
                         <div className={style.gridbox}>
@@ -101,7 +107,7 @@ const Index = (props) => {
                 </div>
 
                 <div className={style.aboutus}>
-                    <div className={style.subtitle}><span>ABOUT US</span>会社案内</div>
+                    <div className={style.subtitle}><span>ABOUT US</span><br/>会社案内</div>
 
                     <div className={style.gridArea}>
                         
@@ -119,12 +125,10 @@ const Index = (props) => {
                     <div className={style.skewbg}></div>
                 </div>
 
-                <ContactArea/>
-
                 <div className={style.news}>
 
                     <div className={style.gridArea}>
-                        <div className={style.subtitle}><span>NEWS</span>お知らせ</div>
+                        <div className={style.subtitle}><span>NEWS</span><br/>お知らせ</div>
                         <div className={style.morebutton}><Link to="/articles">VIEW MORE<span><FontAwesomeIcon icon={faChevronRight}/></span></Link></div>
                         <div className={style.blogArea}>
                             {/* tagをworks、記事数を3つに絞る */}
@@ -157,17 +161,10 @@ const Index = (props) => {
 
                         </div>
                     </div>
-                    
-
-            
-                    
-
-
                 </div>
+                <ContactArea/>
 
-            </div>
-
-
+            </div>{/* </main> */}
         </Layout>
     )
 }

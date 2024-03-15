@@ -41,7 +41,7 @@
     text-align: left;
     width:90%;
     padding: 4rem 0;
-    font-family: "Noto Sans JP", sans-serif;
+    //font-family: "Noto Sans JP", sans-serif;
     h2 { color: $base-color; font-family:$baseFont; padding-top: 4rem; padding-bottom: 2rem; text-align: center; }
     
 }
@@ -200,7 +200,7 @@
         bottom: 0;
         width: 100px;
         height: 4px;
-        background: rgba($color: $base-color, $alpha: 1.0);
+        background: rgba($color: $active-color, $alpha: 1.0);
         z-index: 1;
     }
     h1::after {
@@ -210,7 +210,7 @@
         bottom: 0;
         width: 100%;
         height: 4px;
-        background: rgba($color: $base-color, $alpha: 0.3);
+        background: rgba($color: $active-color, $alpha: 0.3);
     }
     h2 {
         font-size: 1.4rem;
@@ -220,35 +220,35 @@
         padding: 6px 10px;
         margin-bottom: 1em;
         color: #ffffff;
-        background: $base-color;
+        background: $active-color;
     }
     h3 {
         font-size: 1.4rem;
         font-weight: bold;
         padding: 6px 10px;
         margin-bottom: 1em;
-        border: 3px solid $base-color;
+        border: 3px solid $active-color;
     }
     h4 {
         font-size: 1.4rem;
         font-weight: bold;
         padding: 6px 10px;
         margin-bottom: 1em;
-        border-bottom: 3px solid $base-color;
+        border-bottom: 3px solid $active-color;
     }
     h5 {
         font-size: 1.2rem;
         font-weight: bold;
         padding: 6px 10px;
         margin-bottom: 1em;
-        border-bottom: 3px dotted $base-color;
+        border-bottom: 3px dotted $active-color;
     }
     h6 {
         font-size: 15px;
         font-weight: bold;
         padding: 5px 20px;
         margin-bottom: 1em;
-        border-left: 8px solid #FA1E0E;
+        border-left: 8px solid $active-color;
     }
 
     .subTitle {

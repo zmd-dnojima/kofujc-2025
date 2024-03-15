@@ -10,15 +10,32 @@
 .subtitle {
     color: $base-color;
     text-align: center;
-    margin: 0 auto;
     font-size: rem(26);
+    line-height: 3rem;
     span {
         font-family: $enFont;
         font-size: rem(12);
-        letter-spacing: .4rem;
-        display: block;
+        letter-spacing: .3rem;
+        position: relative;
+        padding: 0 80px;
     }
-    padding: 5rem 0;
+    span:after,
+    span:before {
+        content: '';
+        position: absolute;
+        top: 42%;
+        display: inline-block;
+        width: 70px;
+        height: 1px;
+        background-color: rgba($color: $base-color, $alpha: 0.3);
+    }
+    span:before {
+        left: 0;
+    }
+    span:after {
+        right: 0;
+    }
+    padding: 10vh 0;
 }
 
 //CVボタン
@@ -144,22 +161,22 @@
     position: fixed;
     top: 0px;
     width: 100%;
-    height: 70px;
-    @media(max-width: $break-s){ height: 70px; }
+    height: 90px;
+    @media(max-width: $break-s){ height: 50px; }
     z-index: 11;
     align-items: center;
     .container {
         position: absolute;
         width: 100%;
         height: 100%;
-        top: -70px;
-        @media(max-width: $break-s){ top: -70px; }
+        top: -90px;
+        @media(max-width: $break-s){ top: -50px; }
         background-color: rgba(255, 255, 255, 1); /* 背景色 */
         display: flex;
         transition: all 0.3s;
 
         .contentInner {
-            padding: 0 6vw;
+            padding: 0 4vw;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -170,18 +187,21 @@
                     justify-content: center;
                     align-items: center;
                     width: 170px;
-                    padding-top: 4px;
-                    // @media(max-width: $break-s){ width: 110px; }
+                    @media(max-width: $break-s){ width: 120px; }
                 }
             }
             ul {
                 display: flex;
                 align-items: center;
                 @media(max-width: $break-s){ display: none; }
+                li {
+                    margin-right: 3vw;
+                }
                 a {
+                    position: relative;
                     display: block;
                     width: 100%;
-                    margin: 1rem;
+                    
                     color:#333;
                     text-decoration: none; /* デフォルトの下線を非表示にする */
                     text-align: center;
@@ -189,22 +209,27 @@
                     span {
                         display: block;
                     }
-                    
                 }
+                
                 a.selected {
                     color: $base-color;
                 }
                 :hover {
-                    color: $active-color;
+                    color: $base-color;
                 } 
-                .ctaBtn {
-                    a {
-                        color: #fff;
-                        span:after {
-                            margin-top: -.7em;
-                            
-                        }
-                    }               
+                .ctaBtn a {
+                    color: #fff;
+                    background-color: $active-color;            
+                    padding: 0.4rem 1rem;
+                    border-radius: 40px;
+                    span {
+                        display: inline-block;
+                        padding-right: .6rem;
+                    }
+                }
+                .ctaBtn a:hover {
+                    opacity: 0.7;
+                    color: #fff;
                 }
             }
         }
@@ -222,7 +247,7 @@
     position: relative;
     text-align: center;
     margin: 0 auto;
-    background-color:#222222;
+    background-color:#333333;
     padding-top: 4rem;
     padding-bottom: 1rem;
     font-size: 0.8rem;
@@ -237,7 +262,9 @@
         line-height: rem(30);
         padding-bottom: 4rem;
         .logo {
-            margin-bottom: 4rem;
+            width: 50%;
+            margin: 0 auto;
+            padding-bottom: 2rem;
         }
         @media(max-width: $break-s) {
             grid-template-columns: 1fr;
@@ -245,7 +272,10 @@
         }
 
         ul {
-            line-height: 4rem;
+            line-height: 3rem;
+            @media(max-width: $break-s) {
+                text-align: center;
+            }
         }
         
 
@@ -278,6 +308,10 @@
 .menuWrapper {
     position: absolute;
     z-index: 20;
+    display: none;
+    @media(max-width: $break-s){ 
+        display: block;
+    }
     .menuBtn {
         position: fixed;
         top: 0;
@@ -286,8 +320,8 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
         box-sizing: border-box;
         background-color: $base-color;
         transition: opacity 0.3s ease;
@@ -346,7 +380,8 @@
         @media(max-width: $break-s){ 
             width: 100%;
         }
-        background-color: rgba($color: $base-color, $alpha: 1);
+        // background-color: rgba($color: $base-color, $alpha: 1);
+        @include gradient(135deg, $base-color, $active-color);
         top: 0;
         right: -100vw;
         color: #333;
@@ -370,7 +405,8 @@
                 display: block;
                 padding: 1.6rem 0;
                 transition: opacity 0.3s ease;
-                line-height: 1rem;
+                line-height: 2rem;
+                font-size: rem(20);
                 span {
                     display: block;
                     font-family: $baseFont;
@@ -403,16 +439,20 @@
     position: relative;
     //background-color: $bg-color;
     width: 100%;
-    margin-bottom: 10rem;
-    background-image: url('../images/contact_bg.jpg') ;
-    //background: url('../images/contact_bg.jpg') no-repeat 0 0 / cover;
-    background-color:rgba(255,255,255,0.8);
-    background-blend-mode:lighten;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:100% auto;
-    width: 100%;
-    height: 300px;
+    margin-top: 2rem;
+    padding-bottom: 4rem;
+    height: auto;
+    overflow: hidden;
+    .bg {
+        @include center(xy);
+        opacity: 0.2;
+        img {
+            @include center(xy);
+            width: 100vw;
+            min-width: 1440px;
+            height: auto;
+        }
+    }
     
     
     .gridbox {
