@@ -15,8 +15,7 @@ const ContactArea = (props) => {
 
     return (
         <div className={style.contactArea}>
-                    <div className={style.subtitle}><span>CONTACT</span><br/>お問い合わせ</div>
-                    <div className={style.bg}><StaticImage src="../images/contact_bg.jpg" alt="contact_bg" placeholder="blurred" quality ={90} layout="fullWidth"/></div>
+                    {/* <div className={style.bg}><StaticImage src="../images/contact_bg.jpg" alt="contact_bg" placeholder="blurred" quality ={90} layout="fullWidth"/></div> */}
                     <div className={style.gridbox}>
                         <div className={style.telbox}>
                             <div className={style.telNumber}><Link to="tel:0552755141"><span><FontAwesomeIcon icon={faPhone}/></span> 055-275-5141</Link></div>

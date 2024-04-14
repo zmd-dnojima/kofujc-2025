@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ContactArea from "../components/contactArea"
 import * as style from "../styles/sub.module.scss"
 
 import { useLocation } from "@reach/router"
@@ -19,7 +20,7 @@ const SingleBlog = (props) => {
             <Seo title={props.data.microcmsArticles.title} description={props.data.microcmsArticles.title} /> 
             <div className={style.subtitle}>
                 <h1>NEWS</h1>
-                <div className={style.txtArea}>お知らせ</div>
+                <div className={style.txtArea}>ヨシブロ</div>
             </div>
             <div className={style.singlePage}>
                 <div className={style.subContent}>
@@ -30,7 +31,7 @@ const SingleBlog = (props) => {
                     <div className={style.backButton}><Link to={"../articles/"}>一覧ページへ戻る</Link></div>
                 </div>
             </div>
-            
+            <ContactArea/>
         </Layout>                    
     )
 }

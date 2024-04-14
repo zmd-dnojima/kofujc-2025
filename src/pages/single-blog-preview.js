@@ -53,7 +53,7 @@ const SingleBlogPreview = (props) => {
 
             <div className={style.subtitle}>
                 <h1>NEWS</h1>
-                <div className={style.txtArea}>お知らせ</div>
+                <div className={style.txtArea}>ヨシブロ</div>
             </div>
             <div className={style.singlePage}>
                 <div className={style.subContent}>

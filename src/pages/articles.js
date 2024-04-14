@@ -5,6 +5,7 @@ import queryString from 'query-string'
 import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ContactArea from "../components/contactArea"
 import * as style from "../styles/sub.module.scss"
 
 const Blog = (props) => {
@@ -18,8 +19,8 @@ const Blog = (props) => {
             <div className={style.main}>
 
                 <div className={style.subtitle}>
-                    <h1>NEWS</h1>
-                    <div className={style.txtArea}>お知らせ</div>
+                    <h1>NEWS/TOPICS</h1>
+                    <div className={style.txtArea}>ヨシブロ</div>
                 </div>
 
                 <div className={style.subContent}>
@@ -52,7 +53,7 @@ const Blog = (props) => {
                 </div>
                 </div>
             
-                
+                <ContactArea/>
             </div>
         </Layout>
     )

@@ -17,7 +17,7 @@ const Footer = () => {
                 </div>
                 <ul>
                     <li><Link to="/">ホーム</Link></li>
-                    <li><Link to="/articles">お知らせ</Link></li>
+                    <li><Link to="/articles">ヨシブロ</Link></li>
                     <li><Link to="/aboutus">会社案内</Link></li>
                     <li><Link to="/feature">柳川芳鉄工所の強み</Link></li>
                     <li><Link to="/contact">お問い合わせ</Link></li>

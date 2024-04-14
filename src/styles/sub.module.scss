@@ -16,19 +16,15 @@
     background-size: cover;
 
     h1 {
-        width: 100%;
-        @include center(xy);
-        top: 70%;
+        text-align: center;
+        margin-top: 2rem;
         z-index: 1;
-        font-size: clamp(1.2rem, calc(5vw + 2.6rem), 8rem);
+        font-size: rem(14);
         font-family: $enFont;
-        letter-spacing: 1rem;
-        color: rgba($color: #fff, $alpha: 0.1);
+        letter-spacing: 0.6rem;
+        color: rgba($color: #fff, $alpha: 1);
     }
     .txtArea {
-        width: 100%;
-        @include center(xy);
-        top: 60%;
         color: #fff;
         font-size: clamp(1rem, calc(5vw + 0.6rem), 2rem);
         letter-spacing: 0.2rem;

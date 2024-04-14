@@ -16,45 +16,45 @@
     .txtArea {
         z-index: 1;
         position: absolute;
-        text-align: center;
-        top: 50%;
-        right: 10%;
-        //transform: translate(-50%,-50%);
+        top: 40%;
+        left: 20%;
         color: #fff;
-        text-shadow: 0 0 30px rgb(0, 0, 0, 0.8);
+        // text-shadow: 0 0 30px rgb(0, 0, 0, 0.8);
+        text-align: center;
         @media(max-width: $break-s){ 
             width: 100%;
             right: auto;
             left: 50%;
             transform: translate(-50%,-50%);
-            text-shadow: 0 0 20px rgb(0, 0, 0, 1);
+            // text-shadow: 0 0 20px rgb(0, 0, 0, 1);
         }
         
         h1 {
-            font-size: rem(60);
+            // font-size: rem(70);
+            font-size: clamp(3.75rem, 3.571rem + 0.89vw, 4.375rem);
             margin-bottom: 2rem;
             letter-spacing: .1rem;
             span {
-                font-size: rem(50);
+                font-size: clamp(3.125rem, 2.946rem + 0.89vw, 3.75rem);
             }
         }
         h5 {
-            font-size: rem(17);
+            font-size: clamp(0.875rem, 0.696rem + 0.89vw, 1.5rem);
             letter-spacing: .1rem;
         }
     }
     .mainImg {
-        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, #000), color-stop(70%, #000), to(transparent));
-        -webkit-mask-image: -webkit-linear-gradient(top, transparent 0%, #000 0%, #000 70%, transparent 100%);
-        mask-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, #000), color-stop(70%, #000), to(transparent));
-        mask-image: linear-gradient(to bottom, transparent 0%, #000 0%, #000 70%, transparent 100%);
-        line-height:0;
-            width: 100vw;
-            height: 100vh;
-        img {
-            display:block;
-            width: 100vw;
-            height: 100vh;
+        // -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, #000), color-stop(70%, #000), to(transparent));
+        // -webkit-mask-image: -webkit-linear-gradient(top, transparent 0%, #000 0%, #000 70%, transparent 100%);
+        // mask-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, #000), color-stop(70%, #000), to(transparent));
+        // mask-image: linear-gradient(to bottom, transparent 0%, #000 0%, #000 70%, transparent 100%);
+        @include gradient(135deg, $base-color, $active-color);
+        height: 100vh;
+        width: 100%;
+        .mainImgInner {
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
     }
     
@@ -84,7 +84,7 @@
             img {
                 display: block;
                 width: 100%;
-                height: auto;
+                max-height: 200px;
             }
         }
         
@@ -232,6 +232,7 @@
     border: 1px solid $base-color;
     width: 80%;
     border-radius: 6px;
+    margin-bottom: 4rem;
     .gridArea {
         padding: 0rem 2rem;
         display: grid;

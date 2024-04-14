@@ -41,8 +41,11 @@ const Index = (props) => {
                         <h5>重ねた歴史を土台に、更に遠くへ</h5> 
                     </div>
                     <div className={style.mainImg}>
-                        <StaticImage className={style.pc} src="../images/top.jpg" alt="main" placeholder="blurred" quality ={90} layout="fullWidth" />
-                        <StaticImage className={style.sp} src="../images/top_sp.jpg" alt="main" placeholder="blurred" quality ={90} layout="fullWidth" />
+                        <div className={style.mainImgInner}>
+                            <StaticImage src="../images/mainImg.png" alt="main" placeholder="blurred" quality ={90}  />
+                            {/* <StaticImage className={style.sp} src="../images/top_sp.jpg" alt="main" placeholder="blurred" quality ={90} /> */}
+                        </div>
+                        
                     </div>
                 </div>
                 </div>
@@ -128,7 +131,7 @@ const Index = (props) => {
                 <div className={style.news}>
 
                     <div className={style.gridArea}>
-                        <div className={style.subtitle}><span>NEWS</span><br/>お知らせ</div>
+                        <div className={style.subtitle}><span>NEWS/TOPICS</span><br/>ヨシブロ</div>
                         <div className={style.morebutton}><Link to="/articles">VIEW MORE<span><FontAwesomeIcon icon={faChevronRight}/></span></Link></div>
                         <div className={style.blogArea}>
                             {/* tagをworks、記事数を3つに絞る */}

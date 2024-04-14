@@ -57,7 +57,7 @@ const Header = () => {
         <div className={style.contentInner}>
           <div className={style.logo}><Link to="/"><img src={logo} alt="javascript" /></Link></div>
           <ul>
-            <li><Link to="/articles" className={`${(location.pathname == "/articles/" ? style.selected : '')}`}>お知らせ</Link></li>
+            <li><Link to="/articles" className={`${(location.pathname == "/articles/" ? style.selected : '')}`}>ヨシブロ</Link></li>
             <li><Link to="/aboutus" className={`${(location.pathname == "/aboutus/" ? style.selected : '')}`}>会社案内</Link></li>
             <li><Link to="/feature" className={`${(location.pathname == "/feature/" ? style.selected : '')}`}>柳川芳鉄工所の強み</Link></li>
             <li className={style.ctaBtn}><Link to="/contact" className={`${(location.pathname == "/contact/" ? style.selected : '')}`}><span><FontAwesomeIcon icon={faEnvelope}/></span>お問い合わせ</Link></li>
