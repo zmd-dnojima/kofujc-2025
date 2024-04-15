@@ -148,13 +148,6 @@ const Feature = (props) => {
                             </div>
                         </div>  
                         <div className={style.gridbox}>
-                            <div className={style.imgbox}><StaticImage src="../images/ok-007.jpg" alt="ok-007" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
-                            <div className={style.txtbox}>
-                                <div className={style.title}>油圧プレス</div>
-                                <div className={style.cap}>松田製作所 / CⅡ-110</div>     
-                            </div>
-                        </div> 
-                        <div className={style.gridbox}>
                             <div className={style.imgbox}><StaticImage src="../images/ok-008.jpg" alt="ok-008" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                             <div className={style.txtbox}>
                                 <div className={style.title}>中型５種切断複合機</div>
@@ -190,17 +183,17 @@ const Feature = (props) => {
                             </div>
                         </div>   
                         <div className={style.gridbox}>
-                            <div className={style.imgbox}><StaticImage src="../images/ok-013.jpg" alt="ok-013" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
-                            <div className={style.txtbox}>
-                                <div className={style.title}>ベンディングロール</div>
-                                <div className={style.cap}>自社製機械</div>     
-                            </div>
-                        </div>   
-                        <div className={style.gridbox}>
                             <div className={style.imgbox}><StaticImage src="../images/ok-014.jpg" alt="ok-014" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                             <div className={style.txtbox}>
                                 <div className={style.title}>ベンディングロール</div>
                                 <div className={style.cap}>神崎工業/TAH-03AT</div>     
+                            </div>
+                        </div> 
+                        <div className={style.gridbox}>
+                            <div className={style.imgbox}><StaticImage src="../images/ok-021.jpg" alt="ok-014" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
+                            <div className={style.txtbox}>
+                                <div className={style.title}>ベンディングロール</div>
+                                <div className={style.cap}>松本機械/MBR-1050-3BH</div>     
                             </div>
                         </div>   
                         <div className={style.gridbox}>
