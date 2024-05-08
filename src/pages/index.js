@@ -177,7 +177,7 @@ export default Index
 
 export const query = graphql` 
     query MyQuery {
-        allMicrocmsArticles {
+        allMicrocmsArticles(sort: { fields: [createdAt], order: DESC }) {
         edges {
             node {
                 articlesId
