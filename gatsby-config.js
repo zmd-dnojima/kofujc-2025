@@ -41,6 +41,7 @@ module.exports = {
         apis: [
           {
           endpoint: 'articles',    // micorCMSで作ったapiのエンドポイントを記載
+          queries: {orders: 'createdAt'}
           }
         ],
       },
