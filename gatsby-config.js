@@ -6,8 +6,8 @@ require('dotenv').config({path: `./.env.${env}`});
 
 module.exports = {
   siteMetadata: {
-    defaultTitle: `柳川芳鉄工所`,
-    defaultDescription: `【公式】柳川芳鉄工所`,
+    defaultTitle: `【公式】株式会社 柳川芳鉄工所`,
+    defaultDescription: `【公式】株式会社 柳川芳鉄工所`,
     defaultImage: "src/image/social-card.png",
     siteUrl: "https://yanagawa-yoshi.co.jp",
   },

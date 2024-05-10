@@ -233,13 +233,16 @@
     width: 80%;
     border-radius: 6px;
     margin-bottom: 4rem;
+
+    
     .gridArea {
         padding: 0rem 2rem;
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 180px 1fr 120px;
         @media(max-width: $break-s){ 
             row-gap: 0rem;
             padding: 0rem 0rem;
+            
         }
         justify-items: center;
         align-items: center;
@@ -250,7 +253,6 @@
             grid-column: 1;
             justify-self: center;
             width: 100%;
-            
         }
         .morebutton {
             margin-left: 1rem;
@@ -279,12 +281,16 @@
         .blogCard {
             display: grid;
             grid-template-columns: 1fr 3fr;
+            @media(max-width: $break-s){ 
+                grid-template-columns: 1fr;
+            }
             justify-items: start;
             align-items: center;
             padding: 1rem 0;
             border-bottom: 1px solid rgba($color: $base-color, $alpha: 0.3);
             h3 {
                 align-self: start;
+                line-height: 1.4rem;
             }
         }
     }
