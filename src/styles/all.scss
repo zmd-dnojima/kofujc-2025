@@ -1,8 +1,6 @@
 @import './variables.scss';
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 
 html {
@@ -13,7 +11,7 @@ html {
 body {
     font-family: $baseFont;
     
-    font-size: 1rem;
+    font-size: .9rem;
     @media(max-width: $break-s){ 
         font-size: .8rem;
     }

@@ -57,7 +57,57 @@
             right: 0;
         }
     }
+}
+
+////////////////////////////////////////////////
+
+.news {
+    z-index: 10;
+    margin-top: -7vw;
+    .subtitle {
+        padding: 0rem;
+        grid-row: 1;
+        grid-column: 1;
+        justify-self: center;
+        width: 100%;
+    }
+    .morebutton {
+        margin-left: 1rem;
+        grid-row: 3;
+        grid-column: 1;
+        justify-self: end;
+        margin-right: 4rem;
+        @media(max-width: $break-s){ 
+            grid-row: 3;
+            grid-column: auto;
+            justify-self: end;
+        }
+    }
     
+    .blogArea {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        width: 100%;
+        .blogCard {
+            display: grid;
+            grid-template-rows:1fr;
+            width: 100%;
+            .blogImgContent {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+            justify-items: start;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba($color: $base-color, $alpha: 0.3);
+            h3 {
+                align-self: start;
+                line-height: 1.4rem;
+            }
+        }
+    }
 }
 
 .feature {
@@ -224,74 +274,5 @@
             }
         }
         
-    }
-}
-
-.news {
-    @extend %container;
-    border: 1px solid $base-color;
-    width: 80%;
-    border-radius: 6px;
-    margin-bottom: 4rem;
-
-    
-    .gridArea {
-        padding: 0rem 2rem;
-        display: grid;
-        grid-template-rows: 180px 1fr 120px;
-        @media(max-width: $break-s){ 
-            row-gap: 0rem;
-            padding: 0rem 0rem;
-            
-        }
-        justify-items: center;
-        align-items: center;
-        text-align: left;
-        .subtitle {
-            padding: 0rem;
-            grid-row: 1;
-            grid-column: 1;
-            justify-self: center;
-            width: 100%;
-        }
-        .morebutton {
-            margin-left: 1rem;
-            grid-row: 3;
-            grid-column: 1;
-            justify-self: end;
-            margin-right: 4rem;
-            @media(max-width: $break-s){ 
-                grid-row: 3;
-                grid-column: auto;
-                justify-self: end;
-            }
-        }
-        
-    }
-    .blogArea {
-        font-family: "Noto Sans JP", sans-serif;
-        width: 100%;
-        font-size: rem(12);
-        grid-row: 2;
-        grid-column: 1;
-        @media(max-width: $break-s){ 
-            grid-row: 2;
-            grid-column: auto;
-        }
-        .blogCard {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            @media(max-width: $break-s){ 
-                grid-template-columns: 1fr;
-            }
-            justify-items: start;
-            align-items: center;
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba($color: $base-color, $alpha: 0.3);
-            h3 {
-                align-self: start;
-                line-height: 1.4rem;
-            }
-        }
     }
 }

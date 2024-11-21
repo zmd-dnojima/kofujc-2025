@@ -5,11 +5,12 @@ import * as Scroll from 'react-scroll'
 import { StaticImage } from "gatsby-plugin-image"
 import { useLocation } from "@reach/router"
 import * as style from "../styles/common.module.scss"
-import logo from '../images/logo.svg'
+import logo from '../images/jcilogo.svg'
 
 //fontswesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight,faEnvelope,faPhone } from "@fortawesome/free-solid-svg-icons"
+import { faChevronRight,faEnvelope,faPhone,faLock } from "@fortawesome/free-solid-svg-icons"
+
 
 const Header = () => {
 
@@ -57,10 +58,12 @@ const Header = () => {
         <div className={style.contentInner}>
           <div className={style.logo}><Link to="/"><img src={logo} alt="javascript" /></Link></div>
           <ul>
-            <li><Link to="/articles" className={`${(location.pathname == "/articles/" ? style.selected : '')}`}>ヨシブロ</Link></li>
-            <li><Link to="/aboutus" className={`${(location.pathname == "/aboutus/" ? style.selected : '')}`}>会社案内</Link></li>
-            <li><Link to="/feature" className={`${(location.pathname == "/feature/" ? style.selected : '')}`}>柳川芳鉄工所の強み</Link></li>
+            <li><Link to="/" className={`${(location.pathname == "/articles/" ? style.selected : '')}`}>（一社）甲府青年会議所とは</Link></li>
+            <li><Link to="/" className={`${(location.pathname == "/articles/" ? style.selected : '')}`}>新着情報</Link></li>
+            <li><Link to="/" className={`${(location.pathname == "/joinus/" ? style.selected : '')}`}>入会案内</Link></li>
+            <li><Link to="/" className={`${(location.pathname == "/senior/" ? style.selected : '')}`}>シニアクラブ</Link></li>
             <li className={style.ctaBtn}><Link to="/contact" className={`${(location.pathname == "/contact/" ? style.selected : '')}`}><span><FontAwesomeIcon icon={faEnvelope}/></span>お問い合わせ</Link></li>
+            <li className={style.memberBtn}><Link to="/contact" className={`${(location.pathname == "/contact/" ? style.selected : '')}`}><span><FontAwesomeIcon icon={faLock}/></span>会員ページ</Link></li>
           </ul>
         </div>
       </div>
