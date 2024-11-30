@@ -1,0 +1,38 @@
+@import './variables.scss';
+@import './all.scss';
+@import './common.module.scss';
+
+
+////////////////////////////////////////////////
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    align-items: start;
+    border-bottom: 1px solid #d1d1d1;
+    padding: 3rem 0 2rem 0;
+    .image {
+        grid-column: 1;
+    }
+    .txt {
+        grid-column: 2;
+    }
+
+    @media(max-width: $break-s){ 
+        grid-template-columns: 1fr;
+        .image {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        
+        .txt {
+            grid-column: 1;
+            grid-row: 2;
+        }
+    }
+
+}

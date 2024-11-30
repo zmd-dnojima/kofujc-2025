@@ -3,6 +3,7 @@ import Header from "./header"
 import Footer from "./footer"
 import PageTop from "./pagetop"
 import Menu from "./menu"
+import Sns from "./sns"
 import "../styles/all.scss"
 
 const Layout = (props) => {
@@ -14,6 +15,7 @@ const Layout = (props) => {
       <main>{props.children}</main>
       <Footer />
       <PageTop showBelow={200} />
+      <Sns />
     </>
   )
 }

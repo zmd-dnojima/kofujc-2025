@@ -19,24 +19,24 @@ const Footer = () => {
                 <div className={style.gnavi}>
                     <ul>
                         <li className={style.mainT}><span><FontAwesomeIcon icon={faChevronDown}/></span> 甲府青年会議所とは</li>
-                        <li><Link to="/"><span><FontAwesomeIcon icon={faMinus}/></span> 理事長所信</Link></li>
-                        <li><Link to="/"><span><FontAwesomeIcon icon={faMinus}/></span> 副理事長・専務理事所信</Link></li>
-                        <li><Link to="/"><span><FontAwesomeIcon icon={faMinus}/></span> 理事役員紹介</Link></li>
-                        <li><Link to="/"><span><FontAwesomeIcon icon={faMinus}/></span> 総合計画2021</Link></li>
-                        <li><Link to="/"><span><FontAwesomeIcon icon={faMinus}/></span> これまでの活動</Link></li>
+                        <li><Link to="/policy"><span><FontAwesomeIcon icon={faMinus}/></span> 理事長所信</Link></li>
+                        <li><Link to="/vice-policy"><span><FontAwesomeIcon icon={faMinus}/></span> 副理事長・専務理事所信</Link></li>
+                        <li><Link to="/officers"><span><FontAwesomeIcon icon={faMinus}/></span> 理事役員紹介</Link></li>
+                        <li><Link to="/sougoukeikaku2021"><span><FontAwesomeIcon icon={faMinus}/></span> 総合計画2021</Link></li>
+                        <li><Link to="/history"><span><FontAwesomeIcon icon={faMinus}/></span> これまでの活動</Link></li>
                     </ul>
                     <ul>
                         <li className={style.mainT}><span><FontAwesomeIcon icon={faChevronDown}/></span> 新着情報</li>
                         <li><Link to="/"><span><FontAwesomeIcon icon={faMinus}/></span> 今後の例会・事業</Link></li>
                         <li><Link to="/"><span><FontAwesomeIcon icon={faMinus}/></span> 過去の例会・事業</Link></li>
                         <li><Link to="/"><span><FontAwesomeIcon icon={faMinus}/></span> 理事長所感</Link></li>
-                        <li className={style.mainT}><Link to="/"><span><FontAwesomeIcon icon={faChevronRight}/></span> 入会案内</Link></li>
-                        <li className={style.mainT}><Link to="/"><span><FontAwesomeIcon icon={faChevronRight}/></span> シニアクラブ</Link></li>
+                        <li className={style.mainT}><Link to="/joinus"><span><FontAwesomeIcon icon={faChevronRight}/></span> 入会案内</Link></li>
+                        <li className={style.mainT}><Link to="/senior"><span><FontAwesomeIcon icon={faChevronRight}/></span> シニアクラブ</Link></li>
                     </ul>
                     <ul>
-                        <li className={style.mainT}><Link to="/"><span><FontAwesomeIcon icon={faChevronRight}/></span> アクセス・お問い合わせ</Link></li>
-                        <li className={style.mainT}><Link to="/"><span><FontAwesomeIcon icon={faChevronRight}/></span> プライバシーポリシー</Link></li>
-                        <li className={style.mainT}><Link to="/"><span><FontAwesomeIcon icon={faChevronRight}/></span> ソーシャルメディアポリシー</Link></li>
+                        <li className={style.mainT}><Link to="/contact"><span><FontAwesomeIcon icon={faChevronRight}/></span> アクセス・お問い合わせ</Link></li>
+                        <li className={style.mainT}><Link to="/privacypolicy"><span><FontAwesomeIcon icon={faChevronRight}/></span> プライバシーポリシー</Link></li>
+                        <li className={style.mainT}><Link to="/socialmediapolicy"><span><FontAwesomeIcon icon={faChevronRight}/></span> ソーシャルメディアポリシー</Link></li>
                     </ul>
                 </div>
             </div> 

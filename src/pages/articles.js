@@ -15,42 +15,72 @@ const Blog = (props) => {
     
     return (
         <Layout>
-            <Seo title="NEWS一覧" description="柳川芳鉄工所｜NEWS一覧ページ" />
+            <Seo title="新着情報" description="一般社団法人甲府青年会議所 2025年度 | 新着情報" />
             <div className={style.main}>
 
-                <div className={style.subtitle}>
-                    <h1>NEWS/TOPICS</h1>
-                    <div className={style.txtArea}>ヨシブロ</div>
+                <div className={style.subHeader}>
+                    <p>新着情報</p>
                 </div>
 
-                <div className={style.subContent}>
-            
-                <div className={style.blogArea}>  
-                    {(() => {
-                        const allBlog = [];
-                        const showBlogNum = 10;
-                        var blogAddNum = 0;
-                        for(var i in props.data.allMicrocmsArticles.edges){
+                <div className={style.contentWrap}>
+                    <div className={style.tabNavi}>
+                        <div className={style.tabNaviItem}><Link to="/articles/?tag=all" className={`${(query3['tag'] == undefined || query3['tag'] == "all" ? style.selected : '')}`}>ALL</Link></div>
+                        <div className={style.tabNaviItem}><Link to="/articles/?tag=syokan" className={`${(query3['tag'] == "syokan" ? style.selected : '')}`}>理事長所感</Link></div>
+                        <div className={style.tabNaviItem}><Link to="/articles/?tag=news" className={`${(query3['tag'] == "news" ? style.selected : '')}`}>今後の例会・事業</Link></div>
+                        <div className={style.tabNaviItem}><Link to="/articles/?tag=past" className={`${(query3['tag'] == "past" ? style.selected : '')}`}>過去の例会・事業</Link></div>
+                    </div>
+                    <div className={style.blogArea}>  
+                        {(() => {
+                            const allBlog = [];
+                            const showBlogNum = 10;
+                            var blogAddNum = 0;
+                            for(var i in props.data.allMicrocmsArticles.edges){
+                                
+                                allBlog.push(props.data.allMicrocmsArticles.edges[i])
+
+                                console.log(allBlog[i].node.category[0].tag)
+                                if(allBlog[i].node.category[0].tag && allBlog[i].node.category[0].tag == query3['tag']){
+                                
+                                    blogAddNum +=1
+                                    if(blogAddNum > showBlogNum){
+                                        break
+                                    }
+                                    singleBlog.push(allBlog[i])
+                                }else{
+                                //singleBlog.push(allBlog[i])
+                                }
+                               
+                                if(query3['tag'] == undefined || query3['tag'] == "all" ) {
+                                    if(allBlog[i].node.category[0].tag != "banner" && allBlog[i].node.category[0].tag != "page" ) {
+                                        blogAddNum +=1
+                                        if(blogAddNum > showBlogNum){
+                                            break
+                                        }
+                                        singleBlog.push(allBlog[i])
+                                        
+                                    }
+                                }
+                            }
                             
-                            allBlog.push(props.data.allMicrocmsArticles.edges[i])
-                            singleBlog.push(allBlog[i])
+                        })()}
+                        <div className={style.blogCardWrapper}>
+                        {
+                            singleBlog.map((novel, index) =>(
+                                <Link to={'../' + novel.node.articlesId}>
+                                <div className={style.blogCard} key={index}>                            
+                                    <div className={style.blogImgWrapper}><div className={style.blogImgContent}><img src={novel.node.mainImage.url} alt="card-image" className={style.cardImg} /></div></div>
+                                    <div className={style.blogTags}>#{novel.node.category[0].name}</div>  
+                                    <div className={style.blogDate}>{`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div>
+                                    <div className={style.blogTitle}>{novel.node.title}</div>
+                                    
+                                </div>
+                                </Link>
+                                
+                                
+                            ))
                         }
-                        
-                    })()}
-
-                    {
-                        singleBlog.map((novel, index) =>(
-                            <Link to={'../' + novel.node.articlesId}>
-                            <div className={style.blogCard} key={index}>                            
-                                <div className={style.blogDate}>{`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div>
-                                <h3>{novel.node.title}</h3>
-                            </div>
-                            </Link>
-                            
-                            
-                        ))
-                    }
-                </div>
+                        </div>
+                    </div>
                 </div>
             
                 <ContactArea/>
@@ -71,6 +101,16 @@ export const query = graphql`
                 title
                 body
                 eventDate
+                category {
+                    name
+                    tag
+                }
+                mainImage {
+                    url
+                }
+                bannerImage {
+                    url
+                }
             }
         }
         }

@@ -2,25 +2,30 @@ import * as React from "react"
 import { graphql, Link } from "gatsby"
 import * as style from "../styles/sub.module.scss"
 
+//google map
+import EmbedMap from "../components/embedmap"
+
 
 export default () => (
 
-    <div className={style.subContent}>
-        <h2>ご依頼から納品までの流れ</h2>
+    <div className={style.contentWrap}>
+        <h2>アクセス</h2>
+        <h3>一般社団法人　甲府青年会議所事務局</h3>
+        <br/>
         <div className={style.outline}>
-            <div className={style.materialName}>1. ご相談開始</div><div>お電話・メール・ご来訪　どういった方法でも構いませんのでまずはご相談ください。</div>
-            <div className={style.materialName}>2. 内容確認</div><div>製作依頼→ 手書きイメージでも口頭でも構いませんお打ち合わせをしながら詳細を詰めていきます。<br/>工事依頼→ まずは現場確認をいたしますので大体の内容と現場をお伝えください。</div>
-            <div className={style.materialName}>3. お見積り作成</div><div>お伺いした内容に基づきお見積書を作成いたします。</div>
-            <div className={style.materialName}>4. 製作・実行依頼</div><div>お見積内容にてご承認いただきましたら製作を開始いたします。</div>
-            <div className={style.materialName}>5. 製作・工事→検査</div><div>ご依頼内容に基づき製作 または工事をしてまいります。必要な検査があれば検査まで行います。</div>
-            <div className={style.materialName}>6. ご納品・お引渡し</div><div>条件に合わせて、梱包・郵送を行います。工事の場合は、完了後お客様にご確認を頂き納品といたします。</div>
+            <div className={style.materialName}>住所</div><div>〒400-0858 山梨県甲府市相生2丁目2-17 甲府商工会議所3F</div>
+            <div className={style.materialName}>TEL</div><div>055-235-5423</div>
+            <div className={style.materialName}>FAX</div><div>055-226-9596</div>
+            <div className={style.materialName}>営業時間</div><div>平日１０時～１５時</div>
         </div>
 
-        <h2>ご相談フォーム</h2>
-        <p>こちらのフォームからのお問い合わせに関しては、原則数日以内にメールでご返答させていただきます。なお、お問い合わせの内容次第ではご返答に時間がかかる場合もございます。予めご了承ください。</p>
-        <div><a href="../privacypolicy" target="_blank" style={{textDecoration:"underline"}}>プライバシーポリシー</a></div>
+        <div className={style.gmap} id={"access"}>
+            <EmbedMap><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12967.14761647503!2d138.5696454!3d35.6576215!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601bf9c4a4071a5b%3A0xb0f771b4a1e4e832!2z5LiA6Iis56S-5Zuj5rOV5Lq655Sy5bqc6Z2S5bm05Lya6K2w5omA!5e0!3m2!1sja!2sjp!4v1732688904917!5m2!1sja!2sjp" className={style.gmapInner} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></EmbedMap>
+        </div>
 
-        <form action="https://ssgform.com/s/393qJ3JNXKoU" method="post" enctype="multipart/form-data">
+        <h2>お問い合わせ</h2>
+
+        <form action="https://ssgform.com/s/FYR6tpn2PBnY" method="post" enctype="multipart/form-data">
             
             
             <div>
@@ -34,14 +39,6 @@ export default () => (
             <div>
                 <label htmlFor="tel"><span className={style.required}>必須</span>電話番号</label>
                 <input type="tel" id="電話番号" name="phone" required="required" />
-            </div>
-            <div>
-                <label htmlFor="campanyname">会社名</label>  
-                <input type="text" name="campanyname" id="campanyname"/>
-            </div>
-            <div className={style.tenpu}>
-                <label htmlFor="campanyname">参考資料<span>※5MBまで</span></label>  
-                <input type="file" name="参考資料" />
             </div>
 
             <div>

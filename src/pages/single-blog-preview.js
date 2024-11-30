@@ -22,10 +22,10 @@ const SingleBlogPreview = (props) => {
     useEffect(() => {
         if (!postData) {
             fetch(
-                `https://yanagawayoshi.microcms.io/api/v1/articles/${contentId}?draftKey=${draftKey}`,
+                `https://kofujc2025.microcms.io/api/v1/articles/${contentId}?draftKey=${draftKey}`,
             {
                 headers: {
-                "X-API-KEY": "0KHCwJD4GocMq9VX4EIhCWXQxw6OlhJVgosP",
+                "X-API-KEY": "A52cGJsz6I2zQ2CqESuZc6zTf3LimFvGQIwW",
                 },
             }
             )
@@ -51,14 +51,12 @@ const SingleBlogPreview = (props) => {
     return(
         <Layout>
 
-            <div className={style.subtitle}>
-                <h1>NEWS</h1>
-                <div className={style.txtArea}>ヨシブロ</div>
+            <div className={style.subHeader}>
+                <p>{postData?.title}</p>   
             </div>
             <div className={style.singlePage}>
-                <div className={style.subContent}>
-                    <h1 className={style.subTitle}>{postData?.title}</h1>        
-                    <div className={style.blogDate}>{`${postData?.eventDate.substring(0, postData?.eventDate.indexOf("T"))}`}</div>
+                <div className={style.subContent}>  
+                    {/* <div className={style.blogDate}>{`${postData?.eventDate.substring(0, postData?.eventDate.indexOf("T"))}`}</div> */}
                     <div className={style.contentInner} dangerouslySetInnerHTML={{ __html: postData?.body }} />  
                 </div>
             </div>

@@ -1,0 +1,33 @@
+@import './variables.scss';
+@import './all.scss';
+@import './common.module.scss';
+
+
+////////////////////////////////////////////////
+
+.contentWrap {
+    img {
+        display: block;
+        padding: 2rem 0;
+    }
+    a {
+        text-decoration: underline!important;
+    }
+}
+
+.blueBack {
+    background: rgba(0, 151, 215, 0.1);
+    padding: 0.6rem 1rem 0.2rem 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    p {
+        margin-left: 1rem;
+    }
+}
+
+.cap {
+    margin-top: 4rem;
+}
+
+
+

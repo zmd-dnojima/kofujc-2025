@@ -8,13 +8,12 @@ import * as style from "../styles/sub.module.scss"
 const Thankyou = () => {
     return(
         <Layout>
-            <Seo title="お問い合わせ完了" description="柳川芳鉄工所｜お問い合わせありがとうございます。" />
+            <Seo title="お問い合わせ完了" description="一般社団法人甲府青年会議所 2025年度 | お問い合わせ完了" />
             <div className={style.main}>
-            <div className={style.subtitle}>
-                <h1>CONTACT</h1>
-                <div className={style.txtArea}>お問い合わせ</div>
+            <div className={style.subHeader}>
+                <p>お問い合わせありがとうございます</p>
             </div>
-            <div className={style.subContent}>
+            <div className={style.contentWrap}>
                     <p>
                     お問い合わせありがとうございます。<br/>
                     お送り頂きました内容を確認の上、原則数日以内にに折り返しご連絡させて頂きます。<br/>

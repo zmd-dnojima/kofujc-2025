@@ -17,14 +17,13 @@ const ContactArea = (props) => {
         <div className={style.contactArea}>
                     {/* <div className={style.bg}><StaticImage src="../images/contact_bg.jpg" alt="contact_bg" placeholder="blurred" quality ={90} layout="fullWidth"/></div> */}
                     <div className={style.gridbox}>
-                        <div className={style.telbox}>
-                            <div className={style.telNumber}><Link to="tel:0552755141"><span><FontAwesomeIcon icon={faPhone}/></span> 055-275-5141</Link></div>
-                            <div className={style.faxNumber}>FAX：055-275-5143</div>
+                        <div className={style.contactTxt}>
+                            <div className={style.txt_1}>その一歩で、<br/>君が変わる、<br/>まちが変わる</div>
+                            <div className={style.txt_2}>一般社団法人甲府青年会議所は<br/>2025年度入会募集しております</div>
                         </div>
                         <Link to="/contact/">
                         <div className={style.btnbox}>
-                                <div className={style.envelop}><span><FontAwesomeIcon icon={faEnvelope}/></span> お問い合わせ</div>
-                                <div className={style.chev}><span><FontAwesomeIcon icon={faChevronRight}/></span></div>
+                                <div className={style.envelop}>入会案内</div>
                         </div>
                         </Link>
                     </div>

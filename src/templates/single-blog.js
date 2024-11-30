@@ -18,18 +18,17 @@ const SingleBlog = (props) => {
     return(
       <Layout>
             <Seo title={props.data.microcmsArticles.title} description={props.data.microcmsArticles.title} /> 
-            <div className={style.subtitle}>
-                <h1>NEWS</h1>
-                <div className={style.txtArea}>ヨシブロ</div>
+            <div className={style.subHeader}>
+                <p>{props.data.microcmsArticles.title}</p>   
             </div>
+            <div className={style.contentWrap}>
             <div className={style.singlePage}>
                 <div className={style.subContent}>
-                    <h1 className={style.subTitle}>{props.data.microcmsArticles.title}</h1>         
-                    <div className={style.blogDate}>{`${props.data.microcmsArticles.eventDate.substring(0, props.data.microcmsArticles.eventDate.indexOf("T"))}`}</div>
+                    {/* <div className={style.blogDate}>{`${props.data.microcmsArticles.eventDate.substring(0, props.data.microcmsArticles.eventDate.indexOf("T"))}`}</div> */}
                     <div className={style.contentInner} dangerouslySetInnerHTML={{ __html: props.data.microcmsArticles.body }} />  
-
-                    <div className={style.backButton}><Link to={"../articles/"}>一覧ページへ戻る</Link></div>
+                    {/* <div className={style.backButton}><Link to={"../articles/"}>新着情報一覧へ</Link></div> */}
                 </div>
+            </div>
             </div>
             <ContactArea/>
         </Layout>                    

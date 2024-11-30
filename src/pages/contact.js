@@ -8,10 +8,9 @@ import DummyForm from "../components/dummyForm"
 const Contact = () => {
     return (
         <Layout>
-            <Seo title="お問い合わせ" description="柳川芳鉄工所｜お問い合わせページです。" />
-            <div className={style.subtitle}>
-                <h1>CONTACT</h1>
-                <div className={style.txtArea}>お問い合わせ</div>
+            <Seo title="お問い合わせ" description="一般社団法人甲府青年会議所 2025年度｜お問い合わせページです。" />
+            <div className={style.subHeader}>
+                <p>お問い合わせ</p>
             </div>
             <DummyForm/>
             

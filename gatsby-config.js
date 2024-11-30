@@ -9,7 +9,7 @@ module.exports = {
     defaultTitle: `一般社団法人甲府青年会議所 2025年度 - Here We Go! ～その一歩で君が変わる、まちが変わる～`,
     defaultDescription: `一般社団法人甲府青年会議所は「修練」「奉仕」「友情」の３信条のもと、「明るい豊かな社会の実現」を目指し「まちづくり」「ひとづくり」「組織づくり」をしている団体です。`,
     defaultImage: "src/image/social-card.png",
-    siteUrl: "https://yanagawa-yoshi.co.jp",
+    siteUrl: "https://kofujc2025.netlify.app",
   },
   plugins: [
     `gatsby-plugin-sass`, 
@@ -70,7 +70,7 @@ module.exports = {
         background_color: `#663399`,
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo_short.svg`, // This path is relative to the root of the site.
+        icon: `src/images/jcilogo.svg`, // This path is relative to the root of the site.
       },
     },
     // {
