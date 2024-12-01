@@ -190,6 +190,15 @@
 .aboutus {
     padding: 4rem 0;
     position: relative;
+
+    .brpc {
+        display: grid!important;
+        @media(max-width: $break-s){ display: none!important; }
+    }
+    .brsp {
+        display: none!important;
+        @media(max-width: $break-s){ display: grid!important; }
+    }
     
     .aboutusBtns {
         display: grid;
