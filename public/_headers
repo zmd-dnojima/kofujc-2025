@@ -1,0 +1,57 @@
+## Created with gatsby-plugin-netlify
+
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: same-origin
+/framework-9291c9963fed7d9931de.js
+  Cache-Control: public, max-age=31536000, immutable
+/styles.144e241168e6e6e971a7.css
+  Cache-Control: public, max-age=31536000, immutable
+/c16184b3-1404966e2a843a578bf3.js
+  Cache-Control: public, max-age=31536000, immutable
+/2cca2479-5cb1d441ee10b82247e1.js
+  Cache-Control: public, max-age=31536000, immutable
+/commons-d8b1e71b1482e8ca0894.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-templates-single-blog-js-cdd5d9d06ebb7d7dd3be.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-404-js-45b987b17ffc156128f9.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-articles-js-f311e76a57882418a912.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-contact-js-84e0f739f3955e188511.js
+  Cache-Control: public, max-age=31536000, immutable
+/ca751cfbebf26073eaae5781c7a2ad2e00d3cbbd-069d5a62ef0cfa96777c.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-history-js-c2339ead5f161e339029.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-index-js-66e507182aa88e3a9bc1.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-joinus-js-188dfe2d339acecb232a.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-officers-js-bf89bfe499653fa98819.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-policy-js-1490160ef59d6d8cc45d.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-privacypolicy-js-60b95862f59a537a07db.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-single-blog-preview-js-f9e3920ca95674b4317e.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-socialmediapolicy-js-680ea67eea6cb904affd.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-sougoukeikaku-2021-js-cc066249d301c422c487.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-thankyou-js-1b36de9b1ce5fabb7cf8.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-vice-policy-js-ddd70a7d5ca6c1c94be5.js
+  Cache-Control: public, max-age=31536000, immutable
+/webpack-runtime-c76fadc01102c4b5b810.js
+  Cache-Control: public, max-age=31536000, immutable
+/app-bcd1eed93c49ed6d0b66.js
+  Cache-Control: public, max-age=31536000, immutable
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+/sw.js
+  Cache-Control: no-cache
