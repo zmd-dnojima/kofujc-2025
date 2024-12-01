@@ -206,6 +206,9 @@
             position: relative;
             z-index: 1;
             color: #fff;
+            .gatsby-image-wrapper-constrained {
+                display: none;
+            }
             .aBtnTxt {
                 position: absolute;
                 left: 1rem;
