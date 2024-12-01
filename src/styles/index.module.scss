@@ -16,7 +16,8 @@
         // -webkit-mask-image: -webkit-linear-gradient(top, transparent 0%, #000 0%, #000 70%, transparent 100%);
         // mask-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, #000), color-stop(70%, #000), to(transparent));
         // mask-image: linear-gradient(to bottom, transparent 0%, #000 0%, #000 70%, transparent 100%);
-        @include gradient(135deg, $base-color, $active-color);
+        // @include gradient(135deg, $base-color, $active-color);
+        background: #b9b9b9;
         height: 100vh;
         width: 100%;
         .mainImgInner {
@@ -215,6 +216,16 @@
                     font-size: 1.2rem;
                     font-weight: 600;
                     margin-bottom: 0;
+                }
+            }
+
+            @media(max-width: $break-s){ 
+                .brsp {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
                 }
             }
         }

@@ -14,7 +14,7 @@ const Layout = (props) => {
       <Header />
       <main>{props.children}</main>
       <Footer />
-      <PageTop showBelow={200} />
+      <PageTop showBelow={50} />
       <Sns />
     </>
   )

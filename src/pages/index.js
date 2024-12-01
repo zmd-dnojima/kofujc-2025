@@ -151,32 +151,32 @@ const Index = (props) => {
                     <div className={style.aboutusBtns}>
                         <div className={style.aBtn}>
                             <Link to="/">
-                                <StaticImage src="../images/a1.jpg" alt="理事役員紹介" placeholder="blurred" quality ={90} className={style.brpc}/>
-                                <StaticImage src="../images/a1_sp.jpg" alt="理事役員紹介" placeholder="blurred" quality ={90} className={style.brsp}/>
+                                <div className={style.brpc}><StaticImage src="../images/a1.jpg" alt="理事役員紹介" placeholder="blurred" quality ={90} /></div>
+                                <div className={style.brsp}><StaticImage src="../images/a1_sp.jpg" alt="理事役員紹介" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                                 <div className={style.aBtnTxt}><span>理事役員紹介</span>2025年度の活動を担う、〇〇名の理事役員を紹介します。</div>
                                 <div className={style.aBtnArrow}><FontAwesomeIcon icon={faChevronRight}/></div>
                             </Link>
                         </div>
                         <div className={style.aBtn}>
                             <Link to="/">
-                                <StaticImage src="../images/a2.jpg" alt="総合計画2021" placeholder="blurred" quality ={90} className={style.brpc}/>
-                                <StaticImage src="../images/a2_sp.jpg" alt="総合計画2021" placeholder="blurred" quality ={90} className={style.brsp}/>
+                                <div className={style.brpc}><StaticImage src="../images/a2.jpg" alt="総合計画2021" placeholder="blurred" quality ={90} /></div>
+                                <div className={style.brsp}><StaticImage src="../images/a2_sp.jpg" alt="総合計画2021" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                                 <div className={style.aBtnTxt}><span>総合計画2021</span>中長期計画である総合計画2021は、2025年度に4年目を迎えます。</div>
                                 <div className={style.aBtnArrow}><FontAwesomeIcon icon={faChevronRight}/></div>
                             </Link>
                         </div>
                         <div className={style.aBtn}>
                             <Link to="/">
-                                <StaticImage src="../images/a3.jpg" alt="これまでの活動" placeholder="blurred" quality ={90} className={style.brpc}/>
-                                <StaticImage src="../images/a3_sp.jpg" alt="これまでの活動" placeholder="blurred" quality ={90} className={style.brsp}/>
+                                <div className={style.brpc}><StaticImage src="../images/a3.jpg" alt="これまでの活動" placeholder="blurred" quality ={90} /></div>
+                                <div className={style.brsp}><StaticImage src="../images/a3_sp.jpg" alt="これまでの活動" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                                 <div className={style.aBtnTxt}><span>これまでの活動</span>2024年以前のホームページをご覧いただけます。</div>
                                 <div className={style.aBtnArrow}><FontAwesomeIcon icon={faChevronRight}/></div>
                             </Link>
                         </div>
                         <div className={style.aBtn}>
                             <Link to="/">
-                                <StaticImage src="../images/a4.jpg" alt="シニアクラブ" placeholder="blurred" quality ={90} className={style.brpc}/>
-                                <StaticImage src="../images/a4_sp.jpg" alt="シニアクラブ" placeholder="blurred" quality ={90} className={style.brsp}/>
+                                <div className={style.brpc}><StaticImage src="../images/a4.jpg" alt="シニアクラブ" placeholder="blurred" quality ={90} /></div>
+                                <div className={style.brsp}><StaticImage src="../images/a4_sp.jpg" alt="シニアクラブ" placeholder="blurred" quality ={90} layout="fullWidth" /></div>
                                 <div className={style.aBtnTxt}><span>シニアクラブ</span>甲府青年会議所シニアクラブの情報はこちら</div>
                                 <div className={style.aBtnArrow}><FontAwesomeIcon icon={faChevronRight}/></div>
                             </Link>
