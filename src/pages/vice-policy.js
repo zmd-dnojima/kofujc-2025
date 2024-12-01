@@ -27,7 +27,7 @@ const VicePolicy = (props) => {
                     
                     <div className={style.grid}>
                         <div className={style.image}>
-                            <StaticImage src="../images/hagihararyo.jpg" alt="main" placeholder="blurred" quality ={90}  />
+                            <StaticImage src="../images/m_hagihararyo.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <p>副委員長<br/><span>萩原　亮</span></p>
                         </div>
                         <div className={style.txt}>
@@ -52,7 +52,7 @@ const VicePolicy = (props) => {
 
                     <div className={style.grid}>
                         <div className={style.image}>
-                            <StaticImage src="../images/hagihararyo.jpg" alt="main" placeholder="blurred" quality ={90}  />
+                            <StaticImage src="../images/m_hagihararyo.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <p>副委員長<br/><span>萩原　亮</span></p>
                         </div>
                         <div className={style.txt}>
@@ -77,7 +77,7 @@ const VicePolicy = (props) => {
 
                     <div className={style.grid}>
                         <div className={style.image}>
-                            <StaticImage src="../images/hagihararyo.jpg" alt="main" placeholder="blurred" quality ={90}  />
+                            <StaticImage src="../images/m_hagihararyo.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <p>副委員長<br/><span>萩原　亮</span></p>
                         </div>
                         <div className={style.txt}>

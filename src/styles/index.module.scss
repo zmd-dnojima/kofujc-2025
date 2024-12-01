@@ -47,7 +47,8 @@
     padding: 1rem 0;
     height: 100%;
     .contentWrap {
-        padding: 2rem 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
     .bg {
         @include center(xy);
@@ -63,7 +64,7 @@
         column-gap: 1.4rem;
         row-gap: 1.4rem;
         justify-content: center;
-        padding-bottom: 5rem;
+        padding-bottom: 2rem;
         .blogImgContent {
             width: 100%;
             img {
@@ -79,15 +80,12 @@
 ////////////////////////////////////////////////
 
 .news {
-    padding-bottom: 6rem;
+    padding-bottom: 2rem;
     .newsTitle {
         display: flex;
         align-items: center;
         column-gap: 40px;
-        padding-bottom: 4rem;
-        .subtitle{
-            // padding: 2rem 0;
-        }
+        padding-bottom: 2rem;
         @media(max-width: $break-s){ 
             display: block;
         }
@@ -120,7 +118,16 @@
 
             .blogTags {                
                 font-size: rem(10);
-
+            }
+            .blogTitle {                
+                width: 100%;
+                overflow: hidden;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                /* ブラウザがサポートしていない場合のフェールセーフ */
+                // max-height: 24px;
             }
         }
     }
@@ -130,25 +137,20 @@
 
 .rijicho {
     position: relative;
-    height: 100%;
     clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% calc(100% - 4vw), 0 100%);
     overflow: hidden;
-    background-attachment: fixed;
-    background-image: url('../images/kofu.jpg') ;
-    background-position: center;
-    
+
     .inner {
-        
         background: rgba($color: #fff, $alpha: 0.9);
-        margin: 8rem 0;
-        padding: 4rem 2rem;
+        margin: 4rem 0;
+        padding: 2rem 1rem;
         .rijichoName {
             text-align: right;
             margin-top: 2rem;
         }
         .slogan {
             text-align: center;
-            padding: 2rem 0;
+            padding-bottom: 2rem;
             img {
                 width: 100%;
                 max-width: 400px;
@@ -166,12 +168,26 @@
             border-radius: 0.2rem;
             color: #fff;            
         }
-        
     }
 }
 
+.rijicho::before {
+    content:"";
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height:100vh;
+    background-repeat:no-repeat;
+    background-position:50% 100%;
+    background-image: url('../images/kofu.jpg') ;
+    background-size:cover;
+}
+
 .aboutus {
-    padding: 6rem 0;
+    padding: 4rem 0;
     position: relative;
     
     .aboutusBtns {
@@ -227,7 +243,7 @@
 .cardWrap {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    margin: 4rem auto;
+    margin: 2rem auto;
     text-align: center;
     width: 100%;
     max-width: 1080px;

@@ -172,7 +172,7 @@
     @media(max-width: $break-s) { 
         grid-template-columns: repeat(2, 1fr);
     }
-    column-gap: 1.2vw;
+    column-gap: 1.2rem;
     row-gap: 1rem;
     .blogCard {
         width: 100%;
@@ -197,6 +197,14 @@
             }
             .blogTitle {
                 font-size: rem(14);
+                width: 100%;
+                overflow: hidden;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                /* ブラウザがサポートしていない場合のフェールセーフ */
+                // max-height: 24px;
             }
 
             .blogTags {

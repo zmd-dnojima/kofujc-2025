@@ -9,11 +9,14 @@
 ////////////////////////////////////////////////
 
 
+
 .subHeader {
     position: relative;
     width: 100%;
-    padding: 6rem 0;
+    padding-top: 14rem;
+    padding-bottom: 2rem;
     background-image: url('../images/contactBg.jpg') ;
+    @media(max-width: $break-s){ padding-top: 10rem;  }
     // background-color:rgba(255,255,255,0.8);
     // background-blend-mode:lighten;
     background-repeat: no-repeat;
@@ -33,10 +36,16 @@
     position: relative;
     text-align: center;
     font-size: rem(26);
-    margin: 4rem 0 1rem 0;
+    margin: 2rem 0 2rem 0;
+    
     display: inline-block;
     padding: 0 2rem;
     line-height: 2.6rem;
+    @media(max-width: $break-s){
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .historyTitle::before, .historyTitle::after {
@@ -120,15 +129,7 @@
 
 .activity {
     background: #f3f3f3;
-    .historyTitle {
-        position: relative;
-        text-align: center;
-        font-family: inherit;
-        margin: 2rem 0 3rem 0;
-        display: inline-block;
-        padding: 0 2rem;
-        line-height: 2.6rem;
-    }
+    
     .gridWrap {
         display: grid;
         grid-template-columns: repeat( auto-fill, minmax(300px,1fr) ) ; 
@@ -165,16 +166,6 @@
 
 .graduate {
     background: #fff;
-    
-    .historyTitle {
-        position: relative;
-        text-align: center;
-        font-family: inherit;
-        margin: 2rem 0 3rem 0;
-        display: inline-block;
-        padding: 0 2rem;
-        line-height: 2.6rem;
-    }
     .gridWrap {
         display: grid;
         grid-template-rows: 1fr; 
@@ -216,6 +207,10 @@
             .intro {
                 font-size: rem(12);
                 line-height: rem(20);
+                @media(max-width: $break-s){ 
+                    text-align: center;
+                    padding-top: 1rem;
+                }
             }
             p { 
                 position: relative;
@@ -275,6 +270,29 @@
             border-top: solid 1px #fff;
             border-bottom: solid 1px #fff;
         }
+
+        .cyomei {
+            max-width: 500px;
+            margin: 0 auto;
+            p {
+                width: 100%;
+                text-align: left;
+            }
+            p span {
+                display: flex;
+                align-items: center; /* 垂直中心 */
+                justify-content: end; /* 水平中心 */
+            }
+            p span:before {
+                content: "";
+                border-top: 1px solid rgba($color: #fff, $alpha: 0.4);
+                width: 3rem; /* 線の長さ */
+                text-align: right;
+                margin-right: .6rem;
+    
+            }
+        }
+        
         
     } 
 }
@@ -425,13 +443,11 @@
 .merit {
     background: #f3f3f3;
     .historyTitle {
-        position: relative;
-        text-align: center;
-        font-family: inherit;
-        margin: 2rem 0 3rem 0;
-        display: inline-block;
-        padding: 0 2rem;
-        line-height: 2.6rem;
+        line-height: 2rem;
+        span {
+            display: block;
+            font-size: rem(14);
+        }
     }
     .gridWrap {
         display: grid;

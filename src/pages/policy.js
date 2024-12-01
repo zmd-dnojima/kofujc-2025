@@ -27,12 +27,12 @@ const Policy = (props) => {
                     
                     <div className={style.grid}>
                         <div className={style.image}>
-                            <StaticImage src="../images/hagihararyo.jpg" alt="main" placeholder="blurred" quality ={90}  />
+                            <StaticImage src="../images/m_hagihararyo.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <p>一般社団法人甲府青年会議所<br/>第74代理事長<br/><span>萩原　亮</span></p>
                         </div>
                         <div className={style.slogan}>
                             <div className={style.sloganImg}><img src={slogan} alt="javascript" /></div>
-                            <div className={style.frameBox}>HERE WE GO!<br/>その一歩で、君が変わる、まちが変わる</div>
+                            <div className={style.frameBox}>HERE WE GO!<br/>その一歩で、君が変わる、<br className={style.brsp}/>まちが変わる</div>
                         </div>
                         <div className={style.txt}>
                             <p>青年よ、心に火を灯し、自らの未来を誓おう。<br/>

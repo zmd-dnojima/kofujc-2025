@@ -25,16 +25,16 @@ const Menu = () => {
           <div className={`${style.menuInner} ${(active ? style.menuShow : '')}`}>
             <ul>
               <li><Link to="/">ホーム</Link></li>
-              <li>(一社)甲府青年会議所とは</li>
+              <li><span>(一社)甲府青年会議所とは</span></li>
               <li className={style.subMenu}><Link to="/policy">理事長所信</Link></li>
               <li className={style.subMenu}><Link to="/vice-policy">副理事長・専務理事所信</Link></li>
               <li className={style.subMenu}><Link to="/officers">理事役員紹介</Link></li>
               <li className={style.subMenu}><Link to="/sougoukeikaku2021">総合計画2021</Link></li>
               <li className={style.subMenu}><Link to="/history">これまでの活動</Link></li>
-              <li><Link to="/">新着情報</Link></li>
-              <li className={style.subMenu}><Link to="/">今後の例会事業</Link></li>
-              <li className={style.subMenu}><Link to="/">過去の例会事業</Link></li>
-              <li className={style.subMenu}><Link to="/">理事長所感</Link></li>
+              <li><Link to="/articles">新着情報</Link></li>
+              <li className={style.subMenu}><Link to="/articles/?tag=news" onClick={classToggle} >今後の例会事業</Link></li>
+              <li className={style.subMenu}><Link to="/articles/?tag=past" onClick={classToggle} >過去の例会事業</Link></li>
+              <li className={style.subMenu}><Link to="/articles/?tag=syokan" onClick={classToggle} >理事長所感</Link></li>
               <li><Link to="/joinus">入会案内</Link></li>
               <li><Link to="/senior">シニアクラブ</Link></li>
               <li><Link to="/contact">アクセス・お問い合わせ</Link></li>

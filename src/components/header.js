@@ -10,7 +10,8 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 //fontswesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight,faEnvelope,faPhone,faLock } from "@fortawesome/free-solid-svg-icons"
+import { faChevronRight,faPhone } from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope,faUser } from "@fortawesome/free-regular-svg-icons"
 import { color } from 'framer-motion'
 
 
@@ -29,13 +30,15 @@ const Header = () => {
     //   if (show) setScroll(false)
     // }
      
-  if(showNum != 0){
-    if (document.documentElement.scrollTop < showNum) {
-      setScroll(true)
-    }else{
-      setScroll(false)
-    }
-  }  
+  // if(showNum != 0){
+  //   if (document.documentElement.scrollTop < showNum) {
+  //     setScroll(true)
+  //   }else{
+  //     setScroll(false)
+  //   }
+  // } 
+  
+  
     showNum = document.documentElement.scrollTop;
   }
   useEffect(() => {
@@ -50,9 +53,10 @@ const Header = () => {
   return (
 
     <header className={style.headerWrapper}>
-       <div className={`${style.container} ${(show ? style.active : '')}`}>
+       {/* <div className={`${style.container} ${(show ? style.active : '')}`}> */}
+       <div className={`${style.container} ${style.active}`}>
         
-        <div className={style.contentInner}>
+        <div className={style.innerPc}>
           <div className={style.logo}><Link to="/"><img src={logo} alt="javascript" /></Link></div>
           <ul>
             <li>
@@ -81,10 +85,22 @@ const Header = () => {
             <li><Link to="/articles" className={`${(location.pathname == "/articles/" ? style.selected : '')}`}>新着情報</Link></li>
             <li><Link to="/joinus" className={`${(location.pathname == "/joinus/" ? style.selected : '')}`}>入会案内</Link></li>
             <li><Link to="/senior" className={`${(location.pathname == "/senior/" ? style.selected : '')}`}>シニアクラブ</Link></li>
-            <li className={style.ctaBtn}><Link to="/contact" className={`${(location.pathname == "/contact/" ? style.selected : '')}`}><span><FontAwesomeIcon icon={faEnvelope}/></span>お問い合わせ</Link></li>
-            <li className={style.memberBtn}><Link to="https://member.kofujc.com/?password-protected=login&redirect_to=https%3A%2F%2Fmember.kofujc.com%2F" target="_blank"><span><FontAwesomeIcon icon={faLock}/></span>会員ページ</Link></li>
           </ul>
-        </div>
+          <div className={style.ctaWrap}>
+          <div className={style.ctaBtn}><Link to="/contact" className={`${(location.pathname == "/contact/" ? style.selected : '')}`}><FontAwesomeIcon icon={faEnvelope}/><span>お問い合わせ</span></Link></div>
+          <div className={style.memberBtn}><Link to="https://member.kofujc.com/?password-protected=login&redirect_to=https%3A%2F%2Fmember.kofujc.com%2F" target="_blank"><FontAwesomeIcon icon={faUser}/><span>会員ページ</span></Link></div>
+          </div>
+          
+        </div>{/* <PC版> */}
+
+        <div className={style.innerSp}>
+          <div className={style.logo}><Link to="/"><img src={logo} alt="javascript" /></Link></div>
+          <div className={style.ctaWrap}>
+            <div className={style.ctaBtn}><Link to="/contact" className={`${(location.pathname == "/contact/" ? style.selected : '')}`}><FontAwesomeIcon icon={faEnvelope}/></Link></div>
+            <div className={style.memberBtn}><Link to="https://member.kofujc.com/?password-protected=login&redirect_to=https%3A%2F%2Fmember.kofujc.com%2F" target="_blank"><FontAwesomeIcon icon={faUser}/></Link></div>
+          </div>
+          
+        </div>{/* <SP版> */}
       </div>
 
       

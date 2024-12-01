@@ -77,11 +77,12 @@ h2::after {
 
     .frameBox {
         margin-top: 4rem;
-        padding: 30px;
+        padding: 1rem;
         position: relative;
         text-align: center;
         font-size: rem(20);
         line-height: 2rem;
+        font-weight: 600;
     }
     
     .frameBox::before, .frameBox::after {
