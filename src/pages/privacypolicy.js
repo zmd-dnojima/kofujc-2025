@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as style from "../styles/privacypolicy.module.scss"
 
-import Pdf from '../Documents/hoyu_data_kaiji_seikyusho-1.pdf';
+import Pdf from '../Documents/personaldata.pdf';
 
 
 const PrivacyPolicy = () => {
