@@ -10,12 +10,12 @@ import { faFacebookF,faInstagram,faLine,faXTwitter } from "@fortawesome/free-bra
 const Sns = () => {
 
   return (
-    <sns className={style.snsWrapper}>
-      <Link to="https://www.facebook.com/kofujc" target={"_blank"}><div className={style.faceIcon}><span><FontAwesomeIcon icon={faFacebookF}/></span></div></Link>
-      <Link to="https://www.instagram.com/kofujc/" target={"_blank"}><div className={style.instaIcon}><span><FontAwesomeIcon icon={faInstagram}/></span></div></Link>
-      <Link to="https://liff.line.me/1645278921-kWRPP32q/?accountId=kofujc" target={"_blank"}><div><span><FontAwesomeIcon icon={faLine}/></span></div></Link>
-      <Link to="https://x.com/jci_kofu" target={"_blank"}><div><span><FontAwesomeIcon icon={faXTwitter}/></span></div></Link>
-    </sns>
+    <div className={style.snsWrapper}>
+      <a href="https://www.facebook.com/kofujc" target={"_blank"}><div className={style.faceIcon}><span><FontAwesomeIcon icon={faFacebookF}/></span></div></a>
+      <a href="https://www.instagram.com/kofujc/" target={"_blank"}><div className={style.instaIcon}><span><FontAwesomeIcon icon={faInstagram}/></span></div></a>
+      <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=kofujc" target={"_blank"}><div><span><FontAwesomeIcon icon={faLine}/></span></div></a>
+      <a href="https://x.com/jci_kofu" target={"_blank"}><div><span><FontAwesomeIcon icon={faXTwitter}/></span></div></a>
+    </div>
   )
 }
 

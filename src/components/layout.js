@@ -4,6 +4,7 @@ import Footer from "./footer"
 import PageTop from "./pagetop"
 import Menu from "./menu"
 import Sns from "./sns"
+
 import "../styles/all.scss"
 
 const Layout = (props) => {
@@ -16,6 +17,7 @@ const Layout = (props) => {
       <Footer />
       <PageTop showBelow={50} />
       <Sns />
+      
     </>
   )
 }

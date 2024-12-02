@@ -22,6 +22,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Loader from "../components/loader"
 
 import * as style from "../styles/index.module.scss"  
 import ContactArea from "../components/contactArea"
@@ -36,8 +37,11 @@ const Index = (props) => {
     const query3 = queryString.parse(search);
 
     return (
+        
         <Layout>
+            
             <Seo title="一般社団法人甲府青年会議所 2025年度 - Here We Go! ～その一歩で君が変わる、まちが変わる～" description="一般社団法人甲府青年会議所 2025年度 | ホーム" />
+            <Loader />
             <div className={style.main}>
 
 
@@ -141,7 +145,7 @@ const Index = (props) => {
                                 <div className={style.slogan}><img src={slogan} alt="javascript" /></div>
                                 <div>ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。</div>
                                 <div className={style.rijichoName}>一般社団法人甲府⻘年会議所<br/>第〇〇代理事長 萩原 亮</div>
-                                <div className={style.btn}><Link to="/">理事長所信</Link></div>
+                                <div className={style.btn}><Link to="/policy">理事長所信</Link></div>
                             </div>
                     </div>
                 </div>

@@ -58,6 +58,12 @@
             align-self: start;
         }
     }
+
+    .loading {
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 10rem;
+    }
 }
 
 
@@ -132,7 +138,7 @@
 
 .tabNavi {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
     @media(max-width: $break-s) { 
@@ -259,5 +265,7 @@
                 margin-top: 1rem;
             }
     }
+
+    
     
 }

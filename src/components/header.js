@@ -88,7 +88,7 @@ const Header = () => {
           </ul>
           <div className={style.ctaWrap}>
           <div className={style.ctaBtn}><Link to="/contact" className={`${(location.pathname == "/contact/" ? style.selected : '')}`}><FontAwesomeIcon icon={faEnvelope}/><span>お問い合わせ</span></Link></div>
-          <div className={style.memberBtn}><Link to="https://member.kofujc.com/?password-protected=login&redirect_to=https%3A%2F%2Fmember.kofujc.com%2F" target="_blank"><FontAwesomeIcon icon={faUser}/><span>会員ページ</span></Link></div>
+          <div className={style.memberBtn}><a href="https://member.kofujc.com/?password-protected=login&redirect_to=https%3A%2F%2Fmember.kofujc.com%2F" target="_blank"><FontAwesomeIcon icon={faUser}/><span>会員ページ</span></a></div>
           </div>
           
         </div>{/* <PC版> */}
@@ -97,7 +97,7 @@ const Header = () => {
           <div className={style.logo}><Link to="/"><img src={logo} alt="javascript" /></Link></div>
           <div className={style.ctaWrap}>
             <div className={style.ctaBtn}><Link to="/contact" className={`${(location.pathname == "/contact/" ? style.selected : '')}`}><FontAwesomeIcon icon={faEnvelope}/></Link></div>
-            <div className={style.memberBtn}><Link to="https://member.kofujc.com/?password-protected=login&redirect_to=https%3A%2F%2Fmember.kofujc.com%2F" target="_blank"><FontAwesomeIcon icon={faUser}/></Link></div>
+            <div className={style.memberBtn}><a href="https://member.kofujc.com/?password-protected=login&redirect_to=https%3A%2F%2Fmember.kofujc.com%2F" target="_blank"><FontAwesomeIcon icon={faUser}/></a></div>
           </div>
           
         </div>{/* <SP版> */}

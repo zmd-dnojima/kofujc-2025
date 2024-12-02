@@ -104,7 +104,8 @@
         transition: all 0.4s ease-in-out;
         .loaderInner {
             img {
-                width: 200px;
+                width: 100%;
+                max-width: 600px;
             }
         }
     }
