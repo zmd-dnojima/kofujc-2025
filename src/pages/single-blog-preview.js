@@ -54,13 +54,15 @@ const SingleBlogPreview = (props) => {
             <div className={style.subHeader}>
                 <p>{postData?.title}</p>   
             </div>
+            <div className={style.contentWrap}>
             <div className={style.singlePage}>
                 <div className={style.subContent}>  
                     {/* <div className={style.blogDate}>{`${postData?.eventDate.substring(0, postData?.eventDate.indexOf("T"))}`}</div> */}
                     <div className={style.contentInner} dangerouslySetInnerHTML={{ __html: postData?.body }} />  
                 </div>
             </div>
-            
+            </div>
+            <ContactArea/>
         </Layout>                    
     )
 }
