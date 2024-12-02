@@ -62,7 +62,7 @@ const SingleBlogPreview = (props) => {
                 </div>
             </div>
             </div>
-            <ContactArea/>
+            
         </Layout>                    
     )
 }

@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as style from "../styles/privacypolicy.module.scss"
 
-import Pdf from '../Documents/personaldata.pdf';
 
 
 const PrivacyPolicy = () => {
@@ -30,7 +29,7 @@ const PrivacyPolicy = () => {
                 <p>当団体が保有する「個人データ」について、本人または代理人からデータの開示、訂正・追加・削除、利用の停止等の請求があったときは、個人情報取扱団体として、遅滞なくこれに対処いたします。</p>
                 <h3>申し出の方法</h3>
                 <p>安全かつ正確を期するため、申し出は原則として、下記「保有個人データ開示等請求」によるものとします。必要事項をご記入の上、ご本人であることが確認できる書類のコピーを添えて、申し出先までご郵送下さい。</p>
-                <a href = {Pdf} target = "_blank">保有個人データ開示等請求書</a>
+                <a href = "https://drive.google.com/file/d/1_7ZtjdJKuBrYpcnPoVg3PeZvRQttRXFn/view" target = "_blank">保有個人データ開示等請求書</a>
                 <br/>
                 <br/>
                 <h3>申し出先</h3>
