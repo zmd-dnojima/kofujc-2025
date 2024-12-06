@@ -31,10 +31,10 @@ const Menu = () => {
               <li className={style.subMenu}><Link to="/officers">理事役員紹介</Link></li>
               <li className={style.subMenu}><Link to="/sougoukeikaku2021">総合計画2021</Link></li>
               <li className={style.subMenu}><Link to="/history">これまでの活動</Link></li>
-              <li><Link to="/articles">新着情報</Link></li>
-              <li className={style.subMenu}><Link to="/articles/?tag=news" onClick={classToggle} >今後の例会事業</Link></li>
-              <li className={style.subMenu}><Link to="/articles/?tag=past" onClick={classToggle} >過去の例会事業</Link></li>
-              <li className={style.subMenu}><Link to="/articles/?tag=syokan" onClick={classToggle} >理事長所感</Link></li>
+              <li><span>(一社)新着情報</span></li>
+              <li className={style.subMenu}><Link to="/news/1" onClick={classToggle} >今後の例会事業</Link></li>
+              <li className={style.subMenu}><Link to="/past/1" onClick={classToggle} >過去の例会事業</Link></li>
+              <li className={style.subMenu}><Link to="/syokan/1" onClick={classToggle} >理事長所感</Link></li>
               <li><Link to="/joinus">入会案内</Link></li>
               <li><Link to="/senior">シニアクラブ</Link></li>
               <li><Link to="/contact">アクセス・お問い合わせ</Link></li>

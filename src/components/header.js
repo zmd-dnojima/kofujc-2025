@@ -24,21 +24,6 @@ const Header = () => {
   var showNum = 0
   const [show, setScroll] = useState(true)
   const handleScroll = () => {
-    // if (window.pageYOffset > showBelow) {
-    //   if (!show) setScroll(true)
-    // } else {
-    //   if (show) setScroll(false)
-    // }
-     
-  // if(showNum != 0){
-  //   if (document.documentElement.scrollTop < showNum) {
-  //     setScroll(true)
-  //   }else{
-  //     setScroll(false)
-  //   }
-  // } 
-  
-  
     showNum = document.documentElement.scrollTop;
   }
   useEffect(() => {
@@ -46,8 +31,10 @@ const Header = () => {
     return () => window.removeEventListener(`scroll`, handleScroll)
   })
 
-  const [isHovered, setIsHovered] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
+  const [isHovered1, setIsHovered1] = useState(false);
+  const [isClicked1, setIsClicked1] = useState(false);
+  const [isHovered2, setIsHovered2] = useState(false);
+  const [isClicked2, setIsClicked2] = useState(false);
   
 
   return (
@@ -61,10 +48,10 @@ const Header = () => {
           <ul>
             <li>
             <Dropdown
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              onToggle={() => setIsClicked(!isClicked)}
-              show={isClicked || isHovered}
+              onMouseEnter={() => setIsHovered1(true)}
+              onMouseLeave={() => setIsHovered1(false)}
+              onToggle={() => setIsClicked1(!isClicked1)}
+              show={isClicked1 || isHovered1}
             >
             <Dropdown.Toggle 
               variant="flat"
@@ -80,9 +67,29 @@ const Header = () => {
               <Dropdown.Item ><Link to="/sougoukeikaku2021">総合計画2021</Link></Dropdown.Item>
               <Dropdown.Item ><Link to="/history">これまでの活動</Link></Dropdown.Item>
             </Dropdown.Menu>
-          </Dropdown>
+            </Dropdown>
             </li>
-            <li><Link to="/articles" className={`${(location.pathname == "/articles/" ? style.selected : '')}`}>新着情報</Link></li>
+            <li>
+            <Dropdown
+              onMouseEnter={() => setIsHovered2(true)}
+              onMouseLeave={() => setIsHovered2(false)}
+              onToggle={() => setIsClicked2(!isClicked2)}
+              show={isClicked2 || isHovered2}
+            >
+            <Dropdown.Toggle 
+              variant="flat"
+              id="dropdown-basic"
+              className={style.dpParentBtn}
+            >
+              新着情報
+            </Dropdown.Toggle>
+            <Dropdown.Menu className={style.dpMenu2}>
+              <Dropdown.Item ><Link to="/news/1">今後の例会・事業</Link></Dropdown.Item>
+              <Dropdown.Item ><Link to="/past/1">過去の例会・事業</Link></Dropdown.Item>
+              <Dropdown.Item ><Link to="/syokan/1">理事長所感</Link></Dropdown.Item>
+            </Dropdown.Menu>
+            </Dropdown>
+            </li>
             <li><Link to="/joinus" className={`${(location.pathname == "/joinus/" ? style.selected : '')}`}>入会案内</Link></li>
             <li><Link to="/senior" className={`${(location.pathname == "/senior/" ? style.selected : '')}`}>シニアクラブ</Link></li>
           </ul>

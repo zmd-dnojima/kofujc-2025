@@ -8,13 +8,24 @@ import Seo from "../components/seo"
 import ContactArea from "../components/contactArea"
 import * as style from "../styles/sub.module.scss"
 
-import loadingSvg from '../images/loading.svg'
 
-const Blog = (props) => {
+const Pagination = ({ totalCount }) => {
+    const PER_PAGE = 10
+    const range = (start, end) => [...Array(end - start + 1)].map((_, i) => start + i)
+    return (
+      <ul>
+        {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => (
+          <li key={index}>
+            <Link to={`/syokan/${number}`}>{number}</Link>
+          </li>
+        ))}
+      </ul>
+    )
+}
+
+const CategoryPage = (props) => {
     const singleBlog = [];
-    const search = useLocation().search;
-    const query3 = queryString.parse(search);
-    
+    console.log(props.data.allMicrocmsArticles.totalCount)
 
     return (
         
@@ -28,39 +39,19 @@ const Blog = (props) => {
 
                 <div className={style.contentWrap}>
                     <div className={style.tabNavi}>
-                        <div className={style.tabNaviItem}><Link to="/articles/?tag=news" className={`${(query3['tag'] == "news" ? style.selected : '')}`}>今後の例会・事業</Link></div>
-                        <div className={style.tabNaviItem}><Link to="/articles/?tag=past" className={`${(query3['tag'] == "past" ? style.selected : '')}`}>過去の例会・事業</Link></div>
-                        <div className={style.tabNaviItem}><Link to="/articles/?tag=syokan" className={`${(query3['tag'] == "syokan" ? style.selected : '')}`}>理事長所感</Link></div>
-
+                        <div className={style.tabNaviItem}><Link to="/news/1">今後の<br/>例会・事業</Link></div>
+                        <div className={style.tabNaviItem}><Link to="/past/1">過去の<br/>例会・事業</Link></div>
+                        <div className={style.tabNaviItem}><Link to="/" className={style.selected}>理事長所感</Link></div>
+                        
                     </div>
 
                     
                     <div className={style.blogArea}>  
-                    {(() => {
-                        const allBlog = [];
-                        const showBlogNum = 100;
-                        var blogAddNum = 0;
-                        for(var i in props.data.allMicrocmsArticles.edges){
-                            
-                            allBlog.push(props.data.allMicrocmsArticles.edges[i])
-                            if(allBlog[i].node.category[0].tag && allBlog[i].node.category[0].tag == query3['tag']){
-                                
-                                blogAddNum +=1
-                                if(blogAddNum > showBlogNum){
-                                    break
-                                }
-                                singleBlog.push(allBlog[i])
-                                console.log(allBlog[i])
-                            }else{
-                            //singleBlog.push(allBlog[i])
-                            }
-                        }
-                    })()}
-                    
+                        
                         <div className={style.blogCardWrapper}>
                         {
-                            singleBlog.map((novel, index) =>(
-                                <Link to={'../' + novel.node.articlesId}>
+                            props.data.allMicrocmsArticles.edges.map((novel, index) =>(
+                                <Link to={'../../' + novel.node.articlesId}>
                                 <div className={style.blogCard} key={index}>                            
                                     
                                 <div className={style.blogImgWrapper}><div className={style.blogImgContent}><img src={novel.node.mainImage.url} alt="card-image" className={style.cardImg} /></div></div>
@@ -73,7 +64,7 @@ const Blog = (props) => {
                         }
                         </div>
                     </div>
-
+                    <div className={style.blogPageNation}><Pagination totalCount={props.data.allMicrocmsArticles.totalCount} /></div>
                 </div>
             
                 <ContactArea/>
@@ -82,12 +73,17 @@ const Blog = (props) => {
     )
 }
 
-export default Blog
+export default CategoryPage
 
 
 export const query = graphql` 
-    query MyQuery {
-        allMicrocmsArticles(sort: { fields: [createdAt], order: DESC }) {
+    query MyQuery ($limit: Int!, $skip: Int!) { 
+        allMicrocmsArticles(
+            limit: $limit,
+            skip: $skip,
+            sort: { fields: [createdAt], order: DESC },
+            filter: {category: {elemMatch: {tag: {eq: "syokan"}}}}
+        ) {
         edges {
             node {
                 articlesId
@@ -106,6 +102,7 @@ export const query = graphql`
                 }
             }
         }
+            totalCount
         }
     }
   `  

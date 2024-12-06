@@ -27,9 +27,9 @@ const Footer = () => {
                     </ul>
                     <ul>
                         <li className={style.mainT}><span><FontAwesomeIcon icon={faChevronDown}/></span> 新着情報</li>
-                        <li><Link to="/"><span><FontAwesomeIcon icon={faMinus}/></span> 今後の例会・事業</Link></li>
-                        <li><Link to="/"><span><FontAwesomeIcon icon={faMinus}/></span> 過去の例会・事業</Link></li>
-                        <li><Link to="/"><span><FontAwesomeIcon icon={faMinus}/></span> 理事長所感</Link></li>
+                        <li><Link to="/news/1"><span><FontAwesomeIcon icon={faMinus}/></span> 今後の例会・事業</Link></li>
+                        <li><Link to="/past/1"><span><FontAwesomeIcon icon={faMinus}/></span> 過去の例会・事業</Link></li>
+                        <li><Link to="/syokan/1"><span><FontAwesomeIcon icon={faMinus}/></span> 理事長所感</Link></li>
                         <li className={style.mainT}><Link to="/joinus"><span><FontAwesomeIcon icon={faChevronRight}/></span> 入会案内</Link></li>
                         <li className={style.mainT}><Link to="/senior"><span><FontAwesomeIcon icon={faChevronRight}/></span> シニアクラブ</Link></li>
                     </ul>
