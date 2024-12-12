@@ -24,6 +24,7 @@ import { faClock } from "@fortawesome/free-regular-svg-icons"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Loader from "../components/loader"
+import SwiperLoop from "../components/swiperloop"
 
 import * as style from "../styles/index.module.scss"  
 import ContactArea from "../components/contactArea"
@@ -220,13 +221,15 @@ const Index = (props) => {
 
                 <ContactArea/>
 
-                <div className={style.cardWrap}>
+                {/* <div className={style.cardWrap}>
                     <div className={style.img}><Link to="/"><StaticImage src="../images/banner1.jpg" alt="バナー" placeholder="blurred" quality ={90} /></Link></div>
                     <div className={style.img}><Link to="/"><StaticImage src="../images/banner2.jpg" alt="バナー" placeholder="blurred" quality ={90} /></Link></div>
                     <div className={style.img}><Link to="/"><StaticImage src="../images/banner3.jpg" alt="バナー" placeholder="blurred" quality ={90} /></Link></div>
                     <div className={style.img}><Link to="/"><StaticImage src="../images/banner4.jpg" alt="バナー" placeholder="blurred" quality ={90} /></Link></div>
                     <div className={style.img}><Link to="/"><StaticImage src="../images/banner5.jpg" alt="バナー" placeholder="blurred" quality ={90} /></Link></div>
-                </div>
+                </div> */}
+
+                <SwiperLoop />
 
             </div>{/* </main> */}
         </Layout>
