@@ -192,6 +192,7 @@
                 margin: 0 auto;
                 overflow: hidden;
                 height: auto;
+                border-radius: 10px;
                 .cardImg{
                     transition:.4s all;
                     width: 100%;
@@ -209,19 +210,20 @@
                 text-overflow: ellipsis;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 2;
+                line-height: 1.4rem;
+                margin-top: .6rem;
                 /* ブラウザがサポートしていない場合のフェールセーフ */
                 // max-height: 24px;
             }
 
             .blogTags {
-                position: absolute;
-                top: 0;
-                left: 0;
-                background: $base-color;
+                margin-top: 0.5rem;           
+                font-size: rem(10);
+                background-color: $base-color;
+                padding: 0 .2rem;
+                line-height: 1rem;
                 color: #fff;
-                z-index: 1;
-                font-size: 10px;
-                padding: 0 0.6rem;
+                border-radius: 2px;
             }
             .blogDate {
                 font-size: rem(10);

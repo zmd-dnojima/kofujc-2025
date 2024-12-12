@@ -47,31 +47,20 @@
     position: relative;
     padding: 1rem 0;
     height: 100%;
-    .contentWrap {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    .bg {
-        @include center(xy);
-        height: 100%;
-        width: 100%;
-        background-color: #EFC413;
-        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
-    }
+    background: url('../images/noise.png'),linear-gradient(135deg, #F7FF9F 0%, #A5F0FF 100%);
     
     .blogArea {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 320px);
+        grid-template-columns: repeat(auto-fit, 320px);
         column-gap: 1.4rem;
-        row-gap: 1.4rem;
+        row-gap: 1rem;
         justify-content: center;
-        padding-bottom: 2rem;
         .blogImgContent {
             width: 100%;
             img {
                 width: 100%;
-                border-radius: 10px;
-                border: 1px solid $txt-color;
+                max-width: 320px;
+                border: 1px solid rgba($color: #333333, $alpha: 0.4);
             }
         }
         
@@ -81,7 +70,7 @@
 ////////////////////////////////////////////////
 
 .news {
-    padding-bottom: 2rem;
+    padding: 4rem 0;
     .newsTitle {
         display: flex;
         align-items: center;
@@ -106,7 +95,7 @@
             width: 100%;
             justify-items: start;
             align-items: center;
-            row-gap: .2rem;
+            
             .blogImgContent {
                 width: 100%;
                 img {
@@ -117,8 +106,18 @@
             }
             
 
-            .blogTags {                
+            .blogTags {   
+                margin-top: 0.5rem;           
                 font-size: rem(10);
+                background-color: $base-color;
+                padding: 0 .2rem;
+                line-height: 1rem;
+                color: #fff;
+                border-radius: 2px;
+            }
+            .blogDate {
+                font-size: rem(10);
+                line-height: 1.4rem;
             }
             .blogTitle {                
                 width: 100%;
@@ -138,27 +137,32 @@
 
 .rijicho {
     position: relative;
-    clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% calc(100% - 4vw), 0 100%);
+    clip-path: polygon(0 calc(0% + 0vw), 100% 0, 100% calc(100% - 0vw), 0 100%);
     overflow: hidden;
-
+    
     .inner {
-        background: rgba($color: #fff, $alpha: 0.9);
+        // background: rgba($color: #fff, $alpha: 0.9);
+        color: #fff;
         margin: 4rem auto;
         padding: 2rem 1rem;
         max-width: 900px;
+        font-family: "Shippori Mincho", serif;
         .rijichoName {
             text-align: right;
             margin-top: 2rem;
+            
         }
         .slogan {
             text-align: center;
             padding-bottom: 2rem;
+            
             img {
                 width: 100%;
                 max-width: 400px;
             }
         }
         .btn {
+            font-family: $baseFont;
             margin: 0 auto;
             margin-top: 2rem;
             display: grid;
@@ -186,6 +190,9 @@
     background-position:50% 100%;
     background-image: url('../images/kofu.jpg') ;
     background-size:cover;
+    background-color:rgba(0,0,0,0.6);
+    background-blend-mode:darken;
+    filter: blur(3px);
 }
 
 .aboutus {

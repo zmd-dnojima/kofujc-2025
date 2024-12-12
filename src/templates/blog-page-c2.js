@@ -7,7 +7,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ContactArea from "../components/contactArea"
 import * as style from "../styles/sub.module.scss"
-
+//fontswesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClock } from "@fortawesome/free-regular-svg-icons"
 
 const Pagination = ({ totalCount }) => {
     const PER_PAGE = 10
@@ -56,8 +58,8 @@ const CategoryPage = (props) => {
                                     
                                 <div className={style.blogImgWrapper}><div className={style.blogImgContent}><img src={novel.node.mainImage.url} alt="card-image" className={style.cardImg} /></div></div>
                                 <div className={style.blogTags}>#{novel.node.category[0].name}</div>  
-                                <div className={style.blogDate}>{`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div>
                                 <div className={style.blogTitle}>{novel.node.title}</div>
+                                <div className={style.blogDate}><FontAwesomeIcon icon={faClock}/> {`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div>
                                 </div>
                                 </Link>
                             ))

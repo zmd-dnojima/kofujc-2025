@@ -18,7 +18,8 @@ import "swiper/css/free-mode"
 
 //fontswesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
+import { faChevronRight,  } from "@fortawesome/free-solid-svg-icons"
+import { faClock } from "@fortawesome/free-regular-svg-icons"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -56,47 +57,43 @@ const Index = (props) => {
                 </div>
 
                 <div className={style.bannerArea}>
-                    <div className={style.bg}></div>
-                    <div className={style.contentWrap}>
-                    
-                        <div className={style.blogArea}>
-                            {(() => {
-                                const allBlog_banner = [];
-                                const showBlogNum_banner = 4;
-                                var blogAddNum_banner = 0;
+                    <div className={style.blogArea}>
+                        {(() => {
+                            const allBlog_banner = [];
+                            const showBlogNum_banner = 4;
+                            var blogAddNum_banner = 0;
+                            
+                            for(var i in props.data.allMicrocmsArticles.edges){
                                 
-                                for(var i in props.data.allMicrocmsArticles.edges){
-                                    
-                                    allBlog_banner.push(props.data.allMicrocmsArticles.edges[i])
-                                    
-                                    if(allBlog_banner[i].node.category[0].tag == "banner" ) {
-                                        blogAddNum_banner +=1
-                                        if(blogAddNum_banner > showBlogNum_banner){
-                                            break
-                                        }
-                                        singleBlog_banner.push(allBlog_banner[i])
+                                allBlog_banner.push(props.data.allMicrocmsArticles.edges[i])
+                                
+                                if(allBlog_banner[i].node.category[0].tag == "banner" ) {
+                                    blogAddNum_banner +=1
+                                    if(blogAddNum_banner > showBlogNum_banner){
+                                        break
                                     }
+                                    singleBlog_banner.push(allBlog_banner[i])
                                 }
-                            })()}             
-                            {
-                                singleBlog_banner.map((novel, index) =>(
-                                    <Link to={novel.node.articlesId} key={index}>
-                                        <div className={style.blogCard}>                            
-                                            {/* <div className={style.blogDate}>{`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div> */}
-                                            <div className={style.blogImgWrapper}><div className={style.blogImgContent}><img src={novel.node.bannerImage.url} alt="card-image" className={style.cardImg} /></div></div>
-                                        </div>
-                                    </Link>
-                                ))
                             }
+                        })()}             
+                        {
+                            singleBlog_banner.map((novel, index) =>(
+                                <Link to={novel.node.articlesId} key={index}>
+                                    <div className={style.blogCard}>                            
+                                        {/* <div className={style.blogDate}>{`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div> */}
+                                        <div className={style.blogImgWrapper}><div className={style.blogImgContent}><img src={novel.node.bannerImage.url} alt="card-image" className={style.cardImg} /></div></div>
+                                    </div>
+                                </Link>
+                            ))
+                        }
 
-                        </div>
                     </div>
                 </div>
 
                 <div className={style.news}><div className={style.contentWrap}>
                     <div className={style.newsTitle}>
                         <div className={style.subtitle}><span>NEWS</span><br/>新着情報｜活動報告</div>
-                        <div className={style.morebutton}><Link to="/articles">VIEW MORE<span><FontAwesomeIcon icon={faChevronRight}/></span></Link></div>
+                        <div className={style.morebutton}><Link to="/news/1">VIEW MORE<span><FontAwesomeIcon icon={faChevronRight}/></span></Link></div>
                     </div>
                     
                     <div className={style.gridArea}>
@@ -117,7 +114,6 @@ const Index = (props) => {
                                             break
                                         }
                                         singleBlog.push(allBlog[i])
-                                        console.log(allBlog[i].node.category)
                                     }
                                 }
                             })()}             
@@ -125,10 +121,11 @@ const Index = (props) => {
                                 singleBlog.map((novel, index) =>(
                                     <Link to={novel.node.articlesId} key={index}>
                                         <div className={style.blogCard}>                            
-                                            {/* <div className={style.blogDate}>{`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div> */}
+                                            
                                             <div className={style.blogImgWrapper}><div className={style.blogImgContent}><img src={novel.node.mainImage.url} alt="card-image" className={style.cardImg} /></div></div>
-                                            <div className={style.blogTags}>#{novel.node.category[0].name}</div>  
+                                            <div className={style.blogTags}>{novel.node.category[0].name}</div>  
                                             <div className={style.blogTitle}>{novel.node.title}</div>
+                                            <div className={style.blogDate}><FontAwesomeIcon icon={faClock}/> {`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div>
                                         </div>
                                     </Link>
                                 ))
@@ -142,9 +139,13 @@ const Index = (props) => {
                 <div className={style.rijicho}>
                     <div className={style.contentWrap}>
                             <div className={style.inner}>
-                                <div className={style.slogan}><img src={slogan} alt="javascript" /></div>
-                                <div>ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。ここに理事長所信が入ります。</div>
-                                <div className={style.rijichoName}>一般社団法人甲府⻘年会議所<br/>第〇〇代理事長 萩原 亮</div>
+                                {/* <div className={style.slogan}><img src={slogan} alt="javascript" /></div> */}
+                                <div>
+                                    {/* <p>世界、そして日本を取り巻く社会情勢は日々、目まぐるしく変化し、混沌とした予想のできない時代に突入しました。変動性、不確実性、複雑性、曖昧性の頭文字を取った「VUCA 時代」とも呼ばれています。他国間での戦争、未知のウイルスの蔓延、経済の低迷による格差の拡大、異常気象や地震による自然災害、テロリズムへの恐怖など挙げれば切りがないほどの不安や混乱の中で生きています。一方で先が予測され、何年も前から警笛を鳴らされてきた問題もあります。その一つが人口減少問題です。日本の人口は 2008 年をピークに減少に転じ、人口の推移を長期的に予測すると 2008 年に約 1 億 2000 万人をピークに迎えた人口が 2048 年には 1 億人を割り込み、2060 年には 8674 万人まで減少すると見込まれます。これは、日本の歴史を振り返っても類を見ない水準の人口減少です。安定した雇用の創出や移住・定住の促進、出生率の向上などの施策は示されていますが、現状、歯止めには至っていません。</p>
+                                    <p>これは我々の住み暮らす山の都でも大きな影響を与えており、人口減少・少子高齢化により様々な問題が生じています。行政サービスの縮小、空き家・空き店舗の増加、地域公共交通の縮小・撤退、地域コミュニティの機能低下、企業の担い手不足による地域産業の衰退など、人口減少・少子高齢化を原因とする様々な問題が複合的に関係し、地域の活力を低下させています。このままではこの地域やここに住む人々は未来に明るい選択肢を持つことは困難でしょう。私たちは、この不安定な世の中の先を読み、新しいアイデアやイノベーションを生み出す若者を育成し、彼らが応援する社会を創造しなければなりません。子どもたちが夢に向かい行動し、地域を盛り上げようと志す若者が集えば、地域の活力の増強につながり、地域はこのままだといずれやってきてしまう「選択肢のない未来」ではなく、若者や多様な人材が溢れ、子どもたちが夢に向かって行動する新しい価値が創造された「選択できる未来」を歩むことができるでしょう。</p> */}
+                                    <p>人は皆それぞれに、「何かを変えたい」「より良くしたい」という想いを持っています。自らの発信力と、実現ぜずにはいられない想いから生まれる熱い情熱は心に留めておくだけでは何も始まりません。「さぁやろう!」「一緒にやろう!」「やってみよう!」という情熱を持ったリーダーの踏み出す一歩がなければなりません。「合理的か否か」、「損か得か」、そのような思考回路を捨てて自ら問題に飛び込み、地域のために、誰かのために、果敢に挑む一歩です。その一歩はいつの時代も人の心を動かし、社会を変えます。これこそ青年会議所が担う役割ではないでしょうか。「情熱」と「想像力」と「思いやり」を持った甲府青年会議所は、同じ志を持つ多くの仲間という武器を携えて、地域の問題解決や活性化のために一歩を踏み出します。</p>
+                                    </div>
+                                <div className={style.rijichoName}>一般社団法人甲府⻘年会議所<br/>第74代理事長 萩原 亮</div>
                                 <div className={style.btn}><Link to="/policy">理事長所信</Link></div>
                             </div>
                     </div>
