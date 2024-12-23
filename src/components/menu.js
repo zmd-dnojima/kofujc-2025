@@ -40,6 +40,7 @@ const Menu = () => {
               <li><Link to="/contact">アクセス・お問い合わせ</Link></li>
               <li><Link to="/privacypolicy">プライバシーポリシー</Link></li>
               <li><Link to="/socialmediapolicy">ソーシャルメディアポリシー</Link></li>
+              <li><a href="https://drive.google.com/file/d/1trmTn_ztmXB-9B2aEI5B2cy79z69yuGi/view" target="_blank">組織図</a></li>
            </ul>
          </div> 
        </menu>

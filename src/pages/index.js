@@ -190,7 +190,7 @@ const Index = (props) => {
                         <div className={style.aBtn}>
                             <Link to="/officers">
                                 <StaticImage src="../images/a1.jpg" alt="理事役員紹介" placeholder="blurred" quality ={90} layout="fullWidth" />
-                                <div className={style.aBtnTxt}><span>理事役員紹介</span>2025年度の活動を担う、〇〇名の理事役員を紹介します。</div>
+                                <div className={style.aBtnTxt}><span>理事役員紹介</span>2025年度の活動を担う、20名の理事役員を紹介します。</div>
                                 <div className={style.aBtnArrow}><FontAwesomeIcon icon={faChevronRight}/></div>
                             </Link>
                         </div>

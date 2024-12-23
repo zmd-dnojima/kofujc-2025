@@ -21,7 +21,7 @@ const ContactArea = (props) => {
                             <div className={style.txt_1}>その一歩で、<br/>君が変わる、<br/>まちが変わる</div>
                             <div className={style.txt_2}>一般社団法人甲府青年会議所は<br/>2025年度入会募集しております</div>
                         </div>
-                        <Link to="/contact/">
+                        <Link to="/joinus/">
                         <div className={style.btnbox}>
                                 <div className={style.envelop}>入会案内</div>
                         </div>

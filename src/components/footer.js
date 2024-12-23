@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { useLocation } from "@reach/router"
 import * as style from "../styles/common.module.scss"
 
 //fontswesome
@@ -37,6 +38,7 @@ const Footer = () => {
                         <li className={style.mainT}><Link to="/contact"><span><FontAwesomeIcon icon={faChevronRight}/></span> アクセス・お問い合わせ</Link></li>
                         <li className={style.mainT}><Link to="/privacypolicy"><span><FontAwesomeIcon icon={faChevronRight}/></span> プライバシーポリシー</Link></li>
                         <li className={style.mainT}><Link to="/socialmediapolicy"><span><FontAwesomeIcon icon={faChevronRight}/></span> ソーシャルメディアポリシー</Link></li>
+                        <li className={style.mainT}><a href="https://drive.google.com/file/d/1trmTn_ztmXB-9B2aEI5B2cy79z69yuGi/view" target="_blank"><span><FontAwesomeIcon icon={faChevronRight}/></span> 組織図</a></li>
                     </ul>
                 </div>
             </div> 
