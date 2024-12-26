@@ -50,10 +50,8 @@ const Index = (props) => {
                 <div className={style.mainVisual}>
                 
                     <div className={style.mainImg}>
-                        <div className={style.mainImgInner}>
-                            {/* <StaticImage src="../images/mainImg.png" alt="main" placeholder="blurred" quality ={90}  /> */}
-                            {/* <StaticImage className={style.sp} src="../images/top_sp.jpg" alt="main" placeholder="blurred" quality ={90} /> */}
-                        </div>  
+                        <div className={style.imgInner}><StaticImage src="../images/mainvisual.png" alt="main" placeholder="blurred" quality ={90}  /></div>
+                        <div className={style.slogan}><img src={slogan} alt="javascript"/></div>
                     </div>
                 </div>
 
@@ -83,6 +81,9 @@ const Index = (props) => {
                                     <div className={style.blogCard}>                            
                                         {/* <div className={style.blogDate}>{`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div> */}
                                         <div className={style.blogImgWrapper}><div className={style.blogImgContent}><img src={novel.node.bannerImage.url} alt="card-image" className={style.cardImg} /></div></div>
+                                        <div className={style.blogTitle}>
+                                            <div>{novel.node.title}</div>
+                                        </div>
                                     </div>
                                 </Link>
                             ))
@@ -94,7 +95,7 @@ const Index = (props) => {
                 <div className={style.news}><div className={style.contentWrap}>
                     <div className={style.newsTitle}>
                         <div className={style.subtitle}><span>NEWS</span><br/>新着情報｜活動報告</div>
-                        <div className={style.morebutton}><Link to="/news/1">VIEW MORE<span><FontAwesomeIcon icon={faChevronRight}/></span></Link></div>
+                        <div className={style.morebutton}><Link to="/past/1">VIEW MORE<span><FontAwesomeIcon icon={faChevronRight}/></span></Link></div>
                     </div>
                     
                     <div className={style.gridArea}>
@@ -159,7 +160,7 @@ const Index = (props) => {
                         <div className={style.aBtn}>
                             <Link to="/officers">
                                 <StaticImage src="../images/a1_sp.jpg" alt="理事役員紹介" placeholder="blurred" quality ={90} layout="fullWidth" />
-                                <div className={style.aBtnTxt}><span>理事役員紹介</span>2025年度の活動を担う、〇〇名の理事役員を紹介します。</div>
+                                <div className={style.aBtnTxt}><span>理事役員紹介</span>2025年度の活動を担う、20名の理事役員を紹介します。</div>
                                 <div className={style.aBtnArrow}><FontAwesomeIcon icon={faChevronRight}/></div>
                             </Link>
                         </div>

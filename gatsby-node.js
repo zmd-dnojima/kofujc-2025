@@ -61,14 +61,13 @@ exports.createPages = async ({ graphql, actions }) => {
     }
     
     const pageCountCategory1 = Math.ceil(pageCategory1.data.allMicrocmsArticles.totalCount / PerPage);
-
     for (let i = 0; i < pageCountCategory1; i++) {
         createPage({
             path: `/news/${i + 1}`,
             component: path.resolve("./src/templates/blog-page-c1.js"),
             context: {
-            limit: PerPage,
-            skip: i * PerPage,
+                limit: PerPage,
+                skip: i * PerPage,
             },
         })
     }

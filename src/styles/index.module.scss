@@ -12,18 +12,27 @@
     //overflow: hidden;
     background: #fff;
     .mainImg {
-        // -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, #000), color-stop(70%, #000), to(transparent));
-        // -webkit-mask-image: -webkit-linear-gradient(top, transparent 0%, #000 0%, #000 70%, transparent 100%);
-        // mask-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, #000), color-stop(70%, #000), to(transparent));
-        // mask-image: linear-gradient(to bottom, transparent 0%, #000 0%, #000 70%, transparent 100%);
-        // @include gradient(135deg, $base-color, $active-color);
-        background: #b9b9b9;
+        position: relative;
+        background: #efc413;
         height: 100vh;
         width: 100%;
-        .mainImgInner {
+        .slogan {
             position: absolute;
-            bottom: 0;
-            right: 0;
+            top: 70%;
+            left: 46%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+        }
+        .imgInner {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 110%;
+            max-width: 800px;
+            height: auto;
         }
     }
 }
@@ -55,14 +64,34 @@
         column-gap: 1.4rem;
         row-gap: 1rem;
         justify-content: center;
-        .blogImgContent {
-            width: 100%;
-            img {
+        .blogCard {
+            max-width: 320px;
+            
+            .blogImgContent {
                 width: 100%;
-                max-width: 320px;
-                border: 1px solid rgba($color: #333333, $alpha: 0.4);
+                border: 4px solid rgba($color: $active-color, $alpha: 0.4);
+                img {
+                    width: 100%;
+                    
+                }
+            }
+            .blogTitle {
+                position: relative;
+                background: rgba($color: $active-color, $alpha: 0.4);
+                color: #333;
+                display: -webkit-box;
+                align-items: center;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                padding: .1rem .4rem .3rem .4rem;
+                font-size: rem(14);
+                font-weight: 600;
+                
             }
         }
+        
         
     }
 }
@@ -231,6 +260,7 @@
                 left: 1rem;
                 top: 2rem;
                 width: 90%;
+                text-shadow: 0 0 8px rgb(0, 0, 0, 0.4);
                 span {
                     display: block;
                     font-size: 1.2rem;

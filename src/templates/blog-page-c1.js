@@ -29,7 +29,7 @@ const Pagination = ({ totalCount }) => {
 
 const CategoryPage = (props) => {
     const singleBlog = [];
-    console.log(props.data.allMicrocmsArticles.totalCount)
+    
 
     return (
         

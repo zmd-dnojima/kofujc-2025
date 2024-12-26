@@ -41,9 +41,9 @@ const CategoryPage = (props) => {
 
                 <div className={style.contentWrap}>
                     <div className={style.tabNavi}>
-                        <div className={style.tabNaviItem}><Link to="/news/1">今後の<br/>例会・事業</Link></div>
+                        <div className={style.tabNaviItem}><Link to="/news/1"　 className={style.off}>今後の<br/>例会・事業</Link></div>
                         <div className={style.tabNaviItem}><Link to="/" className={style.selected}>過去の<br/>例会・事業</Link></div>
-                        <div className={style.tabNaviItem}><Link to="/syokan/1">理事長所感</Link></div>
+                        <div className={style.tabNaviItem}><Link to="/syokan/1" className={style.off}>理事長所感</Link></div>
                         
                     </div>
 
