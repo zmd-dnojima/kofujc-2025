@@ -86,7 +86,7 @@ const Header = () => {
             <Dropdown.Menu className={style.dpMenu2}>
               <Dropdown.Item ><Link to="/news/1" className={style.off}>今後の例会・事業</Link></Dropdown.Item>
               <Dropdown.Item ><Link to="/past/1">過去の例会・事業</Link></Dropdown.Item>
-              <Dropdown.Item ><Link to="/syokan/1" className={style.off}>理事長所感</Link></Dropdown.Item>
+              <Dropdown.Item ><Link to="/syokan/1">理事長所感</Link></Dropdown.Item>
             </Dropdown.Menu>
             </Dropdown>
             </li>

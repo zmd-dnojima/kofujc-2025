@@ -34,7 +34,7 @@ const Menu = () => {
               <li><span>(一社)新着情報</span></li>
               <li className={style.subMenu}><Link to="/news/1" onClick={classToggle}  className={style.off}>今後の例会事業</Link></li>
               <li className={style.subMenu}><Link to="/past/1" onClick={classToggle} >過去の例会事業</Link></li>
-              <li className={style.subMenu}><Link to="/syokan/1" onClick={classToggle}  className={style.off}>理事長所感</Link></li>
+              <li className={style.subMenu}><Link to="/syokan/1" onClick={classToggle}>理事長所感</Link></li>
               <li><Link to="/joinus">入会案内</Link></li>
               <li><Link to="/senior">シニアクラブ</Link></li>
               <li><Link to="/contact">アクセス・お問い合わせ</Link></li>
