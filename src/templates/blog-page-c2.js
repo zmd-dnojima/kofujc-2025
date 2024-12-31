@@ -59,7 +59,7 @@ const CategoryPage = (props) => {
                                 <div className={style.blogImgWrapper}><div className={style.blogImgContent}><img src={novel.node.mainImage.url} alt="card-image" className={style.cardImg} /></div></div>
                                 <div className={style.blogTags}>#{novel.node.category[0].name}</div>  
                                 <div className={style.blogTitle}>{novel.node.title}</div>
-                                <div className={style.blogDate}><FontAwesomeIcon icon={faClock}/> {`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div>
+                                {/* <div className={style.blogDate}><FontAwesomeIcon icon={faClock}/> {`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div> */}
                                 </div>
                                 </Link>
                             ))
