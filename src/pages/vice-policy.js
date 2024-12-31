@@ -25,7 +25,7 @@ const VicePolicy = (props) => {
                 </div>
                 <div className={style.contentWrap}>
                     
-                    <div className={style.grid}>
+                    <div className={style.grid} id="hirose">
                         <div className={style.image}>
                             <StaticImage src="../images/m_hirose.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <p>副理事長<br/><span>廣瀬 明彦</span></p>
@@ -100,7 +100,7 @@ const VicePolicy = (props) => {
                         </div>
                     </div>
 
-                    <div className={style.grid}>
+                    <div className={style.grid} id="natori">
                         <div className={style.image}>
                             <StaticImage src="../images/m_natori.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <p>副理事長<br/><span>名執 太貴</span></p>
@@ -151,7 +151,7 @@ const VicePolicy = (props) => {
                         </div>
                     </div>
 
-                    <div className={style.grid}>
+                    <div className={style.grid} id="ishimizu">
                         <div className={style.image}>
                             <StaticImage src="../images/m_ishimizu.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <p>専務理事<br/><span>石水 秀樹</span></p>

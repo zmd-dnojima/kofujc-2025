@@ -9,7 +9,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    //overflow: hidden;
+    overflow: hidden;
     background: #fff;
     .mainImg {
         position: relative;
@@ -22,7 +22,7 @@
             left: 46%;
             transform: translate(-50%, -50%);
             width: 100%;
-            max-width: 700px;
+            max-width: 1000px;
             height: auto;
         }
         .imgInner {
@@ -53,6 +53,8 @@
 ////////////////////////////////////////////////
 
 .bannerArea {
+    display: none;
+    
     position: relative;
     padding: 1rem 0;
     height: 100%;
@@ -68,6 +70,7 @@
             max-width: 320px;
             
             .blogImgContent {
+                
                 width: 100%;
                 border: 4px solid rgba($color: $active-color, $alpha: 0.4);
                 img {
@@ -99,7 +102,9 @@
 ////////////////////////////////////////////////
 
 .news {
+    
     padding: 4rem 0;
+    
     .newsTitle {
         display: flex;
         align-items: center;
