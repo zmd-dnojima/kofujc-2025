@@ -43,7 +43,7 @@ const Index = (props) => {
         <Layout>
             
             <Seo title="一般社団法人甲府青年会議所 2025年度 - Here We Go! ～その一歩で君が変わる、まちが変わる～" description="一般社団法人甲府青年会議所 2025年度 | ホーム" />
-            <Loader />
+            {/* <Loader /> */}
             <div className={style.main}>
 
 
