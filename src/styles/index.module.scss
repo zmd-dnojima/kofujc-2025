@@ -132,10 +132,22 @@
             
             .blogImgContent {
                 width: 100%;
-                img {
+                margin: 0 auto;
+                overflow: hidden;
+                height: auto;
+                border-radius: 10px;
+                // img {
+                //     width: 100%;
+                //     border-radius: 10px;
+                //     border: 1px solid $txt-color;
+                // }
+                .cardImg{
+                    transition:.4s all;
                     width: 100%;
-                    border-radius: 10px;
-                    border: 1px solid $txt-color;
+                }
+                .cardImg:hover{
+                    transform:scale(1.1,1.1);
+                    transition:.4s all;
                 }
             }
             
