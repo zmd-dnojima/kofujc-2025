@@ -1,20 +1,19 @@
 import * as React from "react"
-import { graphql, Link, withPrefix } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { useLocation } from "@reach/router"
 import queryString from 'query-string'
-import { useEffect, useRef, useState } from "react"
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 
 import { motion, useAnimate, useMotionValueEvent, useScroll, useInView } from "framer-motion"
 //import * as Scroll from 'react-scroll'
 
-import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination, Keyboard, FreeMode, EffectCards, Thumbs } from 'swiper'
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
-import 'swiper/css/bundle'
-import "swiper/swiper.min.css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import "swiper/css/free-mode"
+// import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination, Keyboard, FreeMode, EffectCards, Thumbs } from 'swiper'
+// import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
+// import 'swiper/css/bundle'
+// import "swiper/swiper.min.css"
+// import "swiper/css/navigation"
+// import "swiper/css/pagination"
+// import "swiper/css/free-mode"
 
 //fontswesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -30,6 +29,14 @@ import * as style from "../styles/index.module.scss"
 import ContactArea from "../components/contactArea"
 
 import slogan from '../images/slogan.svg'
+
+//microcmsの日時ずれを解消
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.tz.setDefault("Asia/Tokyo");
 
 const Index = (props) => {
 
@@ -128,6 +135,8 @@ const Index = (props) => {
                                             <div className={style.blogTags}>{novel.node.category[0].name}</div>  
                                             <div className={style.blogTitle}>{novel.node.title}</div>
                                             {/* <div className={style.blogDate}><FontAwesomeIcon icon={faClock}/> {`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div> */}
+                                            <div className={style.blogDate}><FontAwesomeIcon icon={faClock}/> {`${dayjs(novel.node.eventDate).tz().format("YYYY/MM/DD")}`}</div>
+                                            
                                         </div>
                                     </Link>
                                 ))

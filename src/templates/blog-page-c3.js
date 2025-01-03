@@ -11,6 +11,14 @@ import * as style from "../styles/sub.module.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from "@fortawesome/free-regular-svg-icons"
 
+//microcmsの日時ずれを解消
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.tz.setDefault("Asia/Tokyo");
+
 
 const Pagination = ({ totalCount }) => {
     const PER_PAGE = 10
@@ -60,7 +68,7 @@ const CategoryPage = (props) => {
                                 <div className={style.blogImgWrapper}><div className={style.blogImgContent}><img src={novel.node.mainImage.url} alt="card-image" className={style.cardImg} /></div></div>
                                 <div className={style.blogTags}>#{novel.node.category[0].name}</div>  
                                 <div className={style.blogTitle}>{novel.node.title}</div>
-                                {/* <div className={style.blogDate}><FontAwesomeIcon icon={faClock}/> {`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div> */}
+                                <div className={style.blogDate}><FontAwesomeIcon icon={faClock}/> {`${dayjs(novel.node.eventDate).tz().format("YYYY/MM/DD")}`}</div>
                                 </div>
                                 </Link>
                             ))
