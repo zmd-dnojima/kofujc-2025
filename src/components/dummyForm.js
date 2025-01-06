@@ -1,10 +1,14 @@
-import * as React from "react"
+import React, { useRef } from "react"
 import { graphql, Link } from "gatsby"
 import * as style from "../styles/sub.module.scss"
+import ReCAPTCHA from "react-google-recaptcha"
 
 //google map
 import EmbedMap from "../components/embedmap"
-
+const recaptchaRef = React.createRef();
+function onChange(value) {
+    console.log("Captcha value:", value);
+}
 
 export default () => (
 
@@ -47,43 +51,16 @@ export default () => (
                 <textarea name="message" rows="10" id="message" required="required"></textarea>
             </div>
             <div>
-                <div className={style.grecaptcha} data-sitekey="6LekWq8qAAAAAN67lgmd3Dfwsu7bpEb_NKgP1lCd"></div>
+            <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey="6LekWq8qAAAAAN67lgmd3Dfwsu7bpEb_NKgP1lCd"
+                onChange={onChange}
+            />
             </div>
             <div>
                 <button className={style.contactButton} type="submit">お問い合わせをする</button>
             </div>
         </form>
-        {/* <form
-            name="contact"
-            method="post"
-            action="/thankyou/"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-        >
-        <input type="hidden" name="form-name" value="contact" />
-        <div>
-            <label htmlFor="name"><span className={style.required}>必須</span>お名前</label>  
-            <input type="text" name="name" id="name" required/>
-        </div>
-        <div>
-            <label htmlFor="email"><span className={style.required}>必須</span>メールアドレス</label>
-            <input type="email" name="email" id="email" required/>
-        </div>
-        <div>
-            <label htmlFor="tel"><span className={style.required}>必須</span>電話番号</label>
-            <input type="tel" id="phone" name="phone" required />
-        </div>
-        <div>
-            <label htmlFor="campanyname">会社名</label>  
-            <input type="text" name="campanyname" id="campanyname"/>
-        </div>
-        <div>
-            <label htmlFor="message"><span className={style.required}>必須</span>ご用件</label>
-            <textarea name="message" rows="10" id="message" required></textarea>
-        </div>
-        <div>
-            <button className={style.contactButton} type="submit">お問い合わせをする</button>
-        </div>   
-        </form>  */}
+        
     </div>
 )
