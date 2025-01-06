@@ -59,7 +59,7 @@ const Officers = (props) => {
                         <div className={style.image}>
                             <StaticImage src="../images/m_ishimizu.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <div className={style.name}>専務理事<br/><span>石水 秀樹</span></div>
-                            <div className={style.btnArea}><Link to="/vice-policy#ishimizu">副理事長所信</Link></div>
+                            <div className={style.btnArea}><Link to="/vice-policy#ishimizu">専務理事所信</Link></div>
                         </div>
                         <div className={style.brpc}></div>
                         <div className={style.brpc}></div>
