@@ -78,15 +78,14 @@
         position: relative;
         :after {
             content: '';
-            display: block;
-            width: 16px; 
-            height: 16px;
+            display: inline-block;
+            margin-left: .4rem;
+            width: 10px; 
+            height: 10px;
             background-image: url('../images/externallink.svg') ;
             background-size: contain;
             background-repeat:no-repeat;
-            position:absolute;
-            top:0.3rem;
-            right:-2rem;
+            
         }
     }
 
@@ -101,10 +100,10 @@
             background: #f3f3f3;
             border: solid 1px #d1d1d1;
             font-weight: normal;
-            padding-left: 1rem;
+            padding: 0 1rem;
         }
         td {
-            padding-left: 1rem;
+            padding: 0 1rem;
             border: solid 1px #d1d1d1;
             vertical-align: middle;
         }
