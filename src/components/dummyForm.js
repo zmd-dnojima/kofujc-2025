@@ -25,7 +25,10 @@ export default () => (
         </div>
         <br/>
         <h2>お問い合わせ</h2>
+        
         <form action="https://ssgform.com/s/FYR6tpn2PBnY" method="post" enctype="multipart/form-data">
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <div style={{display: 'none'}}><input type="text" name="wana" /></div>{/* name="wana"を見えない状態で設置 */}
             <div>
                 <label htmlFor="name"><span className={style.required}>必須</span>お名前</label>  
                 <input type="text" name="お名前" required="required" />
@@ -42,6 +45,9 @@ export default () => (
             <div>
                 <label htmlFor="message"><span className={style.required}>必須</span>ご用件</label>
                 <textarea name="message" rows="10" id="message" required="required"></textarea>
+            </div>
+            <div>
+                <div className={style.grecaptcha} data-sitekey="6LekWq8qAAAAAN67lgmd3Dfwsu7bpEb_NKgP1lCd"></div>
             </div>
             <div>
                 <button className={style.contactButton} type="submit">お問い合わせをする</button>
