@@ -41,6 +41,10 @@ const Menu = () => {
               <li><Link to="/privacypolicy">プライバシーポリシー</Link></li>
               <li><Link to="/socialmediapolicy">ソーシャルメディアポリシー</Link></li>
               <li><a href="https://drive.google.com/file/d/1trmTn_ztmXB-9B2aEI5B2cy79z69yuGi/view" target="_blank">組織図</a></li>
+              <li><Link to="/regulations">定款・諸規則</Link></li>
+              <li><a href="https://www.jaycee.or.jp/" target="_blank">公益社団法人日本青年会議所</a></li>
+              <li><a href="https://www.jaycee.or.jp/kanto" target="_blank">関東地区協議会<br/>公益社団法人日本青年会議所</a></li>
+              <li><a href="https://www.jaycee.or.jp/kanto/yamanashi" target="_blank">山梨ブロック協議会<br/>公益社団法人日本青年会議所</a></li>
            </ul>
          </div> 
        </menu>

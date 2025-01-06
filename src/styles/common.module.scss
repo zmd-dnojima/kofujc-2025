@@ -548,9 +548,12 @@
         padding-bottom: 7rem;
         li {
             text-align: left;
-            text-indent: 2rem;
+            // text-indent: 2rem;
+            padding-left: 2rem;
             color: #fff;
-            line-height: 3rem;
+            line-height: 1.4rem;
+            padding-bottom: 1rem;
+            font-size: rem(14);
             a {
                 display: block;
                 transition: opacity 0.3s ease;
@@ -562,12 +565,11 @@
             
         }
         li.subMenu {
-            text-indent: 3rem;
+            text-indent: 2rem;
         }
 
         li span {
             color: rgba($color: #fff, $alpha: 0.6);
-            font-size: rem(14);
         }
         
     }
