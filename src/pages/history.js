@@ -25,6 +25,11 @@ const History = (props) => {
                 <div className={style.contentWrap}>
                     
                     <div className={style.grid}>
+                    <div className={style.image}>
+                            <p>2024年度</p>
+                            <StaticImage src="../images/m2024.jpg" alt="2024年度" placeholder="blurred" quality ={90}  />
+                            <Link to="https://2024.kofujc.com/" target="_blank">公式サイトへ</Link>
+                        </div>
                         <div className={style.image}>
                             <p>2023年度</p>
                             <StaticImage src="../images/m2023.jpg" alt="2023年度" placeholder="blurred" quality ={90}  />

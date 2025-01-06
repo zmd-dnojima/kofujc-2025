@@ -25,17 +25,21 @@ const SwiperLoop = (props) => {
 
     return (
         <div className={style.swiperWrap}>
-            <Swiper
+            <div><img src={p1} alt="javascript"/></div>
+            <div><img src={p2} alt="javascript"/></div>
+            <div><img src={p3} alt="javascript"/></div>
+            <div><img src={p4} alt="javascript"/></div>
+            {/* <Swiper
                 loop={true}
                 //loopedSlides={7}
-                slidesPerView={3}
+                slidesPerView={4}
                 spaceBetween={20}
                 breakpoints={{
                     768: {
-                        slidesPerView: 5
+                        slidesPerView: 4
                     },
                     640: {
-                        slidesPerView: 3
+                        slidesPerView: 4
                     },
                 }}
                 autoplay={{ "delay": 1, "disableOnInteraction": false, reverseDirection:false}} 
@@ -44,7 +48,7 @@ const SwiperLoop = (props) => {
                 //fill={"column"}                
                 allowTouchMove={false}
                 keyboard={{enabled: false}}
-                modules={[Autoplay]} 
+                //modules={[Autoplay]} 
                 
                 className={style.swiperloop}
             >
@@ -52,13 +56,7 @@ const SwiperLoop = (props) => {
                 <SwiperSlide><img src={p2} alt="javascript"/></SwiperSlide>
                 <SwiperSlide><img src={p3} alt="javascript"/></SwiperSlide>
                 <SwiperSlide><img src={p4} alt="javascript"/></SwiperSlide>
-                <SwiperSlide><img src={p1} alt="javascript"/></SwiperSlide>
-                <SwiperSlide><img src={p2} alt="javascript"/></SwiperSlide>
-                <SwiperSlide><img src={p3} alt="javascript"/></SwiperSlide>
-                <SwiperSlide><img src={p4} alt="javascript"/></SwiperSlide>
-                
-                
-            </Swiper>
+            </Swiper> */}
         </div>
     )
 }

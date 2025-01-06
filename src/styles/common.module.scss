@@ -439,10 +439,11 @@
         }
 
         ul {
-            line-height: 2.4rem;
-            
+            padding-right: 2rem;
             li {
                 padding-left: 14px;
+                line-height: 1rem;
+                margin-bottom: 1.4rem;
             }
             li.mainT {
                 padding-left: 0px;
@@ -776,5 +777,17 @@ form div{
         }
         
 
+    }
+}
+
+
+.swiperWrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 10px 20px;
+    justify-content: center;
+    margin: 0 auto;
+    img {
+        width: 200px;
     }
 }
