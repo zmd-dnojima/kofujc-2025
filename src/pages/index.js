@@ -64,6 +64,10 @@ const Index = (props) => {
 
                 <div className={style.bannerArea}>
                     <div className={style.blogArea}>
+                        <Link to="/koihime"><StaticImage src="../images/bnr_koihime.png" alt="main" placeholder="blurred" quality ={90}  /></Link>
+                    </div>
+                    
+                    {/* <div className={style.blogArea}>
                         {(() => {
                             const allBlog_banner = [];
                             const showBlogNum_banner = 4;
@@ -86,7 +90,7 @@ const Index = (props) => {
                             singleBlog_banner.map((novel, index) =>(
                                 <Link to={novel.node.articlesId} key={index}>
                                     <div className={style.blogCard}>                            
-                                        {/* <div className={style.blogDate}>{`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div> */}
+                                        <div className={style.blogDate}>{`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div>
                                         <div className={style.blogImgWrapper}><div className={style.blogImgContent}><img src={novel.node.bannerImage.url} alt="card-image" className={style.cardImg} /></div></div>
                                         <div className={style.blogTitle}>
                                             <div>{novel.node.title}</div>
@@ -96,7 +100,7 @@ const Index = (props) => {
                             ))
                         }
 
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className={style.news}><div className={style.contentWrap}>

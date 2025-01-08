@@ -53,19 +53,21 @@
 ////////////////////////////////////////////////
 
 .bannerArea {
-    display: none;
     
     position: relative;
     padding: 1rem 0;
     height: 100%;
     background: url('../images/noise.png'),linear-gradient(135deg, #F7FF9F 0%, #A5F0FF 100%);
+
+    
     
     .blogArea {
         display: grid;
-        grid-template-columns: repeat(auto-fit, 320px);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 420px));
         column-gap: 1.4rem;
         row-gap: 1rem;
         justify-content: center;
+        padding: 0 1rem;
         .blogCard {
             max-width: 320px;
             
