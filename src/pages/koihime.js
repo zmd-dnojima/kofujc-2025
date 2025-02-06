@@ -70,13 +70,13 @@ const Koihime = (props) => {
                             <div><span>一次審査（書類審査）</span><br/>
                                 2025年2月9日（日）23:59 申込締切<br/>（一次審査の結果は2025年2月10日（月）～ 13日（木）に適過者のみ電話にて連絡いたします。）<br/><br/>
                                 <span>二次審査（公開審査）</span><br/>
-                                2025年2月16日（日）<br/>
-                                場所：山梨防災新館1階 オープンスクエア特設ステージ</div>
+                                2025年2月16日（日）18:00〜20:00<br/>
+                                場所：山梨県防災新館1階オープンスクエア特設ステージ　一般観覧可</div>
                             <div>賞金・副賞</div>
                             <div><span>湖衣姫： 1 名</span><br/>
                                 （賞金300,000円、副賞）<br/><br/>
                                 <span>準湖衣姫 2 名</span><br/>
-                                （賞金50,000円、副賞 × 2名）</div>
+                                （賞金100,000円、副賞 × 2名）</div>
                             <div>注意事項</div>
                             <div>   ・2022年4月より、成人年齢が18歳に引き下げられましたが、本事業は20歳未満の方は保護者の同意をいただきます。<br/>
                             ・二次審査当日は住所・氏名・生年月日等が確認できるもの（運転免許証・パスポート・保険証・学生証など）と、印鑑をお持ちください。<br/>
@@ -177,11 +177,27 @@ const Koihime = (props) => {
                         <div><StaticImage src="../images/sponsorship_2.jpg" alt="sponsorship_2" placeholder="blurred" quality ={90}  /></div>
                         <div><StaticImage src="../images/sponsorship_3.jpg" alt="sponsorship_3" placeholder="blurred" quality ={90}  /></div>
                     </div> */}
+                    <div className={style.contentWrap}>
+                    <div className={style.sponsorshipTitle}>協賛企業一覧</div>
+                    <div>T&KYU investment 株式会社<br/>
+                    株式会社 早野組<br/>
+                    有限会社 東京製菓<br/>
+                    株式会社 印傳屋上原勇七<br/>
+                    株式会社エフエム富士<br/>
+                    山日YBSグループ<br/>
+                    共信冷熱 株式会社<br/>
+                    株式会社 芙蓉設計事務所<br/>
+                    株式会社 峡東測量<br/>
+                    有限会社 ハギハラ工房<br/>
+                    鶴田電気 株式会社</div>
                     <div className={style.sponsorshipTitle}>協力</div>
-                    <div>(株)きものあさ川／一般社団法人全日本ブライダル協会山梨県支部</div>
+                    <div>株式会社 きものあさ川<br/>
+                    全日本ブライダル協会山梨支部<br/>
+                    信玄公祭り実行委員会</div>
                     <div className={style.sponsorshipTitle}>主催</div>
                     <div>一般社団法人甲府青年会議所 湖衣姫コレクション実行委員会</div>
                     <br/>
+                    </div>
                 </div>
                 
 
