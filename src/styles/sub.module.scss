@@ -94,25 +94,27 @@
         text-align: left;
         border-collapse: collapse;
         border-spacing: 0;
-        
-
         th {
             background: #f3f3f3;
-            border: solid 1px #d1d1d1;
             font-weight: normal;
             padding: 0 1rem;
+            box-sizing: border-box;
         }
         td {
             padding: 0 1rem;
-            border: solid 1px #d1d1d1;
             vertical-align: middle;
+            box-sizing: border-box;
         }
-        td:nth-child(1) {
-            width: 20%;
+        @media(max-width: 640px) { 
+            th,
+            td {
+                display: block;
+    width: 100%;
+            }
+            
         }
-        td:nth-child(2) {
-            width: 80%;
-        }
+
+        
     }
 
     figure {
@@ -125,7 +127,6 @@
             width: 100%;
             max-width: 800px;
             height: auto;
-            
         }
     }
 }
