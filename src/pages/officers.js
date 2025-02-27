@@ -86,11 +86,11 @@ const Officers = (props) => {
                             <div className={style.greetingArea}>これまでの経験を活かし、室長という重責を全うします。「山の都エナジーアップ委員会」と「こどもの夢実現委員会」という甲府青年会議所の花形両委員会を担当することは大きなプレッシャーですが、副理事長と委員長の橋渡し役として調和を図りながら、地域にとって最も良い影響を与えられるよう取り組んでまいります。常に理念を基盤に置き、地域の未来を見据えた活動を進めたいと思います。
                             </div>
                         </div>
-                        <div className={style.image}>
+                        {/* <div className={style.image}>
                             <StaticImage src="../images/m_kobayashi.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <div className={style.name}>組織力向上室 室長<br/><span>小林 広美</span></div>
                             <div className={style.greetingArea}>組織力向上室では、会員拡大委員会と広報ブランディング委員会の2つの委員会を擁し、組織の存在感を高め、価値の向上に努めてまいりたいと思います。会員拡大委員会では、多くの同志を増やしていくことで、組織の活性化を図り、広報ブランディング委員会では的確かつ戦略的に情報発信を行い地域から愛されるべく組織作りを行ってまいります。この両委員会を昇華させ、組織を向上させてまいります。</div>
-                        </div>
+                        </div> */}
                         <div className={style.image}>
                             <StaticImage src="../images/m_shirasu.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <div className={style.name}>財務室 室長<br/><span>白須 良平</span></div>
@@ -101,6 +101,7 @@ const Officers = (props) => {
                             <div className={style.name}>総務室 室長<br/><span>鶴田 雄大</span></div>
                             <div className={style.greetingArea}>総務室は各種会議の運営や調整をはじめ、各会議体•委員会の年間•個別事業の計画書•報告書の精査と成果の検証を行います。1年間、より良い青年会議所活動ができるよう総務渉外委員会を管轄し、組織運営の屋台骨として支えてまいります。</div>
                         </div>
+                        <div className={style.brpc}></div>
                         <div className={style.brpc}></div>
                         <div className={style.image}>
                             <StaticImage src="../images/m_koike.jpg" alt="main" placeholder="blurred" quality ={90}  />
