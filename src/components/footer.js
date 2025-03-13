@@ -40,6 +40,7 @@ const Footer = () => {
                         <li className={style.mainT}><Link to="/socialmediapolicy"><span><FontAwesomeIcon icon={faChevronRight}/></span> ソーシャルメディアポリシー</Link></li>
                         <li className={style.mainT}><a href="https://drive.google.com/file/d/1trmTn_ztmXB-9B2aEI5B2cy79z69yuGi/view" target="_blank"><span><FontAwesomeIcon icon={faChevronRight}/></span> 組織図</a></li>
                         <li className={style.mainT}><Link to="/regulations"><span><FontAwesomeIcon icon={faChevronRight}/></span> 定款・諸規則</Link></li>
+                        <li className={style.mainT}><a href="https://drive.google.com/file/d/1dAFqwRLlcJyakIRP-kJQNNeKnhs4j9_U/view" target="_blank"><span><FontAwesomeIcon icon={faChevronRight}/></span> 財務諸表</a></li>
                         <li className={style.mainT}><a href="https://www.jaycee.or.jp/" target="_blank"><span><FontAwesomeIcon icon={faChevronRight}/></span> 公益社団法人日本青年会議所</a></li>
                         <li className={style.mainT}><a href="https://www.jaycee.or.jp/kanto" target="_blank"><span><FontAwesomeIcon icon={faChevronRight}/></span> 関東地区協議会<br/>　公益社団法人日本青年会議所</a></li>
                         <li className={style.mainT}><a href="https://www.jaycee.or.jp/kanto/yamanashi" target="_blank"><span><FontAwesomeIcon icon={faChevronRight}/></span> 山梨ブロック協議会<br/>　公益社団法人日本青年会議所</a></li>
