@@ -380,3 +380,47 @@
 }
 
 
+.newtxt {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat( 4, 1fr ) ; 
+    column-gap: 2rem;
+    row-gap: 3rem;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 4rem;
+    @media(max-width: $break-s){
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+    }
+    .koihimeName {
+        text-align: left;
+        display:block;
+        font-size: rem(14);
+        color: #333;
+        span {
+            background: linear-gradient(45deg, #f35e95 0%, #b8a3ce 100%) border-box border-box;
+            border-radius: 4px;
+            padding:.2rem .6rem;
+            color: #fff;
+            font-family: $enFont;
+            margin-right: 4px;
+        }
+    }
+
+    .image {
+        img {
+            border: 1px solid #b8a3ce;
+            border-radius: 4px;
+        }
+        
+    }
+    
+
+}

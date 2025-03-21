@@ -40,24 +40,66 @@ const Koihime = (props) => {
                 会場：舞鶴城公園自由広場</p>
                 </div>
 
-                <div className={style.entryArea}>
+                {/* <div className={style.entryArea}>
                 <div className={style.contentWrap}>
                     <div className={style.historyBody}>
                         <p className={style.t1}>エントリー受付期間</p>
                         <p className={style.t2}>2025年1月9日(木)<br className={style.brsp}/>〜<br className={style.brsp}/>2025年2月9日(日)</p>
                     </div>
                 </div>
+                </div> */}
+                <div className={style.contentWrap}>
+                <div className={style.newtxt}>湖衣姫コレクションファイナリストの7名が決まりましたので発表いたします。</div>
+                <div className={style.grid}>
+                    <div className={style.image}>
+                        <div className={style.koihimeName}><span>ENTRY No.1</span><br/>笠井 希海さん</div>
+                        <StaticImage src="../images/k1.jpg" alt="main" placeholder="blurred" quality ={90}  />
+                    </div>
+                    <div className={style.image}>
+                        <div className={style.koihimeName}><span>ENTRY No.2</span><br/>飯田 恵美さん</div>
+                        <StaticImage src="../images/k2.jpg" alt="main" placeholder="blurred" quality ={90}  />
+                    </div>
+                    <div className={style.image}>
+                        <div className={style.koihimeName}><span>ENTRY No.3</span><br/>佐々木 彩菜さん</div>
+                        <StaticImage src="../images/k3.jpg" alt="main" placeholder="blurred" quality ={90}  />
+                    </div>
+                    
+                    <div className={style.image}>
+                        <div className={style.koihimeName}><span>ENTRY No.4</span><br/>志村 幸花さん</div>
+                        <StaticImage src="../images/k4.jpg" alt="main" placeholder="blurred" quality ={90}  />
+                    </div>
+                    <div className={style.image}>
+                        <div className={style.koihimeName}><span>ENTRY No.5</span><br/>雨宮 凜果さん</div>
+                        <StaticImage src="../images/k5.jpg" alt="main" placeholder="blurred" quality ={90}  />
+                    </div>
+                    <div className={style.image}>
+                        <div className={style.koihimeName}><span>ENTRY No.6</span><br/>三上 美希さん</div>
+                        <StaticImage src="../images/k6.jpg" alt="main" placeholder="blurred" quality ={90}  />
+                    </div>
+                    <div className={style.image}>
+                        <div className={style.koihimeName}><span>ENTRY No.7</span><br/>古屋敷 侑さん</div>
+                        <StaticImage src="../images/k7.jpg" alt="main" placeholder="blurred" quality ={90}  />
+                    </div>
+                </div>
+                <div>
+                    ファイナリスト7名の中からグランプリ1名、準グランプリ2名が決まる<br/>
+                    第51回信玄公祭り 湖衣姫コレクションに是非皆さんお越しください!!<br/>
+                    翌日の信玄公祭りで行われる、甲州軍団出陣にも湖衣姫隊として出陣します。
+                </div>
                 </div>
 
-                <div className={style.koihimeBtn}>
+               
+                
+
+                {/* <div className={style.koihimeBtn}>
                     <a href="https://sgfm.jp/f/koihime2025" target="_blank"><span>エントリーはこちら</span></a>
-                </div>
+                </div> */}
                 
 
                 <div className={style.flowArea}>
                 <div className={style.contentWrap}>
                     <div className={style.historyBody}>
-                        <div className={style.koihimeTitle}>
+                        {/* <div className={style.koihimeTitle}>
                             <div className={style.en}><span>O</span>VERVIEW</div>
                             <div className={style.jp}>エントリー概要</div>
                         </div>
@@ -82,7 +124,7 @@ const Koihime = (props) => {
                             ・二次審査当日は住所・氏名・生年月日等が確認できるもの（運転免許証・パスポート・保険証・学生証など）と、印鑑をお持ちください。<br/>
                             ・応募内容に偽りがあった場合、入選を取り消すことがあります。<br/>
                             ・申込に際し提出された個人情報は、コレクションの審査目的にのみ使用し、第三者へは一切開示いたしません。</div>
-                        </div>
+                        </div> */}
                         
                         <div className={style.koihimeTitle}>
                             <div className={style.en}><span>F</span>AQ</div>
@@ -166,9 +208,9 @@ const Koihime = (props) => {
                 </div>
                 </div>
 
-                <div className={style.koihimeBtn}>
+                {/* <div className={style.koihimeBtn}>
                     <a href="https://sgfm.jp/f/koihime2025" target="_blank"><span>エントリーはこちら</span></a>
-                </div>
+                </div> */}
 
                 <div className={style.sponsorship}>
                     {/* <div className={style.sponsorshipTitle}>協賛</div>
