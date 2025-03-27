@@ -73,7 +73,7 @@ const Koihime = (props) => {
                         <StaticImage src="../images/k5.jpg" alt="main" placeholder="blurred" quality ={90}  />
                     </div>
                     <div className={style.image}>
-                        <div className={style.koihimeName}><span>ENTRY No.6</span><br/>三上 美希さん</div>
+                        <div className={style.koihimeName}><span>ENTRY No.6</span><br/>三神 美希さん</div>
                         <StaticImage src="../images/k6.jpg" alt="main" placeholder="blurred" quality ={90}  />
                     </div>
                     <div className={style.image}>
