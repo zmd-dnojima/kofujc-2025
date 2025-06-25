@@ -64,7 +64,7 @@ const Index = (props) => {
 
                 <div className={style.bannerArea}>
                     <div className={style.blogArea}>
-                        <Link to="/3vhurwk42r"><StaticImage src="../images/bnr_518.png" alt="main" placeholder="blurred" quality ={90}  /></Link>
+                        {/* <Link to="/3vhurwk42r"><StaticImage src="../images/bnr_518.png" alt="main" placeholder="blurred" quality ={90}  /></Link> */}
                         <Link to="/kenketsu"><StaticImage src="../images/bnr_kenketsu.png" alt="main" placeholder="blurred" quality ={90}  /></Link>
                     </div>
                     
