@@ -74,7 +74,7 @@ const Joinus = (props) => {
                             <div className={style.txt}>
                                 <div className={style.st}>ポケモンカード教室</div>
                                 <div className={style.box}>運営<p style={{ textAlign: 'center'}}>なしポケ</p></div>
-                                <div className={style.box}>体験内容<p>ルールがわからない、詳しい遊び方が知りたいなど、これからポケモンカードゲームをスタートしたい方、一緒に楽しもう！<br/><p className={style.cap}>※レンタルデッキのため手ぶらでOK！</p></p></div>
+                                <div className={style.box}>体験内容<p>ルールがわからない、詳しい遊び方が知りたいなど、これからポケモンカードゲームをスタートしたい方、一緒に楽しもう！<br/>全3回午前1回、午後2回(時間は対戦状況による)<br/>混雑時整理券配布(午後分12時30分より配布)<br/><p className={style.cap}>※レンタルデッキのため手ぶらでOK！</p></p></div>
                             </div>
                         </div>
                         <div className={style.gridItem}>
@@ -106,7 +106,7 @@ const Joinus = (props) => {
                             <div className={style.txt}>
                                 <div className={style.st}>スノードーム</div>
                                 <div className={style.box}>運営<p style={{ textAlign: 'center'}}>株式会社みっとめるへん社　サン宝石事業</p></div>
-                                <div className={style.box}>体験内容<p>好きなパーツやほっぺちゃんを用いてスノードームを作ろう！</p></div>
+                                <div className={style.box}>体験内容<p>好きなパーツやほっぺちゃんを用いてスノードームを作ろう！<br/>混雑時整理券配布</p></div>
                             </div>
                         </div>
                         <div className={style.gridItem}>
@@ -114,7 +114,7 @@ const Joinus = (props) => {
                             <div className={style.txt}>
                                 <div className={style.st}>ミニパフェキーホルダー</div>
                                 <div className={style.box}>運営<p style={{ textAlign: 'center'}}>FakeFood Cafe</p></div>
-                                <div className={style.box}>体験内容<p>食品サンプルの素材でミニパフェのキーホルダーを作ろう！</p></div>
+                                <div className={style.box}>体験内容<p>食品サンプルの素材でミニパフェのキーホルダーを作ろう！<br/>混雑時整理券配布</p></div>
                             </div>
                         </div>
                         <div className={style.gridItem}>
@@ -130,7 +130,7 @@ const Joinus = (props) => {
                             <div className={style.txt}>
                                 <div className={style.st}>ミニ四駆組み立て体験</div>
                                 <div className={style.box}>運営<p style={{ textAlign: 'center'}}>大公寺寺子屋くらぶ</p></div>
-                                <div className={style.box}>体験内容<p>キットを使って1からミニ四駆を組み立ててみよう。<br/><p className={style.cap}>※組み立てたミニ四駆は持ち帰れます。</p></p></div>
+                                <div className={style.box}>体験内容<p>キットを使って1からミニ四駆を組み立ててみよう。<br/>全3回①10時30分～②13時～③14時30分～<br/>抽選式30名様<br/>抽選券は開催中常時配布(公式LINE登録が必要)、各回15分前に抽選結果発表<br/><p className={style.cap}>※組み立てたミニ四駆は持ち帰れます。</p></p></div>
                             </div>
                             
                         </div>
@@ -163,7 +163,7 @@ const Joinus = (props) => {
                             <div className={style.txt}>
                                 <div className={style.st}>プログラミング体験</div>
                                 <div className={style.box}>運営<p style={{ textAlign: 'center'}}>ココグラム甲府校</p></div>
-                                <div className={style.box}>体験内容<p>大人気ゲームMinecraftを利用してプログラミングを体験してみよう！</p></div>
+                                <div className={style.box}>体験内容<p>大人気ゲームMinecraftを利用してプログラミングを体験してみよう！<br/>混雑時整理券配布</p></div>
                             </div>
                         </div>
                     </div>
