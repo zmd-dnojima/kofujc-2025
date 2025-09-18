@@ -18,6 +18,7 @@ import p1 from "../images/banner1.jpg"
 import p2 from "../images/banner2.jpg"  
 import p3 from "../images/banner3.jpg"  
 import p4 from "../images/banner4.jpg"
+import p6 from "../images/banner6.png"
 
 
 
@@ -29,6 +30,7 @@ const SwiperLoop = (props) => {
             <div><img src={p2} alt="javascript"/></div>
             <div><img src={p3} alt="javascript"/></div>
             <div><img src={p4} alt="javascript"/></div>
+            <div><a href="https://bni.jp/ja/jci" target="_blank"><img src={p6} alt="javascript"/></a></div>
             {/* <Swiper
                 loop={true}
                 //loopedSlides={7}
