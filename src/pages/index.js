@@ -62,47 +62,14 @@ const Index = (props) => {
                     </div>
                 </div>
 
-                <div className={style.bannerArea}>
+                {/* <div className={style.bannerArea}>
                     <div className={style.blogArea}>
                         <Link to="/kidsfes"><StaticImage src="../images/bnr_kidsfes.png" alt="main" placeholder="blurred" quality ={90}  /></Link>
                         <Link to="/kenketsu"><StaticImage src="../images/bnr_kenketsu.png" alt="main" placeholder="blurred" quality ={90}  /></Link>
                     </div>
                     
-                    {/* <div className={style.blogArea}>
-                        {(() => {
-                            const allBlog_banner = [];
-                            const showBlogNum_banner = 4;
-                            var blogAddNum_banner = 0;
-                            
-                            for(var i in props.data.allMicrocmsArticles.edges){
-                                
-                                allBlog_banner.push(props.data.allMicrocmsArticles.edges[i])
-                                
-                                if(allBlog_banner[i].node.category[0].tag == "banner" ) {
-                                    blogAddNum_banner +=1
-                                    if(blogAddNum_banner > showBlogNum_banner){
-                                        break
-                                    }
-                                    singleBlog_banner.push(allBlog_banner[i])
-                                }
-                            }
-                        })()}             
-                        {
-                            singleBlog_banner.map((novel, index) =>(
-                                <Link to={novel.node.articlesId} key={index}>
-                                    <div className={style.blogCard}>                            
-                                        <div className={style.blogDate}>{`${novel.node.eventDate.substring(0, novel.node.eventDate.indexOf("T"))}`}</div>
-                                        <div className={style.blogImgWrapper}><div className={style.blogImgContent}><img src={novel.node.bannerImage.url} alt="card-image" className={style.cardImg} /></div></div>
-                                        <div className={style.blogTitle}>
-                                            <div>{novel.node.title}</div>
-                                        </div>
-                                    </div>
-                                </Link>
-                            ))
-                        }
-
-                    </div> */}
-                </div>
+                    
+                </div> */}
 
                 <div className={style.news}><div className={style.contentWrap}>
                     <div className={style.newsTitle}>
@@ -117,6 +84,8 @@ const Index = (props) => {
                                 const allBlog = [];
                                 const showBlogNum = 4;
                                 var blogAddNum = 0;
+
+                                console.log(props.data)
                                 
                                 for(var i in props.data.allMicrocmsArticles.edges){
                                     
@@ -270,9 +239,7 @@ export const query = graphql`
                 mainImage {
                     url
                 }
-                bannerImage {
-                    url
-                }
+                
             }
         }
         }

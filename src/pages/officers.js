@@ -86,11 +86,11 @@ const Officers = (props) => {
                             <div className={style.greetingArea}>これまでの経験を活かし、室長という重責を全うします。「山の都エナジーアップ委員会」と「こどもの夢実現委員会」という甲府青年会議所の花形両委員会を担当することは大きなプレッシャーですが、副理事長と委員長の橋渡し役として調和を図りながら、地域にとって最も良い影響を与えられるよう取り組んでまいります。常に理念を基盤に置き、地域の未来を見据えた活動を進めたいと思います。
                             </div>
                         </div>
-                        {/* <div className={style.image}>
+                        <div className={style.image}>
                             <StaticImage src="../images/m_kobayashi.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <div className={style.name}>組織力向上室 室長<br/><span>小林 広美</span></div>
                             <div className={style.greetingArea}>組織力向上室では、会員拡大委員会と広報ブランディング委員会の2つの委員会を擁し、組織の存在感を高め、価値の向上に努めてまいりたいと思います。会員拡大委員会では、多くの同志を増やしていくことで、組織の活性化を図り、広報ブランディング委員会では的確かつ戦略的に情報発信を行い地域から愛されるべく組織作りを行ってまいります。この両委員会を昇華させ、組織を向上させてまいります。</div>
-                        </div> */}
+                        </div>
                         <div className={style.image}>
                             <StaticImage src="../images/m_shirasu.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <div className={style.name}>財務室 室長<br/><span>白須 良平</span></div>
@@ -102,7 +102,7 @@ const Officers = (props) => {
                             <div className={style.greetingArea}>総務室は各種会議の運営や調整をはじめ、各会議体•委員会の年間•個別事業の計画書•報告書の精査と成果の検証を行います。1年間、より良い青年会議所活動ができるよう総務渉外委員会を管轄し、組織運営の屋台骨として支えてまいります。</div>
                         </div>
                         <div className={style.brpc}></div>
-                        <div className={style.brpc}></div>
+                        
                         <div className={style.image}>
                             <StaticImage src="../images/m_koike.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <div className={style.name}>山の都エナジーアップ委員会 委員長<br/><span>小池 知矢</span></div>
@@ -119,7 +119,7 @@ const Officers = (props) => {
                             <div className={style.name}>会員拡大委員会 委員長<br/><span>柳澤 隆広</span></div>
                             <div className={style.greetingArea}>組織を永続・発展させていくためには会員数の純増が必要不可欠です。会員拡大委員会では本年度、地域に眠る志を同じくする同志を一人でも多く発掘し組織を活性化させていきます。これを達成するために、地域の方々、特に20代後半から30代前半の若手の方々に、甲府青年会議所の魅力をしっかりと伝えるとともに、各委員会との連携協力を通して会員拡大活動に努めてまいります。</div>
                         </div>
-                        <div className={style.image}>
+                        {/* <div className={style.image}>
                             <StaticImage src="../images/m_takano.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <div className={style.name}>広報ブランディング委員会 委員長<br/><span>高野 真紀</span></div>
                             <div className={style.greetingArea}>広報ブランディング委員会は、甲府青年会議所がより愛される団体となるため日々の活動を伝えていきます。SNS発信を中心に幅広い層にアプローチし、存在感やブランド力の向上に努め、活気あふれるコミュニティづくりを目指します。甲府青年会議所の魅力を多くの方に実感していただけるよう、1年間頑張ってまいります。</div>
@@ -128,7 +128,7 @@ const Officers = (props) => {
                             <StaticImage src="../images/m_yamada.jpg" alt="main" placeholder="blurred" quality ={90}  />
                             <div className={style.name}>総務渉外委員会 委員長<br/><span>山田 安人</span></div>
                             <div className={style.greetingArea}>2025年度は、これまで青年会議所総務委員会が培ってきた、正確かつ円滑な総務運営に、先端技術を試験的に取り入れ、甲府青年会議所の活動を加速させ、前に進める地盤づくりに挑戦します。また、日本、関東地区、山梨ブロック主幹の渉外事業への参加を促進し、会員が積極的に知見を得るお手伝いをいたします。一年間宜しくお願い申し上げます。</div>
-                        </div>
+                        </div> */}
                         
 
                     </div>
