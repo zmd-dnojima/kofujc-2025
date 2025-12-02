@@ -65,7 +65,7 @@ const Index = (props) => {
                 <div className={style.bannerArea}>
                     <div className={style.blogArea}>
                         <Link to="/graduate"><StaticImage src="../images/bnr_graduate.png" alt="main" placeholder="blurred" quality ={90}  /></Link>
-                        
+                        <a href="https://tasukeai-marathon-2025--tasukeai-marathon-2025.asia-east1.hosted.app/status" target="_blank" ><StaticImage src="../images/bnr_kenketsu2.png" alt="main" placeholder="blurred" quality ={90}  /></a>
                     </div>
                     
                     
