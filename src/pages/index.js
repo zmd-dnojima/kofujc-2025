@@ -62,14 +62,14 @@ const Index = (props) => {
                     </div>
                 </div>
 
-                {/* <div className={style.bannerArea}>
+                <div className={style.bannerArea}>
                     <div className={style.blogArea}>
-                        <Link to="/kidsfes"><StaticImage src="../images/bnr_kidsfes.png" alt="main" placeholder="blurred" quality ={90}  /></Link>
-                        <Link to="/kenketsu"><StaticImage src="../images/bnr_kenketsu.png" alt="main" placeholder="blurred" quality ={90}  /></Link>
+                        <Link to="/graduate"><StaticImage src="../images/bnr_graduate.png" alt="main" placeholder="blurred" quality ={90}  /></Link>
+                        
                     </div>
                     
                     
-                </div> */}
+                </div>
 
                 <div className={style.news}><div className={style.contentWrap}>
                     <div className={style.newsTitle}>

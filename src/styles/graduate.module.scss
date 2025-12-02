@@ -1,0 +1,61 @@
+@import './variables.scss';
+@import './all.scss';
+@import './common.module.scss';
+
+
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+
+
+
+
+.gridWrap {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(300px,1fr) ) ; 
+    justify-content: center;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    align-items: start;
+}
+.gridItem {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background: #fff;
+    overflow: hidden;
+    row-gap: 0rem;
+    
+
+    .grid2 {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 40px;
+    }
+    .txt {
+        font-size: 18px;
+        margin: 0;
+        span {
+            font-size: 12px;
+        }
+    }
+
+    .gBtn {
+        color: $base-color;
+        width: 40px;
+        height: 40px;
+        background: $base-color;
+        border-radius: 100%;
+        svg {
+            display: block;
+            color: #fff;
+            text-align: center;
+            margin: 0 auto;
+            padding-top: 12px;
+            
+        }  
+    }
+}
